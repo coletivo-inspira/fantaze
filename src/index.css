@@ -22,6 +22,12 @@
   --animate-float: float 6s ease-in-out infinite;
   --animate-marquee: marquee 38s linear infinite;
   --animate-twinkle: twinkle 3.2s ease-in-out infinite;
+  --animate-bob: bob 2.4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-1.5deg); }
 }
 
 @keyframes flap-l {
@@ -94,8 +100,6 @@ img, svg, video {
 /* Wings do logo: pivô na dobradiça */
 .wing-l { transform-origin: 13.6% 47.4%; }
 .wing-r { transform-origin: 89.3% 51.9%; }
-/* Asa da logo principal: pivô na ponta, junto ao "F" */
-.wing-principal { transform-origin: 32.4% 55.6%; }
 
 /* Scroll horizontal sem barra */
 .no-scrollbar::-webkit-scrollbar { display: none; }

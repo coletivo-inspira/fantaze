@@ -2,14 +2,30 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import LogoPrincipal from '../ui/LogoPrincipal';
 
-/** Abertura do “portal”: logo aparece com a asa batendo e some. Roda a cada visita. */
+const SESSION_KEY = 'fantaze:splash';
+
+function alreadySeen() {
+  try {
+    return window.sessionStorage.getItem(SESSION_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+/** Abertura do “portal”: aparece só na primeira entrada da sessão (aba/navegador aberto). */
 export default function Splash() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(() => !alreadySeen());
 
   useEffect(() => {
+    if (!show) return;
+    try {
+      window.sessionStorage.setItem(SESSION_KEY, '1');
+    } catch {
+      /* sem persistência: a abertura roda de novo, sem problema */
+    }
     const t = setTimeout(() => setShow(false), 2200);
     return () => clearTimeout(t);
-  }, []);
+  }, [show]);
 
   return (
     <AnimatePresence>
