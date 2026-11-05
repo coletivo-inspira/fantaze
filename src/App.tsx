@@ -16,7 +16,7 @@ const NotFound = lazy(() => import('./pages/NotFound.tsx'));
 
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <ScrollRestoration />
       <Suspense fallback={<div className="h-screen w-full bg-brand-paper" />}>
         <Routes>

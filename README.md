@@ -44,6 +44,21 @@ public/                   favicon (svg/png), logo-fantaze.svg/png
 
 O site escolhe o tema ativo pela data atual. A paleta do tema é aplicada via variáveis CSS (`--t-*`) pelo `<ThemeScope />`; a marca usa sempre as cores `brand-*`.
 
+## Deploy no GitHub Pages
+
+O workflow `.github/workflows/deploy.yml` roda lint e build em todo push/PR para `main` e publica no GitHub Pages a cada push em `main`.
+
+Configuração única no repositório:
+
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Faça push na branch `main`. O site fica em `https://<usuario>.github.io/<repositorio>/`.
+
+Detalhes:
+
+- A base do site vem de `VITE_BASE_PATH`; por padrão o workflow usa `/<nome-do-repositorio>/`. Para domínio próprio (ou repositório `<usuario>.github.io`), crie a variável de repositório `BASE_PATH` com o valor `/`.
+- O build gera um `404.html` idêntico ao `index.html`, para que recarregar uma rota como `/cardapio` continue funcionando.
+- Para testar o build local com a base do Pages: `VITE_BASE_PATH=/fantaze/ npm run build && npm run preview`.
+
 ## Integração com sistemas reais
 
 `votesService` e `reservationService` exportam uma interface (`VotesService`, `ReservationService`) e uma implementação local (localStorage, dados simulados). Para usar um backend, crie outra implementação da mesma interface e troque o export no fim do arquivo — as telas não precisam mudar.

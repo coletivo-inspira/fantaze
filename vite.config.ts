@@ -4,5 +4,6 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/',
+  // Em produção no GitHub Pages o workflow define VITE_BASE_PATH (ex.: /fantaze/).
+  base: process.env.VITE_BASE_PATH ?? '/',
 });

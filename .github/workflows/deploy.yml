@@ -1,0 +1,69 @@
+name: Deploy no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissões necessárias para publicar no Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita deploys simultâneos (cancela só os que ainda estão na fila)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar o Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+        env:
+          # Site em https://<usuario>.github.io/<repositorio>/ usa o nome do repositório como base.
+          # Para domínio próprio ou repositório <usuario>.github.io, crie a variável
+          # de repositório BASE_PATH com o valor "/" (Settings > Secrets and variables > Actions > Variables).
+          VITE_BASE_PATH: ${{ vars.BASE_PATH || format('/{0}/', github.event.repository.name) }}
+
+      # O GitHub Pages não conhece as rotas do React Router: o 404.html abre o app
+      # e deixa o roteador resolver a URL (ex.: /cardapio) ao recarregar a página.
+      - name: Criar fallback de SPA (404.html)
+        run: cp dist/index.html dist/404.html
+
+      - name: Enviar artefato do Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
