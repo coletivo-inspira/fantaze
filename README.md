@@ -51,11 +51,11 @@ O workflow `.github/workflows/deploy.yml` roda lint e build em todo push/PR para
 Configuração única no repositório:
 
 1. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. Faça push na branch `main`. O site fica em `https://<usuario>.github.io/<repositorio>/`.
+2. Faça push na branch `main`. Com domínio próprio (ex.: `fantaze.inspira.dev.br`), configure-o em Settings → Pages → Custom domain.
 
 Detalhes:
 
-- A base do site vem de `VITE_BASE_PATH`; por padrão o workflow usa `/<nome-do-repositorio>/`. Para domínio próprio (ou repositório `<usuario>.github.io`), crie a variável de repositório `BASE_PATH` com o valor `/`.
+- A base do site vem de `VITE_BASE_PATH`; o padrão do workflow é `/` (domínio próprio). Se publicar em `https://<usuario>.github.io/<repositorio>/`, crie a variável de repositório `BASE_PATH` com o valor `/<repositorio>/`.
 - O build gera um `404.html` idêntico ao `index.html`, para que recarregar uma rota como `/cardapio` continue funcionando.
 - Para testar o build local com a base do Pages: `VITE_BASE_PATH=/fantaze/ npm run build && npm run preview`.
 

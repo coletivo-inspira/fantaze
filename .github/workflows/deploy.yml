@@ -40,10 +40,11 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Site em https://<usuario>.github.io/<repositorio>/ usa o nome do repositório como base.
-          # Para domínio próprio ou repositório <usuario>.github.io, crie a variável
-          # de repositório BASE_PATH com o valor "/" (Settings > Secrets and variables > Actions > Variables).
-          VITE_BASE_PATH: ${{ vars.BASE_PATH || format('/{0}/', github.event.repository.name) }}
+          # Padrão "/" (domínio próprio, ex.: fantaze.inspira.dev.br).
+          # Se publicar em https://<usuario>.github.io/<repositorio>/, crie a variável de
+          # repositório BASE_PATH com o valor "/<repositorio>/"
+          # (Settings > Secrets and variables > Actions > Variables).
+          VITE_BASE_PATH: ${{ vars.BASE_PATH || '/' }}
 
       # O GitHub Pages não conhece as rotas do React Router: o 404.html abre o app
       # e deixa o roteador resolver a URL (ex.: /cardapio) ao recarregar a página.
