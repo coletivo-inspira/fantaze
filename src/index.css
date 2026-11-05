@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta oficial da marca Fantazê */
+  --color-brand-indigo: #30137e;
+  --color-brand-purple: #7917b0;
+  --color-brand-blue: #3c7fdd;
+  --color-brand-cream: #f6dfd9;
+  --color-brand-amber: #ffb86f;
+  --color-brand-pink: #fc7893;
+  --color-brand-peach: #f8dfda;
+  --color-brand-sand: #ffe6c2;
+  --color-brand-paper: #fff8f4;
+  --color-brand-ink: #1e0b5a;
+
+  --font-display: 'Caprasimo', 'Cooper Black', serif;
+  --font-sans: 'Nunito', system-ui, sans-serif;
+  --font-theme: 'Cormorant Garamond', Georgia, serif;
+
+  --animate-flap-l: flap-l 1.6s ease-in-out infinite;
+  --animate-flap-r: flap-r 1.6s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-twinkle: twinkle 3.2s ease-in-out infinite;
+}
+
+@keyframes flap-l {
+  0%, 100% { transform: scaleX(1) rotate(0deg); }
+  50% { transform: scaleX(0.62) rotate(6deg); }
+}
+@keyframes flap-r {
+  0%, 100% { transform: scaleX(1) rotate(0deg); }
+  50% { transform: scaleX(0.62) rotate(-6deg); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.7) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.1) rotate(25deg); }
+}
+
+/* Variáveis do tema do mês (sobrescritas por <ThemeScope />) */
+:root {
+  --t-bg: #fbf6ec;
+  --t-surface: #ffffff;
+  --t-ink: #1f2a4a;
+  --t-accent: #8fb3dd;
+  --t-accent-2: #e8b4b8;
+  --t-gold: #c9a24b;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Evita zoom automático de fonte no iOS ao girar a tela */
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  /* `clip` não quebra elementos sticky (ao contrário de `hidden`) */
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-brand-paper);
+  color: var(--color-brand-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+img, svg, video {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-brand-pink);
+  color: white;
+}
+
+/* Wings do logo: pivô na dobradiça */
+.wing-l { transform-origin: 13.6% 47.4%; }
+.wing-r { transform-origin: 89.3% 51.9%; }
+
+/* Scroll horizontal sem barra */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

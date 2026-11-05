@@ -1,0 +1,175 @@
+import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import { FaInstagram } from 'react-icons/fa';
+import { restaurant } from '../data/restaurant';
+import PageHeader from '../components/ui/PageHeader';
+import Reveal from '../components/ui/Reveal';
+import SectionHeading from '../components/ui/SectionHeading';
+import Button from '../components/ui/Button';
+import Decor from '../components/ui/Decor';
+import starryCafe from '../assets/photos/starrycafe.jpg';
+import aquarium from '../assets/photos/aquarium.jpg';
+import torii from '../assets/photos/torii.jpg';
+import library from '../assets/photos/library.jpg';
+import tantan from '../assets/photos/tantan.jpg';
+import couple from '../assets/photos/couple.jpg';
+import diner from '../assets/photos/diner.jpg';
+
+// No celular (2 colunas) todas as fotos têm o mesmo tamanho; a partir de md formam um mosaico de 3 colunas.
+const mood = [
+  { src: starryCafe, alt: 'Salão com teto pintado em estilo noite estrelada', className: 'md:row-span-2' },
+  { src: aquarium, alt: 'Restaurante com vista para um aquário gigante', className: '' },
+  { src: couple, alt: 'Casal em traje de baile', className: 'md:row-span-2' },
+  { src: torii, alt: 'Ambiente decorado com portal japonês e flores de cerejeira', className: '' },
+  { src: tantan, alt: 'Salão com lanternas de papel penduradas', className: '' },
+  { src: library, alt: 'Biblioteca fantástica com portal em arco', className: '' },
+  { src: diner, alt: 'Salão com piso xadrez e luzes de neon', className: 'col-span-2 md:col-span-1' },
+];
+
+export default function About() {
+  const { address, hours } = restaurant;
+
+  return (
+    <>
+      <PageHeader
+        kicker="Sobre o Fantazê"
+        title="Um lugar para quem acredita em outros mundos."
+        subtitle={restaurant.essence}
+        decor="eyes"
+      />
+
+      {/* Conceito */}
+      <section className="bg-brand-paper py-16">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:px-10 lg:grid-cols-[1fr_1.1fr]">
+          <Reveal>
+            <div className="rounded-[2.5rem] bg-brand-indigo p-7 text-white sm:p-12">
+              <p className="text-xs font-extrabold uppercase tracking-[0.35em] text-brand-amber">Nossa essência</p>
+              <p className="mt-5 font-display text-3xl leading-tight sm:text-4xl">“{restaurant.essence}”</p>
+              <div className="mt-8 flex flex-wrap gap-2">
+                {restaurant.personality.map((p) => (
+                  <span key={p} className="rounded-full bg-white/15 px-4 py-2 text-sm font-bold">
+                    {p}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-8 text-white/70">{restaurant.audience}</p>
+            </div>
+          </Reveal>
+
+          <ol className="space-y-8">
+            {restaurant.story.map((s, i) => (
+              <Reveal key={s.title} delay={i * 0.1}>
+                <li className="flex gap-5">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-pink font-display text-xl text-white">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-brand-purple">{s.year}</p>
+                    <h3 className="mt-1 text-2xl text-brand-indigo">{s.title}</h3>
+                    <p className="mt-2 leading-relaxed text-brand-ink/70">{s.description}</p>
+                  </div>
+                </li>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Diferenciais */}
+      <section className="bg-brand-peach/60 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <SectionHeading kicker="Diferenciais" title="O que faz do Fantazê uma experiência." />
+          <div className="mt-12 grid gap-5 sm:grid-cols-2">
+            {restaurant.pillars.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.08}>
+                <div className="h-full rounded-[2rem] bg-white p-6 sm:p-8 shadow-[0_24px_50px_-36px_rgba(48,19,126,0.6)]">
+                  <h3 className="text-2xl text-brand-indigo">{p.title}</h3>
+                  <p className="mt-3 leading-relaxed text-brand-ink/70">{p.description}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inspirações */}
+      <section className="relative bg-brand-paper py-16 sm:py-24">
+        <Decor name="spiral" float className="right-[6%] top-10 hidden w-20 md:block" />
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <SectionHeading
+            kicker="Moodboard"
+            title="Mundos que inspiraram a gente."
+            subtitle="Referências de ambientação imersiva que guiam a nossa direção de arte. As imagens são ilustrativas."
+          />
+          <div className="mt-12 grid auto-rows-[10rem] grid-cols-2 gap-4 sm:auto-rows-[13rem] md:grid-cols-3">
+            {mood.map((m, i) => (
+              <Reveal key={m.alt} delay={i * 0.06} className={m.className}>
+                <img
+                  src={m.src}
+                  alt={m.alt}
+                  loading="lazy"
+                  className="h-full w-full rounded-[1.75rem] object-cover transition-transform duration-500 hover:scale-[1.03]"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section className="bg-brand-indigo py-16 sm:py-24 text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:px-10 lg:grid-cols-2">
+          <div>
+            <SectionHeading tone="dark" kicker="Contato e localização" title="Venha nos visitar." />
+            <Reveal delay={0.1}>
+              <ul className="mt-10 space-y-5 text-white/80">
+                <li className="flex gap-4">
+                  <MapPin className="shrink-0 text-brand-amber" />
+                  <span>
+                    {address.street}
+                    <br />
+                    {address.district} · {address.city} · CEP {address.zip}
+                  </span>
+                </li>
+                <li className="flex gap-4">
+                  <Phone className="shrink-0 text-brand-amber" /> {restaurant.phone}
+                </li>
+                <li className="flex gap-4">
+                  <Mail className="shrink-0 text-brand-amber" /> {restaurant.email}
+                </li>
+                <li className="flex gap-4">
+                  <FaInstagram size={24} className="shrink-0 text-brand-amber" /> @{restaurant.instagram}
+                </li>
+              </ul>
+              <div className="mt-10">
+                <Button to="/reservas" variant="secondary" size="lg">
+                  Reservar mesa
+                </Button>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.15}>
+            <div className="rounded-[2rem] bg-white/10 p-6 sm:p-8 backdrop-blur">
+              <h3 className="flex items-center gap-2 text-2xl">
+                <Clock size={22} className="text-brand-amber" /> Horários
+              </h3>
+              <ul className="mt-6 space-y-4">
+                {hours.map((h) => (
+                  <li key={h.days} className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-4 last:border-0">
+                    <span className="font-bold">{h.days}</span>
+                    <span className="text-white/70">{h.time}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 grid h-40 place-items-center rounded-2xl border border-dashed border-white/25 text-center text-sm text-white/55">
+                Espaço reservado para o mapa
+                <br />
+                (Google Maps)
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
+}
