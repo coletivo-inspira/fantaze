@@ -9,6 +9,7 @@ const explore = [
   { name: 'Tema do mês', to: '/tema-do-mes' },
   { name: 'Cardápio', to: '/cardapio' },
   { name: 'Próximos temas', to: '/proximos-temas' },
+  { name: 'Passaporte', to: '/passaporte' },
   { name: 'Reservas', to: '/reservas' },
   { name: 'Sobre o Fantazê', to: '/sobre' },
 ];

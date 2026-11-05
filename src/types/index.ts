@@ -107,6 +107,35 @@ export interface ReservationRequest {
   notes: string;
 }
 
+export interface PassportSlot {
+  id: string;
+  /** Tema ao qual o carimbo pertence (null = ainda não definido) */
+  themeId: string | null;
+  name: string;
+  month: string;
+  /** Código entregue pela equipe na visita; null enquanto o tema não existe */
+  code: string | null;
+  colors: [string, string];
+}
+
+export interface PassportReward {
+  id: string;
+  stampsRequired: number;
+  title: string;
+  description: string;
+}
+
+export interface PassportState {
+  /** slotId -> data ISO em que foi carimbado */
+  stamps: Record<string, string>;
+  /** rewardId -> código do voucher */
+  redeemed: Record<string, string>;
+}
+
+export type ClaimResult =
+  | { ok: true; slot: PassportSlot }
+  | { ok: false; reason: 'invalid' | 'already' | 'locked' };
+
 export interface Reservation extends ReservationRequest {
   code: string;
   createdAt: string;

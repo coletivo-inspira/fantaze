@@ -10,6 +10,7 @@ const MonthlyTheme = lazy(() => import('./pages/MonthlyTheme.tsx'));
 const Menu = lazy(() => import('./pages/Menu.tsx'));
 const NextThemes = lazy(() => import('./pages/NextThemes.tsx'));
 const Reservations = lazy(() => import('./pages/Reservations.tsx'));
+const Passport = lazy(() => import('./pages/Passport.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const NotFound = lazy(() => import('./pages/NotFound.tsx'));
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/cardapio" element={<Menu />} />
             <Route path="/proximos-temas" element={<NextThemes />} />
             <Route path="/reservas" element={<Reservations />} />
+            <Route path="/passaporte" element={<Passport />} />
             <Route path="/sobre" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Route>

@@ -3,6 +3,7 @@ import HowItWorks from '../components/home/HowItWorks';
 import ThemeSpotlight from '../components/home/ThemeSpotlight';
 import MenuPreview from '../components/home/MenuPreview';
 import VotePreview from '../components/home/VotePreview';
+import PassportTeaser from '../components/home/PassportTeaser';
 import VisitInfo from '../components/home/VisitInfo';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <ThemeSpotlight />
       <MenuPreview />
       <VotePreview />
+      <PassportTeaser />
       <VisitInfo />
     </>
   );

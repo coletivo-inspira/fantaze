@@ -20,7 +20,7 @@ src/
   App.tsx                 rotas (lazy) dentro do <Layout />
   main.tsx
   index.css               tema Tailwind (@theme) com a paleta da marca + animações
-  pages/                  Home, MonthlyTheme, Menu, NextThemes, Reservations, About, NotFound
+  pages/                  Home, MonthlyTheme, Menu, NextThemes, Reservations, Passport, About, NotFound
   components/
     layout/               Navbar, Footer, Layout, Splash, ScrollRestoration, ScrollToTopButton
     ui/                   Logo, Button, Reveal, SectionHeading, PageHeader, Decor, Marquee, ThemeScope

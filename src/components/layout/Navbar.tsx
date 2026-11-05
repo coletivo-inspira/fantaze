@@ -11,6 +11,7 @@ const links = [
   { name: 'Tema do mês', to: '/tema-do-mes' },
   { name: 'Cardápio', to: '/cardapio' },
   { name: 'Próximos temas', to: '/proximos-temas' },
+  { name: 'Passaporte', to: '/passaporte' },
   { name: 'Sobre', to: '/sobre' },
 ];
 
@@ -71,7 +72,7 @@ export default function Navbar() {
                 end={link.to === '/'}
                 className={({ isActive }) =>
                   cn(
-                    'relative rounded-full px-4 py-2 text-sm font-bold transition-colors',
+                    'relative rounded-full px-3 py-2 text-sm font-bold transition-colors xl:px-4',
                     isActive ? 'text-brand-indigo' : 'text-brand-ink/60 hover:text-brand-indigo',
                   )
                 }
