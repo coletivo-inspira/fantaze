@@ -88,7 +88,9 @@ export default function MonthlyTheme() {
 
       {/* Ambientação */}
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-        <SectionHeading tone="theme" kicker="Ambientação" title="Três salas, uma temporada" />
+        <Reveal>
+          <h2 className="font-theme text-4xl font-semibold leading-[1.05] text-[var(--t-ink)] sm:text-5xl">Ambientação</h2>
+        </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {theme.scenes.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.12}>
