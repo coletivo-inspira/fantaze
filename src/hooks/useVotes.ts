@@ -28,12 +28,7 @@ export function useVotes() {
     setPendingId(null);
   }, []);
 
-  const suggest = useCallback(async (name: string) => {
-    const data = await votesService.suggest(name);
-    setTally(data);
-  }, []);
-
   const totalVotes = tally.reduce((sum, t) => sum + t.votes, 0);
 
-  return { tally, myVote, loading, pendingId, vote, suggest, totalVotes };
+  return { tally, myVote, loading, pendingId, vote, totalVotes };
 }

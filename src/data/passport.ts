@@ -7,18 +7,18 @@ import type { PassportReward, PassportSlot } from '../types';
  */
 export const passportSlots: PassportSlot[] = [
   {
-    id: 'nov-2026',
+    id: 'carimbo-1',
     themeId: 'bridgerton',
     name: 'Bridgerton',
-    month: 'Nov 2026',
+    month: 'Carimbo 1',
     code: 'FNT-BRIDGERTON',
     colors: ['#30137e', '#8fb3dd'],
   },
-  { id: 'dez-2026', themeId: null, name: 'Em breve', month: 'Dez 2026', code: null, colors: ['#7917b0', '#fc7893'] },
-  { id: 'jan-2027', themeId: null, name: 'Em breve', month: 'Jan 2027', code: null, colors: ['#3c7fdd', '#ffb86f'] },
-  { id: 'fev-2027', themeId: null, name: 'Em breve', month: 'Fev 2027', code: null, colors: ['#fc7893', '#7917b0'] },
-  { id: 'mar-2027', themeId: null, name: 'Em breve', month: 'Mar 2027', code: null, colors: ['#30137e', '#fc7893'] },
-  { id: 'abr-2027', themeId: null, name: 'Em breve', month: 'Abr 2027', code: null, colors: ['#7917b0', '#3c7fdd'] },
+  { id: 'carimbo-2', themeId: null, name: 'Universo 2', month: 'Carimbo 2', code: 'FNT-CARIMBO-02', colors: ['#7917b0', '#fc7893'] },
+  { id: 'carimbo-3', themeId: null, name: 'Universo 3', month: 'Carimbo 3', code: 'FNT-CARIMBO-03', colors: ['#3c7fdd', '#ffb86f'] },
+  { id: 'carimbo-4', themeId: null, name: 'Universo 4', month: 'Carimbo 4', code: 'FNT-CARIMBO-04', colors: ['#fc7893', '#7917b0'] },
+  { id: 'carimbo-5', themeId: null, name: 'Universo 5', month: 'Carimbo 5', code: 'FNT-CARIMBO-05', colors: ['#30137e', '#fc7893'] },
+  { id: 'carimbo-6', themeId: null, name: 'Universo 6', month: 'Carimbo 6', code: 'FNT-CARIMBO-06', colors: ['#7917b0', '#3c7fdd'] },
 ];
 
 export const passportRewards: PassportReward[] = [
@@ -26,7 +26,7 @@ export const passportRewards: PassportReward[] = [
     id: 'sobremesa',
     stampsRequired: 3,
     title: 'Sobremesa por conta da casa',
-    description: 'Uma sobremesa assinatura do tema do mês, em qualquer visita.',
+    description: 'Uma sobremesa assinatura do tema em cartaz, em qualquer visita.',
   },
   {
     id: 'jantar',

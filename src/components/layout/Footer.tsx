@@ -6,7 +6,7 @@ import Logo from '../ui/Logo';
 import Decor from '../ui/Decor';
 
 const explore = [
-  { name: 'Tema do mês', to: '/tema-do-mes' },
+  { name: 'Em cartaz', to: '/tema-do-mes' },
   { name: 'Cardápio', to: '/cardapio' },
   { name: 'Próximos temas', to: '/proximos-temas' },
   { name: 'Passaporte', to: '/passaporte' },
@@ -21,8 +21,8 @@ export default function Footer() {
       <svg className="absolute -top-px left-0 w-full text-brand-paper" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden>
         <path fill="currentColor" d="M0 0 H1440 V20 Q1200 70 960 30 T480 30 T0 40Z" />
       </svg>
-      <Decor name="spiral" float className="right-[6%] top-24 w-16 opacity-60 sm:w-24" />
-      <Decor name="sparkle" twinkle className="left-[44%] top-32 w-10 opacity-70" />
+      <Decor name="cup" float className="right-[6%] top-24 w-16 opacity-60 sm:w-24" />
+      <Decor name="sparkles" twinkle className="left-[44%] top-32 w-10 opacity-70" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-12 pt-24 sm:pt-28 md:grid-cols-12 md:px-10">
         <div className="md:col-span-5">
@@ -90,10 +90,10 @@ export default function Footer() {
 
       <div className="relative border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-white/50 md:px-10">
-          <p>© {new Date().getFullYear()} Fantazê. Projeto acadêmico — Centro Universitário UNA, Publicidade e Propaganda.</p>
+          <p>© {new Date().getFullYear()} Fantazê. Todos os direitos reservados.</p>
           <p>
-            Restaurante fictício. Os universos citados (Bridgerton, Harry Potter, Stranger Things e outros) pertencem aos
-            seus respectivos detentores e aparecem aqui apenas como inspiração.
+            Os universos citados (Bridgerton, Harry Potter, Stranger Things e outros) pertencem aos seus respectivos
+            detentores e aparecem aqui apenas como inspiração.
           </p>
         </div>
       </div>

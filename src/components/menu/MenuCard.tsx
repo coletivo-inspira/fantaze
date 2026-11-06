@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Leaf, Sparkles, Wine, GlassWater } from 'lucide-react';
 import type { DishTag, MenuItem } from '../../types';
 import { formatPrice } from '../../lib/format';
+import { getDishPhoto } from '../../lib/photos';
 import DishArt from './DishArt';
 
 const tagInfo: Record<DishTag, { label: string; icon: typeof Leaf }> = {
@@ -12,6 +13,8 @@ const tagInfo: Record<DishTag, { label: string; icon: typeof Leaf }> = {
 };
 
 export default function MenuCard({ item }: { item: MenuItem }) {
+  const photo = getDishPhoto(item.id);
+
   return (
     <motion.article
       layout
@@ -22,11 +25,20 @@ export default function MenuCard({ item }: { item: MenuItem }) {
       className="group relative flex gap-4 rounded-[1.75rem] border border-[var(--t-gold)]/30 bg-[var(--t-surface)] p-3.5 shadow-[0_20px_40px_-28px_rgba(31,42,74,0.45)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_50px_-28px_rgba(31,42,74,0.55)] sm:gap-5 sm:p-5"
     >
       <div className="relative grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--t-bg)] to-[var(--t-accent)]/40 sm:h-32 sm:w-32">
-        <DishArt
-          kind={item.art}
-          colors={item.colors}
-          className="h-[88%] w-[88%] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3"
-        />
+        {photo ? (
+          <img
+            src={photo}
+            alt={item.name}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        ) : (
+          <DishArt
+            kind={item.art}
+            colors={item.colors}
+            className="h-[88%] w-[88%] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3"
+          />
+        )}
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col">

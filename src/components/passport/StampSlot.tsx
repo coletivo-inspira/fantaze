@@ -43,7 +43,7 @@ export default function StampSlot({ slot, stampedAt, justStamped, index }: Stamp
       </div>
       <p className="mt-3 font-display text-lg leading-tight text-brand-indigo">{slot.month}</p>
       <p className="text-xs font-bold text-brand-ink/55">
-        {stamped ? `Carimbado em ${formatShortDate(stampedAt!)}` : available ? slot.name : 'Tema a definir'}
+        {stamped ? `Carimbado em ${formatShortDate(stampedAt!)}` : available ? slot.name : 'Em breve'}
       </p>
     </div>
   );

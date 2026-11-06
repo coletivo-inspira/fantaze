@@ -34,7 +34,7 @@ export default function StampArt({ name, month, colors, className }: StampArtPro
           {month.toUpperCase()}
         </textPath>
       </text>
-      <image href={grafismos.butterfly} x="38" y="38" width="44" height="44" preserveAspectRatio="xMidYMid meet" />
+      <image href={grafismos.wing} x="38" y="38" width="44" height="44" preserveAspectRatio="xMidYMid meet" />
     </svg>
   );
 }

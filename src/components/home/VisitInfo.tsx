@@ -59,7 +59,7 @@ export default function VisitInfo() {
               <CalendarHeart className="text-brand-amber" size={28} />
               <h3 className="mt-4 text-2xl">Garanta sua mesa</h3>
               <p className="mt-4 leading-relaxed text-white/75">
-                O tema do mês costuma lotar nos fins de semana. Reserve com antecedência e escolha o horário ideal.
+                O tema em cartaz costuma lotar nos fins de semana. Reserve com antecedência e escolha o horário ideal.
               </p>
               <Button to="/reservas" variant="secondary" size="lg" className="mt-8 w-full">
                 Reservar agora

@@ -11,12 +11,12 @@ interface PageHeaderProps {
 }
 
 /** Cabeçalho padrão das páginas internas. */
-export default function PageHeader({ kicker, title, subtitle, decor = 'butterfly' }: PageHeaderProps) {
+export default function PageHeader({ kicker, title, subtitle, decor = 'wing' }: PageHeaderProps) {
   return (
     <header className="relative isolate overflow-hidden bg-gradient-to-b from-brand-peach to-brand-paper pb-14 pt-32 sm:pb-20 sm:pt-40">
       <div className="pointer-events-none absolute -right-20 top-10 -z-10 h-80 w-80 rounded-full bg-brand-pink/20 blur-3xl" />
       <Decor name={decor} float className="right-[8%] top-28 hidden w-24 sm:block lg:w-32" />
-      <Decor name="star" twinkle className="left-[6%] top-36 hidden w-8 sm:block" />
+      <Decor name="sparkles" twinkle className="left-[6%] top-36 hidden w-8 sm:block" />
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}

@@ -1,8 +1,9 @@
 import type { MonthlyTheme } from '../types';
 
 /**
- * Cronograma de temas. Para trocar o tema do mês, basta adicionar um novo item
- * com `startsAt`/`endsAt` — o site calcula o tema ativo pela data atual.
+ * Cronograma de temas (cada tema fica em cartaz por cerca de 4 meses). Para trocar
+ * o tema, basta adicionar um novo item com `startsAt`/`endsAt` — o site calcula o
+ * tema ativo pela data atual.
  */
 export const themes: MonthlyTheme[] = [
   {
@@ -11,9 +12,9 @@ export const themes: MonthlyTheme[] = [
     badge: 'Baile da Temporada',
     tagline: 'Uma noite de gala na Londres da Regência.',
     description:
-      'Salões iluminados por candelabros, chás da tarde com flores e brindes à luz de velas. Neste mês o Fantazê se transforma no baile mais comentado da temporada, com direito a segredos, elegância e muito açúcar.',
+      'Salões iluminados por candelabros, chás da tarde com flores e brindes à luz de velas. Nesta temporada o Fantazê se transforma no baile mais comentado da temporada, com direito a segredos, elegância e muito açúcar.',
     startsAt: '2026-11-01',
-    endsAt: '2026-11-30',
+    endsAt: '2027-02-28',
     palette: {
       bg: '#fbf6ec',
       surface: '#ffffff',

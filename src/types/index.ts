@@ -66,16 +66,9 @@ export interface UpcomingTheme {
   name: string;
   tagline: string;
   colors: [string, string];
-  /** Votos iniciais fictícios (a camada de serviço soma os votos reais) */
+  /** Contagem inicial de votos (a camada de serviço soma os votos reais) */
   seedVotes: number;
   icon: 'wand' | 'bolt' | 'rabbit' | 'ghost' | 'leaf' | 'ring' | 'sparkles';
-}
-
-export interface Suggestion {
-  id: string;
-  name: string;
-  createdAt: string;
-  votes: number;
 }
 
 export interface VoteTally {
@@ -85,7 +78,6 @@ export interface VoteTally {
   colors: [string, string];
   icon: UpcomingTheme['icon'];
   votes: number;
-  isSuggestion: boolean;
 }
 
 export interface TimeSlot {

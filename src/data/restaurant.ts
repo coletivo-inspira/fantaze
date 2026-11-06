@@ -1,6 +1,6 @@
 export const restaurant = {
   name: 'Fantazê',
-  slogan: 'Todo mês, um novo mundo à mesa.',
+  slogan: 'Um novo mundo à mesa, a cada temporada.',
   essence: 'Trazer alegria à vida e as pessoas de volta umas às outras.',
   audience: 'Para todas as idades que acreditam em outros mundos.',
   personality: ['Lúdica', 'Sensorial', 'Divertida'],
@@ -33,7 +33,7 @@ export const restaurant = {
   maxPeoplePerReservation: 12,
   pillars: [
     {
-      title: 'Um universo por mês',
+      title: 'Um universo em cartaz',
       description:
         'Ambientação, cardápio, trilha sonora e até o figurino da equipe mudam a cada ciclo. Voltar sempre é descobrir um lugar novo.',
     },
@@ -64,13 +64,13 @@ export const restaurant = {
       year: 'A marca',
       title: 'Uma borboleta e uma assinatura',
       description:
-        'A borboleta representa a transformação: cada mês o Fantazê se transforma sem perder a essência. A letra manuscrita traz o lado afetivo e lúdico.',
+        'A borboleta representa a transformação: a cada temporada o Fantazê se transforma sem perder a essência. A letra manuscrita traz o lado afetivo e lúdico.',
     },
     {
       year: 'O ciclo',
       title: 'Votação, curadoria e estreia',
       description:
-        'O público vota, a equipe cria a ambientação e o cardápio autoral, e no primeiro dia do mês o portal se abre com um novo universo.',
+        'O público vota, a equipe cria a ambientação e o cardápio autoral, e na estreia da temporada o portal se abre com um novo universo.',
     },
   ],
 };

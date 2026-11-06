@@ -8,7 +8,7 @@ import Button from '../ui/Button';
 
 const links = [
   { name: 'Início', to: '/' },
-  { name: 'Tema do mês', to: '/tema-do-mes' },
+  { name: 'Em cartaz', to: '/tema-do-mes' },
   { name: 'Cardápio', to: '/cardapio' },
   { name: 'Próximos temas', to: '/proximos-temas' },
   { name: 'Passaporte', to: '/passaporte' },

@@ -7,7 +7,7 @@ interface ThemeSceneProps {
 }
 
 /**
- * Ilustrações da ambientação do tema do mês (usam as variáveis `--t-*`).
+ * Ilustrações da ambientação do tema em cartaz (usam as variáveis `--t-*`).
  * Servem como arte oficial até que existam fotos reais do espaço.
  */
 export default function ThemeScene({ kind, className }: ThemeSceneProps) {

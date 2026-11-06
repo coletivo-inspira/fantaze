@@ -8,7 +8,7 @@ interface ThemePortalProps {
   className?: string;
 }
 
-/** “Portal” em arco que mostra o universo do mês, com grafismos da marca ao redor. */
+/** “Portal” em arco que mostra o universo em cartaz, com grafismos da marca ao redor. */
 export default function ThemePortal({ theme, className }: ThemePortalProps) {
   return (
     <div className={className}>
@@ -26,10 +26,10 @@ export default function ThemePortal({ theme, className }: ThemePortalProps) {
           </div>
         </motion.div>
 
-        <Decor name="butterfly" float className="-left-8 top-[14%] w-20 sm:-left-14 sm:w-28" />
-        <Decor name="sparkle" twinkle className="-right-4 top-[6%] w-14 sm:-right-10 sm:w-20" />
-        <Decor name="swirl" float delay={1.2} className="-right-6 bottom-[22%] w-16 sm:-right-12 sm:w-24" />
-        <Decor name="star" twinkle delay={0.8} className="-left-4 bottom-[10%] w-12 sm:-left-10 sm:w-16" />
+        <Decor name="wing" float className="-left-8 top-[14%] w-20 sm:-left-14 sm:w-28" />
+        <Decor name="sparkles" twinkle className="-right-4 top-[6%] w-14 sm:-right-10 sm:w-20" />
+        <Decor name="cutlery" float delay={1.2} className="-right-6 bottom-[22%] w-16 sm:-right-12 sm:w-24" />
+        <Decor name="dice" twinkle delay={0.8} className="-left-4 bottom-[10%] w-12 sm:-left-10 sm:w-16" />
       </div>
     </div>
   );

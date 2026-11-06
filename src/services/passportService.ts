@@ -5,7 +5,7 @@ import { readStorage, wait, writeStorage } from './storage';
 /**
  * Contrato do passaporte. Na versão final o código do carimbo deve ser validado
  * no servidor (ex.: QR code lido pela equipe ou código de uso único por mesa).
- * Aqui a validação é local, só para demonstrar o fluxo.
+ * Hoje a validação é local (códigos em `data/passport.ts`).
  */
 export interface PassportService {
   getState(): PassportState;

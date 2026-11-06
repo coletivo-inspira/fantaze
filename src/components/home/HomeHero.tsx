@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, CalendarHeart, MapPin } from 'lucide-react';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
-import { formatPeriod } from '../../lib/format';
+import { formatShortDate } from '../../lib/format';
 import { restaurant } from '../../data/restaurant';
 import Button from '../ui/Button';
 import Decor from '../ui/Decor';
@@ -23,8 +23,8 @@ export default function HomeHero() {
       {/* manchas de cor */}
       <div className="pointer-events-none absolute -left-32 top-10 -z-10 h-96 w-96 rounded-full bg-brand-pink/25 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 top-40 -z-10 h-[28rem] w-[28rem] rounded-full bg-brand-blue/20 blur-3xl" />
-      <Decor name="star" twinkle className="left-[5%] top-40 hidden w-10 sm:block" />
-      <Decor name="spiral" float delay={0.6} className="bottom-24 left-[8%] hidden w-16 sm:block" />
+      <Decor name="sparkles" twinkle className="left-[5%] top-40 hidden w-10 sm:block" />
+      <Decor name="dice" float delay={0.6} className="bottom-24 left-[8%] hidden w-16 sm:block" />
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8 lg:pb-28">
         <motion.div variants={container} initial="hidden" animate="show">
@@ -36,16 +36,15 @@ export default function HomeHero() {
           </motion.span>
 
           <motion.h1 variants={item} className="mt-6 text-[2.9rem] leading-[1] text-brand-indigo sm:text-7xl lg:text-[5.4rem]">
-            Todo mês,
+            Entre em um
             <br />
-            um <span className="relative inline-block text-brand-purple">novo mundo</span>
-            <br />
-            à mesa.
+            <span className="relative inline-block text-brand-purple">novo mundo</span>
+            <br />à mesa.
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 max-w-xl text-lg leading-relaxed text-brand-ink/70 sm:text-xl">
-            No Fantazê, cardápio, decoração, trilha e figurino mudam a cada mês. Você escolhe o próximo universo, a gente
-            transforma o salão.
+            No Fantazê, cardápio, decoração, trilha e figurino mudam a cada temporada. Você escolhe o próximo universo, a
+            gente transforma o salão.
           </motion.p>
 
           <motion.div variants={item} className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -64,7 +63,7 @@ export default function HomeHero() {
                   {theme.name}
                 </span>
                 <span className="text-sm font-bold text-[var(--t-ink)]">
-                  Tema de {formatPeriod(theme.startsAt, theme.endsAt)}
+                  Em cartaz até {formatShortDate(theme.endsAt)}
                 </span>
                 <ThemeCountdown daysLeft={daysLeft} />
               </div>

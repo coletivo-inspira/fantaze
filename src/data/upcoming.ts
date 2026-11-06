@@ -1,6 +1,6 @@
 import type { UpcomingTheme } from '../types';
 
-/** Universos candidatos aos próximos meses. Votos iniciais são fictícios. */
+/** Universos candidatos aos próximos temas. `seedVotes` é a contagem inicial. */
 export const upcomingThemes: UpcomingTheme[] = [
   {
     id: 'harry-potter',

@@ -55,8 +55,8 @@ export default function ReservationSuccess({ reservation, onReset }: { reservati
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="relative overflow-hidden rounded-[2.5rem] bg-brand-indigo p-6 text-white sm:p-12"
     >
-      <Decor name="butterfly" float className="-right-4 top-6 w-24 sm:w-32" />
-      <Decor name="sparkle" twinkle className="left-6 bottom-8 w-12 opacity-80" />
+      <Decor name="cutlery" float className="-right-4 top-6 w-24 sm:w-32" />
+      <Decor name="sparkles" twinkle className="left-6 bottom-8 w-12 opacity-80" />
 
       <div className="relative">
         <CheckCircle2 size={44} className="text-brand-amber" />

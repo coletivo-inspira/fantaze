@@ -8,7 +8,7 @@ const steps = [
   {
     icon: Vote,
     title: 'Você vota',
-    text: 'Escolha entre Harry Potter, Stranger Things, Alice e outros. Também pode sugerir um universo novo.',
+    text: 'Escolha entre Harry Potter, Stranger Things, Alice e outros universos na disputa pelo próximo tema.',
     color: 'bg-brand-blue',
   },
   {
@@ -20,7 +20,7 @@ const steps = [
   {
     icon: PartyPopper,
     title: 'Você vive',
-    text: 'No primeiro dia do mês, o portal se abre. Reserve sua mesa e entre na história.',
+    text: 'Na estreia da temporada, o portal se abre. Reserve sua mesa e entre na história.',
     color: 'bg-brand-pink',
   },
 ];
@@ -34,7 +34,7 @@ export default function HowItWorks() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
-        <Decor name="butterfly" float className="right-4 top-0 hidden w-24 md:block" />
+        <Decor name="clapper" float className="right-4 top-0 hidden w-24 md:block" />
         <SectionHeading
           kicker="Como funciona"
           title="Um restaurante, infinitos mundos."

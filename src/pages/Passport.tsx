@@ -11,7 +11,7 @@ import RewardTier from '../components/passport/RewardTier';
 import ClaimStampForm from '../components/passport/ClaimStampForm';
 
 const steps = [
-  { title: 'Visite no mês do tema', text: 'Cada universo dura um mês. Venha viver a experiência.' },
+  { title: 'Visite o tema em cartaz', text: 'Cada universo fica por uma temporada. Venha viver a experiência.' },
   { title: 'Peça o código', text: 'A equipe entrega o código do carimbo junto com a conta.' },
   { title: 'Carimbe e ganhe', text: 'Complete a coleção e resgate brindes exclusivos.' },
 ];
@@ -35,7 +35,7 @@ export default function Passport() {
         kicker="Passaporte Fantazê"
         title="Colecione mundos, ganhe brindes."
         subtitle="Cada visita em um tema novo rende um carimbo. Complete a coleção e troque por experiências especiais."
-        decor="star"
+        decor="tickets"
       />
 
       <section className="bg-brand-paper pb-16 sm:pb-24">
@@ -139,9 +139,6 @@ export default function Passport() {
             </ol>
           </div>
 
-          <p className="mt-10 text-center text-xs text-brand-ink/50">
-            Nesta versão o passaporte fica salvo apenas no seu navegador. Brindes e regras são ilustrativos.
-          </p>
         </div>
       </section>
     </>

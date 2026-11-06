@@ -12,8 +12,8 @@ export default function VotePreview() {
 
   return (
     <section className="relative overflow-hidden bg-brand-indigo py-16 sm:py-24 text-white">
-      <Decor name="spiral" float className="right-[8%] top-10 w-20 opacity-70" />
-      <Decor name="butterfly" float delay={1} className="bottom-10 left-[6%] w-24 opacity-70" />
+      <Decor name="cards" float className="right-[8%] top-10 w-20 opacity-70" />
+      <Decor name="tickets" float delay={1} className="bottom-10 left-[6%] w-24 opacity-70" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 md:px-10 lg:grid-cols-2">
         <div>

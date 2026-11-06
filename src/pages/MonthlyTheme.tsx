@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { CalendarHeart, Music2, Shirt } from 'lucide-react';
 import { useCurrentTheme } from '../hooks/useCurrentTheme';
-import { formatPeriod } from '../lib/format';
+import { formatShortDate } from '../lib/format';
 import ThemeScope from '../components/ui/ThemeScope';
 import ThemeScene from '../components/theme/ThemeScene';
+import ScenePhoto from '../components/theme/ScenePhoto';
 import ThemeCountdown from '../components/theme/ThemeCountdown';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
@@ -21,8 +22,8 @@ export default function MonthlyTheme() {
           <ThemeScene kind="ballroom" className="h-full w-full opacity-70" />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--t-bg)]/20 via-[var(--t-bg)]/70 to-[var(--t-bg)]" />
         </div>
-        <Decor name="sparkle" twinkle className="right-[10%] top-36 w-14" />
-        <Decor name="butterfly" float className="left-[5%] top-48 hidden w-24 sm:block" />
+        <Decor name="sparkles" twinkle className="right-[10%] top-36 w-14" />
+        <Decor name="wing" float className="left-[5%] top-48 hidden w-24 sm:block" />
 
         <div className="mx-auto max-w-5xl px-6 pb-16 sm:pb-24 pt-16 text-center md:px-10 lg:pb-32 lg:pt-24">
           <motion.span
@@ -30,7 +31,7 @@ export default function MonthlyTheme() {
             animate={{ opacity: 1 }}
             className="text-xs font-extrabold uppercase tracking-[0.4em] text-[var(--t-gold)]"
           >
-            Tema do mês · {formatPeriod(theme.startsAt, theme.endsAt)}
+            Em cartaz · até {formatShortDate(theme.endsAt)}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -92,8 +93,12 @@ export default function MonthlyTheme() {
           {theme.scenes.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.12}>
               <figure className="group overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-xl">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <ThemeScene kind={s.kind} className="h-full w-full transition-transform duration-700 group-hover:scale-105" />
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ScenePhoto
+                    kind={s.kind}
+                    alt={s.title}
+                    className="h-full w-full transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
                 <figcaption className="p-5">
                   <p className="font-theme text-2xl font-semibold text-[var(--t-ink)]">{s.title}</p>

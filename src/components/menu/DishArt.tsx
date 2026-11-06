@@ -7,7 +7,7 @@ interface DishArtProps {
 }
 
 /**
- * Ilustrações vetoriais dos pratos (placeholders até termos fotografias reais).
+ * Ilustrações vetoriais dos pratos (usadas quando não há foto em src/assets/pratos).
  * Cada ilustração usa duas cores do item para manter a paleta do tema.
  */
 export default function DishArt({ kind, colors, className }: DishArtProps) {

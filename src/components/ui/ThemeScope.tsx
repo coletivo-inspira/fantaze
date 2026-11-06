@@ -8,7 +8,7 @@ interface ThemeScopeProps {
 }
 
 /**
- * Aplica a paleta do tema do mês como variáveis CSS (`--t-*`) para os filhos.
+ * Aplica a paleta do tema em cartaz como variáveis CSS (`--t-*`) para os filhos.
  * A marca continua usando `brand-*`; o tema usa `var(--t-*)`.
  */
 export default function ThemeScope({ palette, className, children }: ThemeScopeProps) {

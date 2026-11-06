@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { Check, Info, Loader2, Stamp } from 'lucide-react';
+import { Check, Loader2, Stamp } from 'lucide-react';
 import type { ClaimResult } from '../../types';
 import { cn } from '../../lib/cn';
 
@@ -36,7 +36,7 @@ export default function ClaimStampForm({ busy, onClaim }: ClaimStampFormProps) {
         <Stamp size={22} className="text-brand-pink" /> Coletar carimbo
       </h3>
       <p className="mt-2 text-sm text-brand-ink/70">
-        Na sua visita, a equipe entrega o código do tema do mês. Digite aqui para carimbar o passaporte.
+        Na sua visita, a equipe entrega o código do carimbo do tema em cartaz. Digite aqui para carimbar o passaporte.
       </p>
 
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
@@ -82,13 +82,6 @@ export default function ClaimStampForm({ busy, onClaim }: ClaimStampFormProps) {
         </p>
       )}
 
-      <p className="mt-5 flex items-start gap-2 rounded-2xl bg-white/60 p-3 text-xs text-brand-ink/60">
-        <Info size={14} className="mt-0.5 shrink-0" />
-        <span>
-          Modo demonstração: use o código <strong className="text-brand-indigo">FNT-BRIDGERTON</strong>. Na versão final, o
-          código será validado no servidor.
-        </span>
-      </p>
     </form>
   );
 }

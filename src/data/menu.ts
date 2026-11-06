@@ -7,7 +7,7 @@ export const menuCategories: MenuCategory[] = [
   { id: 'bebidas', label: 'Bebidas', subtitle: 'Chás e brindes' },
 ];
 
-/** Cardápio fictício do tema Bridgerton. Cada tema terá o seu próprio. */
+/** Cardápio do tema Bridgerton. Cada tema terá o seu próprio. */
 export const menuItems: MenuItem[] = [
   // Entradas
   {

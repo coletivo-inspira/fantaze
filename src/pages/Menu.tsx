@@ -41,8 +41,8 @@ export default function Menu() {
       <PageHeader
         kicker={`Cardápio · ${theme.name}`}
         title="A mesa da temporada."
-        subtitle="Cada tema tem um cardápio autoral, com nomes e sabores inspirados no universo do mês. Os valores são ilustrativos nesta versão."
-        decor="swirl"
+        subtitle="Cada tema tem um cardápio autoral, com nomes e sabores inspirados no universo em cartaz."
+        decor="cutlery"
       />
 
       <ThemeScope palette={theme.palette}>

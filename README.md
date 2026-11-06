@@ -37,12 +37,12 @@ src/
 public/                   favicon (svg/png), logo-fantaze.svg/png
 ```
 
-## Como trocar o tema do mês
+## Como trocar o tema em cartaz
 
 1. Adicione um objeto em `src/data/themes.ts` com `startsAt`/`endsAt` e a paleta do universo.
 2. Adicione o cardápio do tema em `src/data/menu.ts`.
 
-O site escolhe o tema ativo pela data atual. A paleta do tema é aplicada via variáveis CSS (`--t-*`) pelo `<ThemeScope />`; a marca usa sempre as cores `brand-*`.
+Cada tema fica em cartaz por cerca de 4 meses. O site escolhe o tema ativo pela data atual. A paleta do tema é aplicada via variáveis CSS (`--t-*`) pelo `<ThemeScope />`; a marca usa sempre as cores `brand-*`.
 
 ## Deploy no GitHub Pages
 
@@ -65,6 +65,5 @@ Detalhes:
 
 ## Observações
 
-- As ilustrações de ambientação e dos pratos são vetoriais (placeholders) até haver fotografias reais.
-- As fotos do moodboard (`src/assets/photos`) são referências do projeto; substitua por imagens com direitos de uso antes de publicar.
-- Restaurante fictício (projeto acadêmico). Marcas e universos citados pertencem aos seus detentores.
+- Fotos reais: coloque `src/assets/pratos/<id-do-prato>.jpg` (ids em `src/data/menu.ts`) e `src/assets/ambiente/{salao,jardim,cha}.jpg`. Sem foto, o site usa as ilustrações vetoriais.
+- Use apenas imagens com direitos de uso. Marcas e universos citados pertencem aos seus detentores.

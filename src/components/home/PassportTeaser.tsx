@@ -16,7 +16,7 @@ export default function PassportTeaser() {
           <SectionHeading
             kicker="Passaporte Fantazê"
             title="Um carimbo por mundo visitado."
-            subtitle="Volte todo mês, colecione os carimbos de cada tema e troque por sobremesas, jantares e outros brindes."
+            subtitle="Volte a cada novo tema, colecione os carimbos de cada universo e troque por sobremesas, jantares e outros brindes."
           />
           <Reveal delay={0.1}>
             <Button to="/passaporte" size="lg" className="mt-8" icon={<ArrowRight size={18} />}>

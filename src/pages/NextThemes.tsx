@@ -3,18 +3,17 @@ import { useVotes } from '../hooks/useVotes';
 import PageHeader from '../components/ui/PageHeader';
 import Reveal from '../components/ui/Reveal';
 import VoteCard from '../components/vote/VoteCard';
-import SuggestionForm from '../components/vote/SuggestionForm';
 
 export default function NextThemes() {
-  const { tally, myVote, loading, pendingId, vote, suggest, totalVotes } = useVotes();
+  const { tally, myVote, loading, pendingId, vote, totalVotes } = useVotes();
 
   return (
     <>
       <PageHeader
         kicker="Próximos temas"
         title="Você escolhe o próximo universo."
-        subtitle="O tema mais votado vira a ambientação do mês seguinte. Dá para trocar o voto quando quiser."
-        decor="sparkle"
+        subtitle="O tema mais votado vira a ambientação da próxima temporada. Dá para trocar o voto quando quiser."
+        decor="cards"
       />
 
       <section className="bg-brand-paper pb-16 sm:pb-24">
@@ -22,7 +21,7 @@ export default function NextThemes() {
           <Reveal className="mb-10 grid gap-4 sm:grid-cols-3">
             <Stat label="Votos até agora" value={loading ? '…' : totalVotes.toLocaleString('pt-BR')} />
             <Stat label="Universos na disputa" value={loading ? '…' : String(tally.length)} />
-            <Stat label="Votação encerra em" value="30 de novembro" />
+            <Stat label="Votação encerra em" value="28 de fevereiro" />
           </Reveal>
 
           {loading ? (
@@ -30,7 +29,7 @@ export default function NextThemes() {
               <Loader2 className="animate-spin" size={20} /> Carregando votação…
             </p>
           ) : (
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
               {tally.map((option, i) => (
                 <VoteCard
                   key={option.id}
@@ -46,13 +45,6 @@ export default function NextThemes() {
             </div>
           )}
 
-          <Reveal className="mt-14">
-            <SuggestionForm onSuggest={suggest} />
-          </Reveal>
-
-          <p className="mt-6 text-center text-xs text-brand-ink/50">
-            Nesta versão os votos ficam salvos apenas no seu navegador. Os números iniciais são fictícios.
-          </p>
         </div>
       </section>
     </>

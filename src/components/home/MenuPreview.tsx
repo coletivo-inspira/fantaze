@@ -19,7 +19,7 @@ export default function MenuPreview() {
             <SectionHeading
               kicker={`Cardápio ${theme.name}`}
               title="Pratos que contam a história."
-              subtitle="Uma seleção das criações assinatura deste mês. Todas com ingredientes frescos e muita fantasia."
+              subtitle="Uma seleção das criações assinatura do tema em cartaz. Todas com ingredientes frescos e muita fantasia."
             />
             <Reveal>
               <Button to="/cardapio" variant="ghost" size="lg" icon={<ArrowRight size={18} />}>

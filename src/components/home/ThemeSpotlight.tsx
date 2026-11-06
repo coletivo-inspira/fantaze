@@ -1,10 +1,10 @@
 import { ArrowRight } from 'lucide-react';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
-import { formatPeriod } from '../../lib/format';
+import { formatShortDate } from '../../lib/format';
 import Button from '../ui/Button';
 import Reveal from '../ui/Reveal';
 import ThemeScope from '../ui/ThemeScope';
-import ThemeScene from '../theme/ThemeScene';
+import ScenePhoto from '../theme/ScenePhoto';
 import ThemeCountdown from '../theme/ThemeCountdown';
 
 export default function ThemeSpotlight() {
@@ -17,7 +17,7 @@ export default function ThemeSpotlight() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 md:px-10 lg:grid-cols-2">
           <Reveal>
             <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-[var(--t-gold)]">
-              Tema do mês · {formatPeriod(theme.startsAt, theme.endsAt)}
+              Em cartaz · até {formatShortDate(theme.endsAt)}
             </span>
             <h2 className="mt-4 break-words font-theme text-5xl font-semibold italic leading-none text-[var(--t-ink)] sm:text-7xl lg:text-8xl">
               {theme.name}
@@ -44,13 +44,13 @@ export default function ThemeSpotlight() {
 
           <Reveal delay={0.15} className="relative mx-auto grid w-full max-w-lg grid-cols-2 gap-4">
             <div className="col-span-2 aspect-[16/9] overflow-hidden rounded-[2rem] border-4 border-white shadow-xl">
-              <ThemeScene kind="ballroom" className="h-full w-full" />
+              <ScenePhoto kind="ballroom" alt="Salão de baile" className="h-full w-full" />
             </div>
             <div className="aspect-square overflow-hidden rounded-[2rem] border-4 border-white shadow-xl">
-              <ThemeScene kind="garden" className="h-full w-full" />
+              <ScenePhoto kind="garden" alt="Jardim das rosas" className="h-full w-full" />
             </div>
             <div className="aspect-square overflow-hidden rounded-[2rem] border-4 border-white shadow-xl">
-              <ThemeScene kind="tea" className="h-full w-full" />
+              <ScenePhoto kind="tea" alt="Salão de chá" className="h-full w-full" />
             </div>
           </Reveal>
         </div>

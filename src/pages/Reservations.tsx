@@ -16,7 +16,7 @@ export default function Reservations() {
         kicker="Reservas"
         title="Garanta sua mesa no próximo mundo."
         subtitle="Em três passos: escolha o dia e o horário, deixe seus dados e confirme a solicitação."
-        decor="wings"
+        decor="plate"
       />
 
       <section className="bg-brand-paper pb-16 sm:pb-24">

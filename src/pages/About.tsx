@@ -34,7 +34,7 @@ export default function About() {
         kicker="Sobre o Fantazê"
         title="Um lugar para quem acredita em outros mundos."
         subtitle={restaurant.essence}
-        decor="eyes"
+        decor="chair"
       />
 
       {/* Conceito */}
@@ -93,7 +93,7 @@ export default function About() {
 
       {/* Inspirações */}
       <section className="relative bg-brand-paper py-16 sm:py-24">
-        <Decor name="spiral" float className="right-[6%] top-10 hidden w-20 md:block" />
+        <Decor name="plate" float className="right-[6%] top-10 hidden w-20 md:block" />
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <SectionHeading
             kicker="Moodboard"
