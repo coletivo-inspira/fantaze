@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import type { MonthlyTheme } from '../../types';
+import { getCartazPhoto } from '../../lib/photos';
 import ThemeScene from './ThemeScene';
 import Decor from '../ui/Decor';
 
@@ -10,6 +11,8 @@ interface ThemePortalProps {
 
 /** “Portal” em arco que mostra o universo em cartaz, com grafismos da marca ao redor. */
 export default function ThemePortal({ theme, className }: ThemePortalProps) {
+  const photo = getCartazPhoto();
+
   return (
     <div className={className}>
       <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
@@ -19,7 +22,11 @@ export default function ThemePortal({ theme, className }: ThemePortalProps) {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="absolute inset-0 overflow-hidden rounded-t-[999px] rounded-b-[2.5rem] border-[6px] border-white shadow-[0_40px_80px_-30px_rgba(48,19,126,0.55)]"
         >
-          <ThemeScene kind="ballroom" className="h-full w-full" />
+          {photo ? (
+            <img src={photo} alt={`Ambiente do tema ${theme.name}`} className="h-full w-full object-cover object-top" />
+          ) : (
+            <ThemeScene kind="ballroom" className="h-full w-full" />
+          )}
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-indigo/85 to-transparent px-6 pb-6 pt-16 text-center text-white">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-brand-amber">Em cartaz</p>
             <p className="font-theme text-4xl font-semibold italic">{theme.name}</p>

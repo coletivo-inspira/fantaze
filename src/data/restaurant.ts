@@ -12,7 +12,7 @@ export const restaurant = {
   },
   phone: '(31) 99999-0000',
   email: 'ola@fantaze.com.br',
-  instagram: 'fantaze.restaurante',
+  instagram: 'fantaze',
   hours: [
     { days: 'Segunda', time: 'Fechado', closed: true },
     { days: 'Terça a quinta', time: '18h às 23h' },

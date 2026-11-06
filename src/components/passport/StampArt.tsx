@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { grafismos } from '../ui/grafismos';
+import logo from '../../assets/logo-completa.svg';
 
 interface StampArtProps {
   name: string;
@@ -8,33 +8,36 @@ interface StampArtProps {
   className?: string;
 }
 
-/** Carimbo circular do tema: texto em arco, borboleta ao centro e mês na base. */
+/** Carimbo circular do tema: nome em arco, logo do Fantazê ao centro e identificação na base. */
 export default function StampArt({ name, month, colors, className }: StampArtProps) {
   const uid = useId().replace(/:/g, '');
   const [ink, accent] = colors;
-  const label = `FANTAZÊ ✦ ${name.toUpperCase()} ✦`;
+  const label = `✦ ${name.toUpperCase()} ✦`;
+  // O arco superior tem ~140 unidades de comprimento: reduz a fonte para nomes longos
+  const topSize = Math.min(10, 128 / (label.length * 0.82));
 
   return (
     <svg viewBox="0 0 120 120" className={className} role="img" aria-label={`Carimbo ${name}, ${month}`}>
       <defs>
-        <path id={`top-${uid}`} d="M60,60 m-45,0 a45,45 0 1,1 90,0" />
-        <path id={`bot-${uid}`} d="M13,60 a47,47 0 0,0 94,0" />
+        <path id={`top-${uid}`} d="M60,60 m-44,0 a44,44 0 1,1 88,0" />
+        <path id={`bot-${uid}`} d="M14,60 a46,46 0 0,0 92,0" />
       </defs>
       <circle cx="60" cy="60" r="56" fill="none" stroke={ink} strokeWidth="3" />
-      <circle cx="60" cy="60" r="51" fill="none" stroke={ink} strokeWidth="1" strokeDasharray="2 3" />
-      <circle cx="60" cy="60" r="31" fill={accent} opacity=".22" />
-      <circle cx="60" cy="60" r="31" fill="none" stroke={ink} strokeWidth="1.5" />
-      <text fill={ink} fontSize="9.5" fontWeight="800" letterSpacing="1.6" style={{ fontFamily: 'Nunito, sans-serif' }}>
+      <circle cx="60" cy="60" r="52" fill="none" stroke={ink} strokeWidth="0.8" strokeDasharray="2 3" />
+      <circle cx="60" cy="60" r="32" fill="#fff" fillOpacity=".55" />
+      <circle cx="60" cy="60" r="32" fill={accent} opacity=".15" />
+      <circle cx="60" cy="60" r="32" fill="none" stroke={ink} strokeWidth="1.5" />
+      <text fill={ink} fontSize={topSize} fontWeight="800" letterSpacing="1" style={{ fontFamily: 'Nunito, sans-serif' }}>
         <textPath href={`#top-${uid}`} startOffset="50%" textAnchor="middle">
           {label}
         </textPath>
       </text>
-      <text fill={ink} fontSize="9" fontWeight="800" letterSpacing="1.8" style={{ fontFamily: 'Nunito, sans-serif' }}>
+      <text fill={ink} fontSize="8.5" fontWeight="800" letterSpacing="1.6" style={{ fontFamily: 'Nunito, sans-serif' }}>
         <textPath href={`#bot-${uid}`} startOffset="50%" textAnchor="middle">
           {month.toUpperCase()}
         </textPath>
       </text>
-      <image href={grafismos.wing} x="38" y="38" width="44" height="44" preserveAspectRatio="xMidYMid meet" />
+      <image href={logo} x="34" y="42" width="52" height="28" preserveAspectRatio="xMidYMid meet" />
     </svg>
   );
 }

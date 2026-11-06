@@ -2,30 +2,14 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import LogoPrincipal from '../ui/LogoPrincipal';
 
-const SESSION_KEY = 'fantaze:splash';
-
-function alreadySeen() {
-  try {
-    return window.sessionStorage.getItem(SESSION_KEY) === '1';
-  } catch {
-    return false;
-  }
-}
-
-/** Abertura do “portal”: aparece só na primeira entrada da sessão (aba/navegador aberto). */
+/** Abertura do “portal”: aparece toda vez que o site é aberto (ou recarregado). */
 export default function Splash() {
-  const [show, setShow] = useState(() => !alreadySeen());
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
-    if (!show) return;
-    try {
-      window.sessionStorage.setItem(SESSION_KEY, '1');
-    } catch {
-      /* sem persistência: a abertura roda de novo, sem problema */
-    }
     const t = setTimeout(() => setShow(false), 2200);
     return () => clearTimeout(t);
-  }, [show]);
+  }, []);
 
   return (
     <AnimatePresence>

@@ -35,3 +35,6 @@ const sceneFileName = { ballroom: 'salao', garden: 'jardim', tea: 'cha' } as con
 
 export const getScenePhoto = (kind: keyof typeof sceneFileName): string | undefined =>
   scenePhotos[sceneFileName[kind]];
+
+/** Foto do portal “Em cartaz” da home: src/assets/ambiente/cartaz.jpg */
+export const getCartazPhoto = (): string | undefined => scenePhotos['cartaz'];
