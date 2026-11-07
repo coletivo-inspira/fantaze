@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fantazê — Proposta de marca (opções 4)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --indigo:#1E0B5A; --purple:#4A1B7A; --ivory:#FBF6EE; --gold:#C9A25B; --peach:#F8DFDA;
+    --serif:'Bodoni Moda','Playfair Display',Georgia,serif;
+    --sans:'Jost',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--ivory);color:var(--indigo);font-family:var(--sans);line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header.top{padding:56px 0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
+  h1,h2{font-family:var(--serif);font-weight:600}
+  h1{font-size:clamp(28px,5vw,44px)}
+  .lead{max-width:660px;opacity:.8;margin-top:10px}
+  section.opt{padding:44px 0;border-top:1px solid rgba(30,11,90,.12)}
+  .head{display:flex;gap:14px;align-items:baseline;margin-bottom:6px}
+  .num{font-family:var(--serif);font-size:34px;color:var(--gold)}
+  h2{font-size:24px}
+  .why{max-width:640px;opacity:.78;margin-bottom:20px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{border-radius:6px;padding:40px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:320px}
+  .dark{background:var(--indigo);color:var(--ivory)}
+  .light{background:#fff;color:var(--indigo);border:1px solid rgba(30,11,90,.12)}
+  .sym{display:block;height:auto}
+  .gold{color:var(--gold)}
+  .wm{font-family:var(--serif);font-weight:500;letter-spacing:.26em;padding-left:.26em;line-height:1}
+  .ds{font-size:10px;letter-spacing:.38em;text-transform:uppercase;padding-left:.38em;margin-top:12px}
+  .rule{display:flex;align-items:center;gap:10px;width:200px;margin:12px auto 0;color:var(--gold)}
+  .rule::before,.rule::after{content:"";flex:1;height:1px;background:currentColor}
+  .rule i{width:5px;height:5px;background:currentColor;transform:rotate(45deg)}
+  /* wordmark com A em arco */
+  .wm4{font-family:var(--sans);font-weight:300;letter-spacing:.2em;padding-left:.2em;line-height:1;white-space:nowrap}
+  .wm4 svg{display:inline-block;height:.7em;width:.62em;vertical-align:baseline;margin:0 .1em}
+  /* ícones de app */
+  .icons{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}
+  .ic{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12px;opacity:.9}
+  .tile{background:var(--peach);color:var(--indigo);display:grid;place-items:center;border-radius:22%}
+  .tile.dk{background:var(--indigo);color:var(--ivory)}
+  .small{font-size:12px;opacity:.7;margin-top:10px}
+  .rec{background:#fff;border:1px solid rgba(30,11,90,.12);border-radius:6px;padding:24px;max-width:720px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="spark" viewBox="0 0 100 100"><path d="M50 2 Q56 44 98 50 Q56 56 50 98 Q44 56 2 50 Q44 44 50 2Z"/></symbol>
+
+    <!-- 13 F que nasce do arco (portal) -->
+    <symbol id="f1" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
+        <path d="M30 88 V44 A24 24 0 0 1 78 44"/>
+        <path d="M30 60 H62"/>
+      </g>
+      <g fill="none" style="stroke:var(--gold)" stroke-width="1.8" stroke-linecap="round">
+        <path d="M78 44 V88"/><path d="M20 88 H88"/>
+      </g>
+      <circle cx="58" cy="76" r="6" style="fill:var(--gold)"/>
+    </symbol>
+
+    <!-- 14 F com faísca no braço -->
+    <symbol id="f2" viewBox="0 0 100 100">
+      <g fill="currentColor">
+        <rect x="34" y="14" width="9" height="74"/>
+        <rect x="26" y="14" width="17" height="3.4"/>
+        <rect x="43" y="14" width="36" height="3.4"/>
+        <rect x="77" y="14" width="3" height="15"/>
+        <rect x="43" y="49" width="22" height="3"/>
+        <rect x="24" y="85" width="29" height="3.4"/>
+      </g>
+      <use href="#spark" x="63" y="40" width="22" height="22" style="fill:var(--gold)"/>
+    </symbol>
+
+    <!-- 15 F cortina -->
+    <symbol id="f3" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <path d="M33 22 C29 42 37 66 33 88" stroke-width="4.4"/>
+        <path d="M41 24 C37 44 45 64 41 88" stroke-width="2.4"/>
+        <path d="M48 26 C45 44 51 64 48 88" stroke-width="1.6" opacity=".6"/>
+        <path d="M33 18 C50 34 72 34 86 14" stroke-width="4.4"/>
+        <path d="M37 28 C52 40 70 40 82 24" stroke-width="1.6" opacity=".55"/>
+        <path d="M48 58 H70" stroke-width="3"/>
+        <path d="M24 90 H62" stroke-width="2"/>
+      </g>
+      <circle cx="72" cy="58" r="3.2" style="fill:var(--gold)"/>
+      <path d="M72 62 V72" stroke-width="1.6" stroke-linecap="round" style="stroke:var(--gold)"/>
+    </symbol>
+
+    <!-- 17 F estrela cadente -->
+    <symbol id="f5" viewBox="0 0 100 100">
+      <g fill="currentColor">
+        <rect x="34" y="18" width="9" height="70"/>
+        <rect x="26" y="18" width="17" height="3.4"/>
+        <rect x="43" y="49" width="22" height="3"/>
+        <rect x="63" y="44" width="2.6" height="13"/>
+        <rect x="24" y="85" width="29" height="3.4"/>
+        <path d="M43 18 C58 18 72 15 84 9 L84.4 10.8 C73 18 58 22 43 21.4 Z" style="fill:var(--gold)"/>
+      </g>
+      <use href="#spark" x="79" y="2" width="17" height="17" style="fill:var(--gold)"/>
+      <circle cx="64" cy="9" r="1.2" style="fill:var(--gold)"/><circle cx="52" cy="10" r=".9" style="fill:var(--gold)"/>
+    </symbol>
+
+    <!-- 18 F com portal dentro -->
+    <symbol id="f6" viewBox="0 0 100 100">
+      <g fill="currentColor">
+        <rect x="26" y="14" width="9" height="74"/>
+        <rect x="18" y="14" width="17" height="3.4"/>
+        <rect x="35" y="14" width="46" height="3.4"/>
+        <rect x="79" y="14" width="3" height="16"/>
+        <rect x="35" y="46" width="30" height="3"/>
+        <rect x="63" y="41" width="2.6" height="13"/>
+        <rect x="16" y="85" width="29" height="3.4"/>
+      </g>
+      <g fill="none" style="stroke:var(--gold)" stroke-width="2" stroke-linecap="round">
+        <path d="M48 85 V72 A12 12 0 0 1 72 72 V85"/>
+        <path d="M54 85 V73 A6 6 0 0 1 66 73 V85" opacity=".6"/>
+        <path d="M44 85 H76"/>
+      </g>
+      <circle cx="60" cy="66" r="2" style="fill:var(--gold)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Fantazê · Proposta de marca</div>
+    <h1>O ícone dentro da letra (13 a 18)</h1>
+    <p class="lead">Aqui o símbolo não fica ao lado do nome: ele nasce da letra, como a borboleta que se ligava ao F. As letras são desenhadas à mão (em vetor), então cada uma pode ser ajustada depois.</p>
+  </div>
+</header>
+
+<!-- 13 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">13</span><h2>F que nasce do arco</h2></div>
+  <p class="why">A haste e o braço de cima do F formam o arco de um portal; a perna direita do arco é fina e dourada, e uma lua repousa no vão. Um símbolo só, que é letra e porta ao mesmo tempo.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym" style="width:120px"><use href="#f1"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:120px"><use href="#f1"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 14 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">14</span><h2>F com faísca no braço</h2></div>
+  <p class="why">Um F de serifa clássica (estilo Bodoni) em que o braço do meio termina numa estrela de quatro pontas. É a opção mais discreta: lê-se "F" primeiro e a magia aparece depois.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym" style="width:120px"><use href="#f2"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:120px"><use href="#f2"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 15 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">15</span><h2>F de cortina</h2></div>
+  <p class="why">A haste é uma cortina com pregas, o braço de cima é o drapeado do palco e o braço do meio é a presilha da cortina, com uma borla dourada. Mais teatral e ornamentado.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym" style="width:120px"><use href="#f3"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:120px"><use href="#f3"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 16 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">16</span><h2>Os "A" viram portais</h2></div>
+  <p class="why">Sem símbolo separado: os dois A de FANTAZÊ são arcos de porta, com a travessa em dourado. O nome inteiro vira a logo, em tipografia fina e moderna. Quem lê entende "FANTAZÊ", e quem olha de perto vê as portas.</p>
+  <div class="grid">
+    <div class="card dark">
+      <div class="wm4" style="font-size:44px">F<svg viewBox="0 0 62 70"><path d="M6 70 V28 A25 25 0 0 1 56 28 V70" fill="none" stroke="currentColor" stroke-width="6"/><path d="M6 50 H56" stroke="var(--gold)" stroke-width="5" fill="none"/></svg>NT<svg viewBox="0 0 62 70"><path d="M6 70 V28 A25 25 0 0 1 56 28 V70" fill="none" stroke="currentColor" stroke-width="6"/><path d="M6 50 H56" stroke="var(--gold)" stroke-width="5" fill="none"/></svg>ZÊ</div>
+      <div class="rule"><i></i></div><div class="ds gold">Restaurante Cênico</div>
+    </div>
+    <div class="card light">
+      <div class="wm4" style="font-size:44px">F<svg viewBox="0 0 62 70"><path d="M6 70 V28 A25 25 0 0 1 56 28 V70" fill="none" stroke="currentColor" stroke-width="6"/><path d="M6 50 H56" stroke="var(--gold)" stroke-width="5" fill="none"/></svg>NT<svg viewBox="0 0 62 70"><path d="M6 70 V28 A25 25 0 0 1 56 28 V70" fill="none" stroke="currentColor" stroke-width="6"/><path d="M6 50 H56" stroke="var(--gold)" stroke-width="5" fill="none"/></svg>ZÊ</div>
+      <div class="rule"><i></i></div><div class="ds">Restaurante Cênico</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 17 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">17</span><h2>F estrela cadente</h2></div>
+  <p class="why">O braço de cima do F se alonga num rastro dourado que termina numa estrela. Tem movimento, remete a desejo e fantasia, e ainda é um F legível.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym" style="width:120px"><use href="#f5"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:120px"><use href="#f5"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 18 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">18</span><h2>F com portal dentro</h2></div>
+  <p class="why">Um F clássico em que o espaço abaixo do braço do meio guarda um pequeno portal com uma luz. É a ideia literal de "um mundo dentro da letra", e a que mais lembra o encaixe da antiga borboleta no F.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym" style="width:120px"><use href="#f6"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:120px"><use href="#f6"/></svg><div class="wm" style="font-size:32px;margin-top:10px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<section class="opt"><div class="wrap">
+  <div class="eyebrow">Teste de tamanho</div>
+  <h2 style="margin-bottom:6px">Como cada F fica como favicon / ícone de app</h2>
+  <p class="why">O ícone atual do site é o símbolo sobre um quadrado pêssego. Aqui, o teste em 72 px e em 32 px.</p>
+  <div class="icons">
+    <div class="ic"><div class="tile" style="width:72px;height:72px"><svg class="sym" style="width:48px"><use href="#f1"/></svg></div><div class="tile" style="width:32px;height:32px"><svg class="sym" style="width:22px"><use href="#f1"/></svg></div>13</div>
+    <div class="ic"><div class="tile" style="width:72px;height:72px"><svg class="sym" style="width:48px"><use href="#f2"/></svg></div><div class="tile" style="width:32px;height:32px"><svg class="sym" style="width:22px"><use href="#f2"/></svg></div>14</div>
+    <div class="ic"><div class="tile" style="width:72px;height:72px"><svg class="sym" style="width:48px"><use href="#f3"/></svg></div><div class="tile" style="width:32px;height:32px"><svg class="sym" style="width:22px"><use href="#f3"/></svg></div>15</div>
+    <div class="ic"><div class="tile" style="width:72px;height:72px"><svg class="sym" style="width:48px"><use href="#f5"/></svg></div><div class="tile" style="width:32px;height:32px"><svg class="sym" style="width:22px"><use href="#f5"/></svg></div>17</div>
+    <div class="ic"><div class="tile" style="width:72px;height:72px"><svg class="sym" style="width:48px"><use href="#f6"/></svg></div><div class="tile" style="width:32px;height:32px"><svg class="sym" style="width:22px"><use href="#f6"/></svg></div>18</div>
+    <div class="ic"><div class="tile dk" style="width:72px;height:72px"><svg class="sym" style="width:48px"><use href="#f1"/></svg></div><div class="tile dk" style="width:32px;height:32px"><svg class="sym" style="width:22px"><use href="#f1"/></svg></div>13 escuro</div>
+  </div>
+</div></section>
+
+<section class="opt" style="padding-bottom:80px"><div class="wrap">
+  <div class="rec">
+    <h2 style="margin-bottom:8px">Minha escolha desta rodada</h2>
+    <p>A <b>13 (F que nasce do arco)</b>: é a que une letra e portal com mais clareza e continua legível pequena. A <b>18</b> é a segunda, mais próxima do encaixe que a borboleta tinha. A <b>14</b> é a mais discreta, se o professor quiser algo bem sóbrio.</p>
+    <p class="small">O site real não foi alterado.</p>
+  </div>
+</div></section>
+
+</body>
+</html>

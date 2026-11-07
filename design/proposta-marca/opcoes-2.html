@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fantazê — Proposta de marca (opções 2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --indigo:#1E0B5A; --purple:#4A1B7A; --ivory:#FBF6EE; --gold:#C9A25B; --rose:#D9788C;
+    --serif:'Bodoni Moda','Playfair Display',Georgia,serif;
+    --sans:'Jost',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--ivory);color:var(--indigo);font-family:var(--sans);line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header.top{padding:56px 0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
+  h1,h2{font-family:var(--serif);font-weight:600}
+  h1{font-size:clamp(28px,5vw,44px)}
+  .lead{max-width:660px;opacity:.8;margin-top:10px}
+  section.opt{padding:44px 0;border-top:1px solid rgba(30,11,90,.12)}
+  .head{display:flex;gap:14px;align-items:baseline;margin-bottom:6px}
+  .num{font-family:var(--serif);font-size:34px;color:var(--gold)}
+  h2{font-size:24px}
+  .why{max-width:640px;opacity:.78;margin-bottom:20px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{border-radius:6px;padding:40px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:300px}
+  .dark{background:var(--indigo);color:var(--ivory)}
+  .light{background:#fff;color:var(--indigo);border:1px solid rgba(30,11,90,.12)}
+  .sym{display:block;height:auto}
+  .wm{font-family:var(--serif);font-weight:500;letter-spacing:.26em;padding-left:.26em;line-height:1}
+  .ds{font-size:10px;letter-spacing:.38em;text-transform:uppercase;padding-left:.38em;margin-top:12px}
+  .gold{color:var(--gold)}
+  .rule{display:flex;align-items:center;gap:10px;width:200px;margin:12px auto 0;color:var(--gold)}
+  .rule::before,.rule::after{content:"";flex:1;height:1px;background:currentColor}
+  .rule i{width:5px;height:5px;background:currentColor;transform:rotate(45deg)}
+  .it{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;letter-spacing:.01em}
+  .pal{padding:44px 0 80px;border-top:1px solid rgba(30,11,90,.12)}
+  .chips{display:flex;gap:6px;margin-top:14px}
+  .chips span{width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.25)}
+  .light .chips span{border-color:rgba(0,0,0,.15)}
+  .small{font-size:12px;opacity:.7;margin-top:10px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 1 Portal & prato -->
+    <symbol id="s1" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M20 90 V46 A30 30 0 0 1 80 46 V90"/><path d="M27 90 V46 A23 23 0 0 1 73 46 V90" opacity=".5"/>
+      <path d="M10 90 H90"/><circle cx="50" cy="56" r="13"/><circle cx="50" cy="56" r="8" opacity=".6"/></g></symbol>
+    <!-- 2 Fechadura -->
+    <symbol id="s2" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 90 V46 A30 30 0 0 1 80 46 V90"/><path d="M10 90 H90"/>
+      <circle cx="50" cy="52" r="7"/><path d="M46.5 58 L44 76 H56 L53.5 58"/></g></symbol>
+    <!-- 3 Ingresso -->
+    <symbol id="s3" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 28 H90 V42 A8 8 0 0 0 90 58 V72 H10 V58 A8 8 0 0 0 10 42 Z"/>
+      <path d="M68 28 V72" stroke-dasharray="2.5 3.5"/>
+      <path d="M38 36 Q40 48 52 50 Q40 52 38 64 Q36 52 24 50 Q36 48 38 36Z"/>
+      <path d="M76 44 H84 M76 50 H84 M76 56 H84" opacity=".5"/></g></symbol>
+    <!-- 4 Cortina -->
+    <symbol id="s4" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M8 20 Q50 4 92 20"/>
+      <path d="M12 21 Q30 52 14 90"/><path d="M26 18 Q40 52 28 90"/>
+      <path d="M88 21 Q70 52 86 90"/><path d="M74 18 Q60 52 72 90"/>
+      <path d="M8 90 H92"/><circle cx="50" cy="64" r="11"/></g></symbol>
+    <!-- 5 Estrela -->
+    <symbol id="s5" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+      <circle cx="50" cy="50" r="42" opacity=".5"/>
+      <path d="M50 16 Q54 46 84 50 Q54 54 50 84 Q46 54 16 50 Q46 46 50 16Z"/>
+      <path d="M76 22 Q77 28 82 29 Q77 30 76 36 Q75 30 70 29 Q75 28 76 22Z" fill="currentColor" stroke="none"/></g></symbol>
+    <!-- 6 Monograma -->
+    <symbol id="s6" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.4">
+      <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="39" opacity=".5"/></g>
+      <text x="50" y="68" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-size="54" font-weight="500" fill="currentColor">F</text>
+      <path d="M50 18 Q51 23 56 24 Q51 25 50 30 Q49 25 44 24 Q49 23 50 18Z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Fantazê · Proposta de marca</div>
+    <h1>Seis símbolos além da borboleta</h1>
+    <p class="lead">Todos usam o conceito do restaurante: um lugar que se abre para outro mundo a cada temporada, entre cinema, teatro e mesa. Cada opção aparece em fundo escuro e claro.</p>
+  </div>
+</header>
+
+<!-- 1 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">1</span><h2>Portal &amp; Prato</h2></div>
+  <p class="why">Um arco de porta com um prato (ou lua) surgindo no centro. Junta os dois pilares do conceito: o portal para outro mundo e a mesa. É o símbolo mais fiel ao site, que já usa portais em arco.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym gold" style="width:96px"><use href="#s1"/></svg><div class="wm" style="font-size:34px;margin-top:14px">FANTAZÊ</div><div class="rule"><i></i></div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:96px;color:var(--gold)"><use href="#s1"/></svg><div class="wm" style="font-size:34px;margin-top:14px">FANTAZÊ</div><div class="rule"><i></i></div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 2 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">2</span><h2>Fechadura</h2></div>
+  <p class="why">Um arco com buraco de fechadura: a porta para outro mundo, com um toque de mistério. Fica elegante e adulto, e abre espaço para o slogan "abra a porta para a próxima temporada".</p>
+  <div class="grid">
+    <div class="card dark"><div class="horiz" style="display:flex;align-items:center;gap:16px"><svg class="sym gold" style="width:70px"><use href="#s2"/></svg><div style="text-align:left"><div class="wm" style="font-size:28px">FANTAZÊ</div><div class="ds gold" style="padding-left:0">Restaurante Cênico</div></div></div></div>
+    <div class="card light"><div style="display:flex;align-items:center;gap:16px"><svg class="sym" style="width:70px;color:var(--gold)"><use href="#s2"/></svg><div style="text-align:left"><div class="wm" style="font-size:28px">FANTAZÊ</div><div class="ds" style="padding-left:0">Restaurante Cênico</div></div></div></div>
+  </div>
+</div></section>
+
+<!-- 3 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">3</span><h2>Ingresso</h2></div>
+  <p class="why">Um bilhete de cinema com uma estrela de fantasia. Remete a "em cartaz" e ao passaporte de carimbos, e é um símbolo que serve também como elemento gráfico (cupons, brindes, convites).</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym gold" style="width:110px"><use href="#s3"/></svg><div class="wm" style="font-size:34px;margin-top:6px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:110px;color:var(--gold)"><use href="#s3"/></svg><div class="wm" style="font-size:34px;margin-top:6px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 4 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">4</span><h2>Cortina de palco</h2></div>
+  <p class="why">Duas cortinas abertas revelando um prato-lua. É o símbolo mais teatral: a "estreia" de cada temporada. Funciona muito bem em fachada, cardápio e uniforme.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym gold" style="width:96px"><use href="#s4"/></svg><div class="wm" style="font-size:34px;margin-top:14px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:96px;color:var(--gold)"><use href="#s4"/></svg><div class="wm" style="font-size:34px;margin-top:14px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 5 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">5</span><h2>Estrela de fantasia</h2></div>
+  <p class="why">Uma estrela de quatro pontas dentro de um círculo fino. Ligação direta com o nome (fantasia, magia) sem ser infantil, porque o traço é fino e o dourado é sóbrio. Também é o mais simples de reproduzir em tamanhos pequenos.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym gold" style="width:90px"><use href="#s5"/></svg><div class="wm it" style="font-size:52px;margin-top:14px;letter-spacing:.02em;padding-left:0">Fantazê</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:90px;color:var(--gold)"><use href="#s5"/></svg><div class="wm it" style="font-size:52px;margin-top:14px;letter-spacing:.02em;padding-left:0">Fantazê</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">6</span><h2>Monograma F</h2></div>
+  <p class="why">Um "F" clássico num selo circular, com uma faísca no lugar de um ornamento. Estilo casa de alta gastronomia: o mais sóbrio e premium de todos, e ótimo para carimbo, lacre e embalagem.</p>
+  <div class="grid">
+    <div class="card dark"><svg class="sym gold" style="width:96px"><use href="#s6"/></svg><div class="wm" style="font-size:30px;margin-top:14px">FANTAZÊ</div><div class="ds gold">Restaurante Cênico</div></div>
+    <div class="card light"><svg class="sym" style="width:96px;color:var(--gold)"><use href="#s6"/></svg><div class="wm" style="font-size:30px;margin-top:14px">FANTAZÊ</div><div class="ds">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- Paletas -->
+<section class="pal"><div class="wrap">
+  <div class="eyebrow">Outras paletas</div>
+  <h2 style="margin-bottom:6px">Três climas de cor com o mesmo símbolo</h2>
+  <p class="why">Mesma logo (Portal &amp; Prato), cores diferentes. A primeira é a que já propus; as outras duas são mais ousadas.</p>
+  <div class="grid">
+    <div class="card" style="background:#1E0B5A;color:#FBF6EE">
+      <svg class="sym" style="width:72px;color:#C9A25B"><use href="#s1"/></svg>
+      <div class="wm" style="font-size:26px;margin-top:12px">FANTAZÊ</div>
+      <div class="chips"><span style="background:#1E0B5A"></span><span style="background:#4A1B7A"></span><span style="background:#C9A25B"></span><span style="background:#FBF6EE"></span></div>
+      <div class="small">Índigo &amp; champagne<br>teatro clássico</div>
+    </div>
+    <div class="card" style="background:#4A0E22;color:#F6E9DC">
+      <svg class="sym" style="width:72px;color:#D8B26E"><use href="#s1"/></svg>
+      <div class="wm" style="font-size:26px;margin-top:12px">FANTAZÊ</div>
+      <div class="chips"><span style="background:#4A0E22"></span><span style="background:#7A1F3D"></span><span style="background:#D8B26E"></span><span style="background:#F6E9DC"></span></div>
+      <div class="small">Bordô &amp; ouro<br>cinema antigo, intimista</div>
+    </div>
+    <div class="card" style="background:#0F2A24;color:#F1EBDD">
+      <svg class="sym" style="width:72px;color:#C9A25B"><use href="#s1"/></svg>
+      <div class="wm" style="font-size:26px;margin-top:12px">FANTAZÊ</div>
+      <div class="chips"><span style="background:#0F2A24"></span><span style="background:#1F4A3F"></span><span style="background:#C9A25B"></span><span style="background:#F1EBDD"></span></div>
+      <div class="small">Verde-garrafa &amp; ouro<br>bosque encantado, sofisticado</div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:24px">O site real não foi alterado.</p>
+</div></section>
+
+</body>
+</html>

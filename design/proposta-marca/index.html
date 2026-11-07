@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fantazê — Proposta de marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&family=Caprasimo&family=Nunito:wght@600;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --indigo:#1E0B5A; --purple:#4A1B7A; --ivory:#FBF6EE; --gold:#C9A25B; --rose:#D9788C;
+    --serif:'Bodoni Moda','Playfair Display',Georgia,serif;
+    --sans:'Jost',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--ivory);color:var(--indigo);font-family:var(--sans);line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0;border-top:1px solid rgba(30,11,90,.12)}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
+  h1,h2{font-family:var(--serif);font-weight:600;letter-spacing:.01em}
+  h2{font-size:clamp(26px,4vw,38px);margin-bottom:8px}
+  .lead{max-width:640px;opacity:.8;margin-bottom:32px}
+  .grid{display:grid;gap:20px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{border-radius:6px;padding:40px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:300px;position:relative}
+  .tag{position:absolute;top:12px;left:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.6}
+  .dark{background:var(--indigo);color:var(--ivory)}
+  .light{background:#fff;color:var(--indigo);border:1px solid rgba(30,11,90,.12)}
+  .gold{background:var(--gold);color:var(--indigo)}
+  .purple{background:var(--purple);color:var(--ivory)}
+
+  /* HERO */
+  .hero{background:var(--indigo);color:var(--ivory);padding:90px 0 80px;text-align:center}
+  .hero .sym{width:84px;color:var(--gold);margin:0 auto 22px}
+  .hero h1{font-size:clamp(40px,9vw,92px);letter-spacing:.26em;padding-left:.26em;font-weight:500}
+  .hero .desc{margin-top:14px;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);padding-left:.42em}
+  .hero p.sub{margin:28px auto 0;max-width:520px;opacity:.8;font-family:var(--serif);font-style:italic;font-size:20px}
+
+  /* LOGOS */
+  .sym{display:block;width:100%;height:auto}
+  .wm{font-family:var(--serif);font-weight:500;letter-spacing:.26em;padding-left:.26em;line-height:1}
+  .ds{font-size:10px;letter-spacing:.38em;text-transform:uppercase;padding-left:.38em;margin-top:12px;opacity:.85}
+  .rule{display:flex;align-items:center;gap:12px;width:100%;max-width:240px;margin:12px auto 0;color:var(--gold)}
+  .rule::before,.rule::after{content:"";flex:1;height:1px;background:currentColor}
+  .rule i{width:5px;height:5px;background:currentColor;transform:rotate(45deg)}
+  .horiz{display:flex;align-items:center;gap:16px;text-align:left}
+  .horiz .wm{font-size:30px}
+  .horiz .ds{margin-top:8px}
+
+  /* PALETA */
+  .sw{border-radius:6px;overflow:hidden;border:1px solid rgba(30,11,90,.12);background:#fff}
+  .sw .c{height:110px}
+  .sw .t{padding:12px 14px;font-size:13px}
+  .sw b{display:block;font-size:14px}
+  .bar{display:flex;height:56px;border-radius:6px;overflow:hidden;margin-top:24px}
+  .bar div{display:flex;align-items:flex-end;padding:6px 10px;font-size:11px}
+
+  /* TIPO */
+  .type{background:#fff;border:1px solid rgba(30,11,90,.12);border-radius:6px;padding:28px}
+  .type small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55}
+  .t1{font-family:var(--serif);font-size:44px;line-height:1.1;margin:8px 0}
+  .t2{font-family:var(--sans);font-size:17px;margin-top:8px;max-width:420px}
+  .cormo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:34px;margin:8px 0}
+  .old{font-family:'Caprasimo',serif;font-size:40px;color:var(--rose);margin:8px 0}
+
+  /* MOCKS */
+  .site{border-radius:8px;overflow:hidden;border:1px solid rgba(30,11,90,.15);background:var(--ivory)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:var(--indigo);color:var(--ivory)}
+  .nav .logo{display:flex;align-items:center;gap:10px}
+  .nav .logo svg{width:30px;color:var(--gold)}
+  .nav .logo span{font-family:var(--serif);letter-spacing:.24em;font-size:16px}
+  .nav ul{display:flex;gap:20px;list-style:none;padding:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  .nav .btn{border:1px solid var(--gold);color:var(--gold);padding:8px 16px;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+  .mhero{padding:70px 24px;text-align:center;background:linear-gradient(180deg,var(--indigo),var(--purple));color:var(--ivory)}
+  .mhero .e{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+  .mhero h3{font-family:var(--serif);font-size:clamp(28px,5vw,48px);font-weight:500;margin:14px 0 10px}
+  .mhero p{opacity:.8;max-width:460px;margin:0 auto 24px}
+  .cta{display:inline-block;background:var(--gold);color:var(--indigo);padding:13px 28px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+  .cta.o{background:none;border:1px solid var(--gold);color:var(--gold);margin-left:10px}
+  @media(max-width:640px){.nav ul{display:none}.cta.o{margin:10px 0 0}}
+
+  /* TEMPORADA */
+  .season{border-radius:8px;padding:48px 28px;text-align:center;position:relative;overflow:hidden}
+  .season .e{font-size:11px;letter-spacing:.4em;text-transform:uppercase}
+  .season h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(36px,6vw,56px);margin:8px 0;font-weight:600}
+  .season .sm{width:44px;margin:0 auto 16px}
+  .brid{background:#EFE3F6;color:#3b2a63}
+  .brid .e{color:#8a6bb3}
+  .alt1{background:#10241F;color:#E8DCC0}.alt1 .e{color:#C9A25B}
+  .alt2{background:#2B0F1A;color:#F3DDE0}.alt2 .e{color:#D9788C}
+  .foot{padding:40px 0 70px;font-size:14px;opacity:.7}
+</style>
+</head>
+<body>
+
+<!-- Símbolo: borboleta em traço fino -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="wing" viewBox="0 0 100 80">
+      <path d="M50 38 C44 12 14 2 8 20 C4 34 26 46 50 42"/>
+      <path d="M50 43 C36 44 20 56 28 70 C38 78 48 62 50 50"/>
+      <path d="M50 38 C48 28 44 22 38 16"/>
+      <path d="M40 28 C30 24 22 24 17 28" opacity=".6"/>
+      <path d="M44 56 C38 60 34 64 32 68" opacity=".6"/>
+    </symbol>
+    <symbol id="bfly" viewBox="0 0 100 80">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#wing" width="100" height="80"/>
+        <g transform="translate(100 0) scale(-1 1)"><use href="#wing" width="100" height="80"/></g>
+        <path d="M50 34 L50 58"/>
+      </g>
+      <circle cx="50" cy="33" r="1.8" fill="currentColor"/>
+    </symbol>
+    <symbol id="arch" viewBox="0 0 120 150">
+      <g fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M10 146 V60 A50 50 0 0 1 110 60 V146"/>
+        <path d="M20 146 V60 A40 40 0 0 1 100 60 V146" opacity=".55"/>
+        <path d="M4 146 H116"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="sym"><use href="#bfly"/></svg>
+    <h1>FANTAZÊ</h1>
+    <div class="desc">Restaurante Cênico</div>
+    <p class="sub">Cada temporada, um novo mundo à mesa.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">01 · Logo</div>
+    <h2>Três formas de assinar a marca</h2>
+    <p class="lead">Mesmo nome, mesma borboleta, agora em traço fino e serifa clássica. A opção B é a que eu recomendo como principal; A e C entram como variações.</p>
+
+    <div class="grid g3">
+      <div class="card dark">
+        <span class="tag">A · Horizontal</span>
+        <div class="horiz">
+          <svg class="sym" style="width:64px;color:var(--gold)"><use href="#bfly"/></svg>
+          <div><div class="wm" style="font-size:26px">FANTAZÊ</div><div class="ds" style="color:var(--gold)">Restaurante Cênico</div></div>
+        </div>
+      </div>
+      <div class="card dark">
+        <span class="tag">B · Vertical (principal)</span>
+        <svg class="sym" style="width:78px;color:var(--gold)"><use href="#bfly"/></svg>
+        <div class="wm" style="font-size:36px;margin-top:14px">FANTAZÊ</div>
+        <div class="rule"><i></i></div>
+        <div class="ds" style="color:var(--gold)">Restaurante Cênico · BH</div>
+      </div>
+      <div class="card dark">
+        <span class="tag">C · Emblema (portal)</span>
+        <div style="position:relative;width:120px;height:150px;color:var(--gold)">
+          <svg class="sym" style="position:absolute;inset:0"><use href="#arch"/></svg>
+          <svg class="sym" style="position:absolute;left:30px;top:58px;width:60px"><use href="#bfly"/></svg>
+        </div>
+        <div class="wm" style="font-size:24px;margin-top:14px">FANTAZÊ</div>
+      </div>
+    </div>
+
+    <h2 style="font-size:24px;margin-top:48px">Versões de cor</h2>
+    <p class="lead" style="margin-bottom:20px">A logo funciona em fundo escuro, claro, dourado e em uma cor só.</p>
+    <div class="grid g3">
+      <div class="card light" style="min-height:240px">
+        <span class="tag">Sobre marfim / branco</span>
+        <svg class="sym" style="width:64px;color:var(--gold)"><use href="#bfly"/></svg>
+        <div class="wm" style="font-size:30px;margin-top:12px;color:var(--indigo)">FANTAZÊ</div>
+        <div class="ds" style="color:var(--indigo)">Restaurante Cênico</div>
+      </div>
+      <div class="card gold" style="min-height:240px">
+        <span class="tag">Sobre dourado · 1 cor</span>
+        <svg class="sym" style="width:64px"><use href="#bfly"/></svg>
+        <div class="wm" style="font-size:30px;margin-top:12px">FANTAZÊ</div>
+        <div class="ds">Restaurante Cênico</div>
+      </div>
+      <div class="card purple" style="min-height:240px">
+        <span class="tag">Sobre roxo · 1 cor</span>
+        <svg class="sym" style="width:64px"><use href="#bfly"/></svg>
+        <div class="wm" style="font-size:30px;margin-top:12px">FANTAZÊ</div>
+        <div class="ds">Restaurante Cênico</div>
+      </div>
+    </div>
+
+    <h2 style="font-size:24px;margin-top:48px">Símbolo isolado (favicon, carimbo, redes)</h2>
+    <div class="grid g3" style="margin-top:16px">
+      <div class="card" style="min-height:160px;background:var(--indigo);color:var(--gold)"><svg class="sym" style="width:56px"><use href="#bfly"/></svg></div>
+      <div class="card" style="min-height:160px;background:var(--gold);color:var(--indigo)"><svg class="sym" style="width:56px"><use href="#bfly"/></svg></div>
+      <div class="card" style="min-height:160px;background:var(--ivory);border:1px solid rgba(30,11,90,.12);color:var(--indigo)">
+        <div style="width:84px;height:84px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center"><svg class="sym" style="width:46px"><use href="#bfly"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">02 · Cores</div>
+    <h2>Paleta da marca</h2>
+    <p class="lead">Base sóbria (índigo e marfim), dourado como assinatura e rosa só em detalhes. A cor forte de cada temporada entra por cima, sem mexer na marca.</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
+      <div class="sw"><div class="c" style="background:#1E0B5A"></div><div class="t"><b>Índigo noite</b>#1E0B5A · base e texto</div></div>
+      <div class="sw"><div class="c" style="background:#4A1B7A"></div><div class="t"><b>Roxo profundo</b>#4A1B7A · apoio</div></div>
+      <div class="sw"><div class="c" style="background:#C9A25B"></div><div class="t"><b>Dourado champagne</b>#C9A25B · destaque</div></div>
+      <div class="sw"><div class="c" style="background:#FBF6EE"></div><div class="t"><b>Marfim</b>#FBF6EE · fundo claro</div></div>
+      <div class="sw"><div class="c" style="background:#D9788C"></div><div class="t"><b>Rosa-antigo</b>#D9788C · acento pontual</div></div>
+    </div>
+    <div class="eyebrow" style="margin-top:36px">Proporção de uso</div>
+    <div class="bar">
+      <div style="flex:45;background:#1E0B5A;color:#FBF6EE">Índigo 45%</div>
+      <div style="flex:30;background:#FBF6EE;border:1px solid rgba(30,11,90,.15)">Marfim 30%</div>
+      <div style="flex:12;background:#4A1B7A;color:#FBF6EE">Roxo 12%</div>
+      <div style="flex:9;background:#C9A25B">Dourado 9%</div>
+      <div style="flex:4;background:#D9788C"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">03 · Tipografia</div>
+    <h2>Fontes</h2>
+    <p class="lead">Serifa clássica nos títulos, sans limpa no texto. A Cormorant continua só no tema em cartaz.</p>
+    <div class="grid g2">
+      <div class="type">
+        <small>Atual (a que o professor achou infantil)</small>
+        <div class="old">Um novo mundo</div>
+        <div style="font-family:'Nunito',sans-serif;font-weight:600;opacity:.8">Caprasimo + Nunito: gordinha e arredondada.</div>
+      </div>
+      <div class="type">
+        <small>Proposta · Títulos — Bodoni Moda</small>
+        <div class="t1">Um novo mundo à mesa</div>
+        <small>Texto — Jost</small>
+        <div class="t2">Aromas, texturas, luz e som desenhados juntos. Cada prato conta um pedaço da história da temporada.</div>
+      </div>
+      <div class="type">
+        <small>Tema em cartaz — Cormorant Garamond itálico</small>
+        <div class="cormo">Bridgerton</div>
+        <div class="t2">Em cartaz até 28 de fevereiro.</div>
+      </div>
+      <div class="type">
+        <small>Etiquetas e botões — Jost, caixa-alta</small>
+        <div style="margin-top:14px"><span class="cta" style="font-size:11px">Reservar mesa</span><span class="cta o" style="font-size:11px">Ver cardápio</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">04 · Aplicação</div>
+    <h2>Como a home ficaria</h2>
+    <p class="lead">Esboço só para visualizar a identidade. O site de verdade não foi alterado.</p>
+    <div class="site">
+      <div class="nav">
+        <div class="logo"><svg><use href="#bfly"/></svg><span>FANTAZÊ</span></div>
+        <ul><li>Em cartaz</li><li>Cardápio</li><li>Próximos temas</li><li>Passaporte</li></ul>
+        <div class="btn">Reservar</div>
+      </div>
+      <div class="mhero">
+        <div class="e">Em cartaz · até 28 de fevereiro</div>
+        <h3>Bridgerton</h3>
+        <p>Cada temporada, um novo mundo à mesa. Ambiente, cardápio e trilha desenhados juntos.</p>
+        <span class="cta">Reservar mesa</span><span class="cta o">Ver cardápio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">05 · Temporadas</div>
+    <h2>A marca fica; o tema veste</h2>
+    <p class="lead">Cada temporada traz a própria paleta, mas assinatura, fontes e dourado permanecem. É isso que mantém o Fantazê sóbrio e ainda lúdico.</p>
+    <div class="grid g3">
+      <div class="season brid">
+        <svg class="sm" style="color:#8a6bb3"><use href="#bfly"/></svg>
+        <div class="e">Em cartaz</div><h3>Bridgerton</h3>
+        <div style="font-size:13px;opacity:.7">Lavanda, creme e cetim</div>
+      </div>
+      <div class="season alt1">
+        <svg class="sm" style="color:#C9A25B"><use href="#bfly"/></svg>
+        <div class="e">Próxima</div><h3>Floresta Encantada</h3>
+        <div style="font-size:13px;opacity:.7">Verde-musgo e dourado</div>
+      </div>
+      <div class="season alt2">
+        <svg class="sm" style="color:#D9788C"><use href="#bfly"/></svg>
+        <div class="e">Próxima</div><h3>Noite em Paris</h3>
+        <div style="font-size:13px;opacity:.7">Vinho e rosa-antigo</div>
+      </div>
+    </div>
+    <p class="foot">Os nomes das temporadas futuras são só exemplos para mostrar a variação de paleta.</p>
+  </div>
+</section>
+
+</body>
+</html>
