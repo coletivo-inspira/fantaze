@@ -1,24 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Paleta oficial da marca Fantazê */
-  --color-brand-indigo: #30137e;
-  --color-brand-purple: #7917b0;
-  --color-brand-blue: #3c7fdd;
-  --color-brand-cream: #f6dfd9;
+  /* Paleta oficial da marca Fantazê: vermelho e laranja (da logo da asa) */
+  --color-brand-indigo: #8e1a1f; /* vermelho profundo: fundos escuros e títulos */
+  --color-brand-purple: #d8302a; /* vermelho vivo: destaques e botões */
+  --color-brand-blue: #f26b2d; /* laranja */
+  --color-brand-cream: #fbdccb;
   --color-brand-amber: #ffb86f;
-  --color-brand-pink: #fc7893;
-  --color-brand-peach: #f8dfda;
+  --color-brand-pink: #ff6b4a; /* coral */
+  --color-brand-peach: #fde4d6;
   --color-brand-sand: #ffe6c2;
   --color-brand-paper: #fff8f4;
-  --color-brand-ink: #1e0b5a;
+  --color-brand-ink: #3d0f12; /* texto */
 
   --font-display: 'Caprasimo', 'Cooper Black', serif;
   --font-sans: 'Nunito', system-ui, sans-serif;
   --font-theme: 'Cormorant Garamond', Georgia, serif;
 
   --animate-flap-l: flap-l 1.6s ease-in-out infinite;
-  --animate-flap-r: flap-r 1.6s ease-in-out infinite;
   --animate-float: float 6s ease-in-out infinite;
   --animate-marquee: marquee 38s linear infinite;
   --animate-twinkle: twinkle 3.2s ease-in-out infinite;
@@ -33,10 +32,6 @@
 @keyframes flap-l {
   0%, 100% { transform: scaleX(1) rotate(0deg); }
   50% { transform: scaleX(0.62) rotate(6deg); }
-}
-@keyframes flap-r {
-  0%, 100% { transform: scaleX(1) rotate(0deg); }
-  50% { transform: scaleX(0.62) rotate(-6deg); }
 }
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -97,9 +92,8 @@ img, svg, video {
   color: white;
 }
 
-/* Wings do logo: pivô na dobradiça */
-.wing-l { transform-origin: 13.6% 47.4%; }
-.wing-r { transform-origin: 89.3% 51.9%; }
+/* Asa do logo: pivô na base da asa */
+.wing-l { transform-origin: 13.4% 62.8%; }
 
 /* Scroll horizontal sem barra */
 .no-scrollbar::-webkit-scrollbar { display: none; }

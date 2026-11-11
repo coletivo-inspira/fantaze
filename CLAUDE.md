@@ -25,11 +25,12 @@ Depois de qualquer mudança, rode `npx tsc -b && npx eslint . && npx vite build`
 
 ## Regras da marca (não contradizer sem consultar o usuário)
 
-- **Logo principal** (`src/assets/logo-completa.svg`, componente `LogoPrincipal`): usar sempre nas cores reais, nunca recolorir. Navbar, splash e centro dos carimbos usam essa logo.
-- **Rodapé** mantém a logo secundária branca de duas asas (`Logo.tsx`). Não alterar.
-- **Favicon** = símbolo (asa com F) sobre quadrado arredondado pêssego (`public/favicon.svg`, PNGs e apple-touch).
+- **Logo** definida pelo grupo (PNG com fundo transparente, extraída de `Design sem nome.zip`): asa em degradê vermelho/laranja/amarelo + nome manuscrito em vermelho. Nunca recolorir a asa. `LogoPrincipal` (`src/assets/logo-completa.png`) é usada na navbar e na splash. Os carimbos usam só a asa (`logo-asa.png`).
+- **Rodapé** usa `Logo.tsx` (nome branco + asa em camada própria, que bate no hover: `logo-letras-branco.png` + `logo-asa-canvas.png`).
+- **Favicon** = asa sobre quadrado arredondado pêssego (`public/favicon.svg` com PNG embutido, PNGs e apple-touch). Se a logo vetorial sair do grupo, substituir os PNGs por SVG.
+- Versões coloridas da logo (verde, roxo, azul etc.) ficam para depois; por ora só a vermelha/laranja.
 - **Grafismos** (`src/assets/grafismos`, via `ui/grafismos.ts` e `<Decor name=…/>`): conjunto novo de cinema e mesa (chair, clapper, tickets, cutlery, bowl, sparkles, plate, cup, wing, dice, cards). Os antigos estão em `design/grafismos-antigos/`.
-- Paleta oficial como `brand-*` (indigo, purple, blue, cream, amber, pink, peach, sand, paper, ink). Fontes: Caprasimo (títulos), Nunito (texto), Cormorant Garamond (tema em cartaz).
+- Paleta oficial como `brand-*`, agora em **vermelho e laranja** (os nomes dos tokens foram mantidos): indigo = vermelho profundo `#8e1a1f`, purple = vermelho `#d8302a`, blue = laranja `#f26b2d`, pink = coral `#ff6b4a`, ink = `#3d0f12`, mais cream, amber, peach, sand e paper (tons quentes). Fontes: Caprasimo (títulos), Nunito (texto), Cormorant Garamond (tema em cartaz).
 - O site deve ser **responsivo para mobile** em tudo que for criado.
 - Instagram: `@fantaze`.
 
@@ -53,7 +54,7 @@ Depois de qualquer mudança, rode `npx tsc -b && npx eslint . && npx vite build`
 
 ## Splash
 
-`Splash.tsx` aparece **toda vez** que o site é aberto/recarregado (sem sessionStorage), por ~2,2 s, com a logo principal em cores reais. Sem cortinas nem botão "entrar".
+`Splash.tsx` aparece **toda vez** que o site é aberto/recarregado (sem sessionStorage), por ~2,2 s, com a logo principal (asa + nome). Sem cortinas nem botão "entrar".
 
 ## Deploy
 

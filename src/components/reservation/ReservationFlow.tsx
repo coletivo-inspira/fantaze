@@ -114,7 +114,7 @@ export default function ReservationFlow() {
   return (
     <form
       onSubmit={submit}
-      className="overflow-hidden rounded-[2.5rem] border border-brand-indigo/10 bg-white shadow-[0_40px_80px_-50px_rgba(48,19,126,0.6)]"
+      className="overflow-hidden rounded-[2.5rem] border border-brand-indigo/10 bg-white shadow-[0_40px_80px_-50px_rgba(142,26,31,0.6)]"
     >
       {/* Etapas */}
       <ol className="grid grid-cols-3 border-b border-brand-indigo/10 bg-brand-peach/50">

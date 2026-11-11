@@ -34,7 +34,7 @@ export default function VoteCard({ option, rank, percent, voted, pending, disabl
       <div className="relative w-full max-w-[19rem] px-4 pt-2">
         <div
           className={cn(
-            'relative aspect-[4/5] w-full overflow-hidden rounded-t-[999px] rounded-b-[2rem] border-[6px] shadow-[0_30px_60px_-30px_rgba(48,19,126,0.55)] transition-all',
+            'relative aspect-[4/5] w-full overflow-hidden rounded-t-[999px] rounded-b-[2rem] border-[6px] shadow-[0_30px_60px_-30px_rgba(142,26,31,0.55)] transition-all',
             voted ? 'border-brand-amber' : 'border-white',
           )}
           style={{ background: `linear-gradient(170deg, ${c1}, ${c2})` }}
@@ -48,7 +48,7 @@ export default function VoteCard({ option, rank, percent, voted, pending, disabl
           {/* silhuetas de fundo */}
           <svg viewBox="0 0 200 250" preserveAspectRatio="none" className="absolute inset-0 h-full w-full" aria-hidden>
             <path d="M0,190 Q40,150 80,176 Q120,140 160,172 Q185,160 200,170 V250 H0z" fill={c1} opacity=".55" />
-            <path d="M0,215 Q50,185 100,208 Q150,184 200,206 V250 H0z" fill="#1e0b5a" opacity=".45" />
+            <path d="M0,215 Q50,185 100,208 Q150,184 200,206 V250 H0z" fill="#3D0F12" opacity=".45" />
           </svg>
           <div className="absolute inset-x-0 top-[26%] grid place-items-center text-white/90 drop-shadow-lg">
             <ThemeIcon name={option.icon} size={72} />

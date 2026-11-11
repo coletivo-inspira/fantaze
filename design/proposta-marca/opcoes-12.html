@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fantazê — Direções totalmente diferentes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=DM+Serif+Display&family=Jost:wght@300;400;500&family=Space+Mono:wght@400;700&family=Special+Elite&family=Syne:wght@500;700;800&family=Yellowtail&family=Bodoni+Moda:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{ --ink:#17151F; --cream:#F3E9D2; --tomato:#E4572E; --mustard:#F2B134; --green:#0F3D2E; --serif:'Bodoni Moda',Georgia,serif; }
+  *{box-sizing:border-box;margin:0}
+  body{background:#F5F1E8;color:var(--ink);font-family:'Jost',system-ui,sans-serif;line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header.top{padding:56px 0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--tomato);font-weight:500;margin-bottom:10px}
+  h1,h2{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.01em}
+  h1{font-size:clamp(28px,5vw,46px)}
+  .lead{max-width:680px;opacity:.8;margin-top:10px}
+  section.opt{padding:44px 0;border-top:1px solid rgba(23,21,31,.15)}
+  .head{display:flex;gap:14px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}
+  .num{font-family:'Syne',sans-serif;font-weight:800;font-size:34px;color:var(--tomato)}
+  h2{font-size:24px}
+  .why{max-width:640px;opacity:.78;margin-bottom:20px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{border-radius:8px;padding:32px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:320px;overflow:hidden}
+  .svgl{width:100%;height:auto;display:block}
+  .rec{background:#fff;border:1px solid rgba(23,21,31,.15);border-radius:8px;padding:24px;max-width:720px}
+  .small{font-size:12px;opacity:.7;margin-top:10px}
+
+  .ink{background:#17151F;color:#F3E9D2}
+  .paper{background:#fff;color:#17151F;border:1px solid rgba(23,21,31,.12)}
+
+  /* 64 pôster */
+  .pwrap{background:#D8D2C6}
+  .poster{width:100%;max-width:290px;aspect-ratio:3/4;position:relative;padding:14px;display:flex;flex-direction:column;justify-content:space-between;border:1.5px solid;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.03em;text-align:left;overflow:hidden}
+  .pl{background:#EDE8DF;color:#111;border-color:#111}
+  .pd{background:#111;color:#EDE8DF;border-color:#EDE8DF}
+  .poster .row{display:flex;justify-content:space-between;gap:8px;position:relative;z-index:3}
+  .poster .big{font-family:'Anton',sans-serif;font-size:112px;line-height:.86;text-transform:uppercase;position:relative;z-index:2;margin:6px 0}
+  .poster .blob{position:absolute;right:-34px;top:96px;width:158px;height:158px;border-radius:50%;background:#E8452C;z-index:1}
+  .pl .blob{mix-blend-mode:multiply;z-index:3}
+  .poster hr{border:0;border-top:1.5px solid currentColor;margin:0 0 6px}
+
+  /* 65 planeta */
+  .c1{--plate:#F3E9D2;--ring:#F2B134;--acc:#E4572E;--ctr:#F2B134;--tx:#F3E9D2;background:#0F3D2E;color:#F3E9D2}
+  .c2{--plate:#0F3D2E;--ring:#E4572E;--acc:#F2B134;--ctr:#E4572E;--tx:#0F3D2E;background:#F3E9D2;color:#0F3D2E}
+  .syne{font-family:'Syne',sans-serif;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1}
+  .syne2{font-family:'Syne',sans-serif;font-weight:500;font-size:13px;letter-spacing:.06em;margin-top:6px;color:var(--acc)}
+
+  /* 67 bistrô */
+  .bn{background:#14305A;color:#FBF3E2}
+  .bc{background:#FBF3E2;color:#14305A}
+  .yt{font-family:'Yellowtail',cursive;font-size:84px;line-height:1.05;text-shadow:3px 3px 0 #E4572E,6px 6px 0 rgba(228,87,46,.35)}
+  .banner{margin-top:14px;background:#E4572E;color:#FBF3E2;font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.34em;text-transform:uppercase;padding:7px 26px;position:relative;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 50%,100% 100%,0 100%,10px 50%)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="pt1" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#F2B134"/><rect y="4" width="8" height="4" fill="#E4572E"/></pattern>
+    <pattern id="pt2" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#1B998B"/><circle cx="4.5" cy="4.5" r="2.2" fill="#F3E9D2"/></pattern>
+    <pattern id="pt3" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#3E63DD"/><rect width="7" height="7" fill="#F3E9D2"/><rect x="7" y="7" width="7" height="7" fill="#F3E9D2"/></pattern>
+    <pattern id="pt4" width="16" height="10" patternUnits="userSpaceOnUse"><rect width="16" height="10" fill="#F4A6B7"/><path d="M0 5 Q4 0 8 5 T16 5" fill="none" stroke="#C2455F" stroke-width="1.8"/></pattern>
+    <pattern id="pt5" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#8DA83A"/><path d="M0 10 L10 0 M-1 1 L1 -1 M9 11 L11 9" stroke="#F3E9D2" stroke-width="2"/></pattern>
+    <pattern id="pt6" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#F3E9D2"/><path d="M0 5 H10 M5 0 V10" stroke="#E4572E" stroke-width="1.2"/></pattern>
+    <pattern id="pt7" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#E4572E"/><circle cx="6" cy="6" r="3.2" fill="#F2B134"/></pattern>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Fantazê · Direções novas</div>
+    <h1>Seis caminhos fora de tudo o que fiz (63 a 68)</h1>
+    <p class="lead">Aqui abandono o dourado, o índigo, os arcos e as estrelas. São identidades de outro tipo: editorial, ilustrada, modular, retrô e filatélica. As cores são só exemplos e podem ser trocadas pela paleta que vocês escolherem.</p>
+  </div>
+</header>
+
+<!-- 63 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">63</span><h2>Cada letra, um mundo</h2></div>
+  <p class="why">Fonte pesada em que cada letra tem uma textura diferente: listras, bolinhas, xadrez, ondas, diagonais, grade. Representa os vários mundos do restaurante num só nome, e as texturas podem mudar a cada temporada.</p>
+  <div class="grid">
+    <div class="card ink">
+      <svg class="svgl" viewBox="0 0 420 140" style="max-width:440px">
+        <text x="210" y="100" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="74" stroke="#17151F" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke"><tspan fill="url(#pt1)">F</tspan><tspan fill="url(#pt2)">A</tspan><tspan fill="url(#pt3)">N</tspan><tspan fill="url(#pt4)">T</tspan><tspan fill="url(#pt5)">A</tspan><tspan fill="url(#pt6)">Z</tspan><tspan fill="url(#pt7)">Ê</tspan></text>
+      </svg>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;letter-spacing:.34em;text-transform:uppercase;margin-top:4px">Restaurante Cênico</div>
+    </div>
+    <div class="card paper">
+      <svg class="svgl" viewBox="0 0 420 140" style="max-width:440px">
+        <text x="210" y="100" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="74" stroke="#17151F" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke"><tspan fill="url(#pt1)">F</tspan><tspan fill="url(#pt2)">A</tspan><tspan fill="url(#pt3)">N</tspan><tspan fill="url(#pt4)">T</tspan><tspan fill="url(#pt5)">A</tspan><tspan fill="url(#pt6)">Z</tspan><tspan fill="url(#pt7)">Ê</tspan></text>
+      </svg>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;letter-spacing:.34em;text-transform:uppercase;margin-top:4px">Restaurante Cênico</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 64 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">64</span><h2>Pôster suíço</h2></div>
+  <p class="why">Estilo editorial de cartaz de cinema de autor: letras enormes e condensadas, texto técnico em fonte monoespaçada e um círculo vermelho solto. É seco, moderno e adulto, e o nome vira cartaz sem precisar de símbolo.</p>
+  <div class="grid">
+    <div class="card pwrap">
+      <div class="poster pl">
+        <div class="row"><span>Nº 01</span><span>Em cartaz: Bridgerton</span></div>
+        <div class="blob"></div>
+        <div class="big">FAN<br>TAZÊ</div>
+        <div><hr><div class="row"><span>Restaurante Cênico</span><span>Belo Horizonte</span></div></div>
+      </div>
+    </div>
+    <div class="card pwrap">
+      <div class="poster pd">
+        <div class="row"><span>Nº 01</span><span>Em cartaz: Bridgerton</span></div>
+        <div class="blob"></div>
+        <div class="big">FAN<br>TAZÊ</div>
+        <div><hr><div class="row"><span>Restaurante Cênico</span><span>Belo Horizonte</span></div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 65 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">65</span><h2>Prato-planeta</h2></div>
+  <p class="why">O prato visto de cima é um planeta com anel, e um garfo orbita em volta. Ilustração plana e simples, com fonte moderna e arrojada em minúsculas. Uma marca que sorri, mas com ar de design contemporâneo.</p>
+  <div class="grid">
+    <div class="card c1">
+      <svg class="svgl" viewBox="0 0 300 220" style="max-width:290px" fill="none">
+        <g transform="rotate(-16 150 100)">
+          <path d="M30 100 A120 26 0 0 1 270 100" stroke-width="4" style="stroke:var(--ring)"/>
+        </g>
+        <circle cx="150" cy="100" r="62" style="fill:var(--plate)"/>
+        <circle cx="150" cy="100" r="46" stroke-width="2.4" style="stroke:var(--acc)"/>
+        <circle cx="150" cy="100" r="14" style="fill:var(--ctr)"/>
+        <g transform="rotate(-16 150 100)">
+          <path d="M30 100 A120 26 0 0 0 270 100" stroke-width="4" style="stroke:var(--ring)"/>
+        </g>
+        <g transform="translate(246 40) rotate(28)" style="stroke:var(--tx)" stroke-width="2.6" stroke-linecap="round" fill="none"><path d="M-6 -14 V-2 Q-6 4 0 4 Q6 4 6 -2 V-14 M0 -14 V18"/></g>
+      </svg>
+      <div class="syne" style="margin-top:-6px">fantazê</div>
+      <div class="syne2">um mundo à mesa</div>
+    </div>
+    <div class="card c2">
+      <svg class="svgl" viewBox="0 0 300 220" style="max-width:290px" fill="none">
+        <g transform="rotate(-16 150 100)">
+          <path d="M30 100 A120 26 0 0 1 270 100" stroke-width="4" style="stroke:var(--ring)"/>
+        </g>
+        <circle cx="150" cy="100" r="62" style="fill:var(--plate)"/>
+        <circle cx="150" cy="100" r="46" stroke-width="2.4" style="stroke:var(--acc)"/>
+        <circle cx="150" cy="100" r="14" style="fill:var(--ctr)"/>
+        <g transform="rotate(-16 150 100)">
+          <path d="M30 100 A120 26 0 0 0 270 100" stroke-width="4" style="stroke:var(--ring)"/>
+        </g>
+        <g transform="translate(246 40) rotate(28)" style="stroke:var(--tx)" stroke-width="2.6" stroke-linecap="round" fill="none"><path d="M-6 -14 V-2 Q-6 4 0 4 Q6 4 6 -2 V-14 M0 -14 V18"/></g>
+      </svg>
+      <div class="syne" style="margin-top:-6px">fantazê</div>
+      <div class="syne2" style="color:#C2461E">um mundo à mesa</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 66 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">66</span><h2>Alfabeto modular</h2></div>
+  <p class="why">Cada letra é montada com retângulos e triângulos, como numa peça de design dos anos 20 (estilo Bauhaus). O nome vira um conjunto de blocos coloridos e tem cara de museu ou galeria. É fácil de animar: os blocos podem se reorganizar.</p>
+  <div class="grid">
+    <div class="card ink">
+      <svg class="svgl" viewBox="0 0 420 130" style="max-width:440px">
+        <g transform="translate(0 26)">
+          <g transform="translate(10 0)" fill="#E4572E"><rect width="12" height="80"/><rect x="12" width="32" height="12"/><rect x="12" y="34" width="22" height="12"/></g>
+          <g transform="translate(68 0)" fill="#F2B134"><path fill-rule="evenodd" d="M22 0 L44 80 H32 L29 66 H15 L12 80 H0 Z M22 26 L27 54 H17 Z"/></g>
+          <g transform="translate(126 0)" fill="#1B998B"><rect width="12" height="80"/><rect x="32" width="12" height="80"/><path d="M0 0 H12 L44 80 H32 Z"/></g>
+          <g transform="translate(184 0)" fill="#3E63DD"><rect width="44" height="12"/><rect x="16" y="12" width="12" height="68"/></g>
+          <g transform="translate(242 0)" fill="#F4A6B7"><path fill-rule="evenodd" d="M22 0 L44 80 H32 L29 66 H15 L12 80 H0 Z M22 26 L27 54 H17 Z"/></g>
+          <g transform="translate(300 0)" fill="#8DA83A"><rect width="44" height="12"/><rect y="68" width="44" height="12"/><path d="M32 12 H44 L12 68 H0 Z"/></g>
+          <g transform="translate(358 0)" fill="#E4572E"><rect width="12" height="80"/><rect x="12" width="32" height="12"/><rect x="12" y="34" width="24" height="12"/><rect x="12" y="68" width="32" height="12"/><path d="M22 -22 L38 -8 H30 L22 -15 L14 -8 H6 Z"/></g>
+        </g>
+      </svg>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;letter-spacing:.34em;text-transform:uppercase;margin-top:6px">Restaurante Cênico</div>
+    </div>
+    <div class="card" style="background:#F3E9D2;color:#17151F">
+      <svg class="svgl" viewBox="0 0 420 130" style="max-width:440px">
+        <g transform="translate(0 26)">
+          <g transform="translate(10 0)" fill="#17151F"><rect width="12" height="80"/><rect x="12" width="32" height="12"/><rect x="12" y="34" width="22" height="12"/></g>
+          <g transform="translate(68 0)" fill="#E4572E"><path fill-rule="evenodd" d="M22 0 L44 80 H32 L29 66 H15 L12 80 H0 Z M22 26 L27 54 H17 Z"/></g>
+          <g transform="translate(126 0)" fill="#17151F"><rect width="12" height="80"/><rect x="32" width="12" height="80"/><path d="M0 0 H12 L44 80 H32 Z"/></g>
+          <g transform="translate(184 0)" fill="#E4572E"><rect width="44" height="12"/><rect x="16" y="12" width="12" height="68"/></g>
+          <g transform="translate(242 0)" fill="#17151F"><path fill-rule="evenodd" d="M22 0 L44 80 H32 L29 66 H15 L12 80 H0 Z M22 26 L27 54 H17 Z"/></g>
+          <g transform="translate(300 0)" fill="#E4572E"><rect width="44" height="12"/><rect y="68" width="44" height="12"/><path d="M32 12 H44 L12 68 H0 Z"/></g>
+          <g transform="translate(358 0)" fill="#17151F"><rect width="12" height="80"/><rect x="12" width="32" height="12"/><rect x="12" y="34" width="24" height="12"/><rect x="12" y="68" width="32" height="12"/><path d="M22 -22 L38 -8 H30 L22 -15 L14 -8 H6 Z" fill="#E4572E"/></g>
+        </g>
+      </svg>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;letter-spacing:.34em;text-transform:uppercase;margin-top:6px">Restaurante Cênico</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 67 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">67</span><h2>Letreiro de bistrô</h2></div>
+  <p class="why">Escrita cursiva grossa de letreiro antigo, com sombra deslocada em vermelho e uma faixa embaixo. Lembra bistrô, cantina e cinema de rua. É afetiva e calorosa, bem longe do estilo "luxo frio".</p>
+  <div class="grid">
+    <div class="card bn"><div class="yt">Fantazê</div><div class="banner">Restaurante Cênico</div></div>
+    <div class="card bc"><div class="yt" style="text-shadow:3px 3px 0 #E4572E,6px 6px 0 rgba(228,87,46,.3)">Fantazê</div><div class="banner">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 68 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">68</span><h2>Selo postal</h2></div>
+  <p class="why">A marca como um selo de correio: bordas picotadas, um globo com rota tracejada, valor "1 mundo" e carimbo de Belo Horizonte por cima. Cada temporada é um selo novo, o que dá um passaporte colecionável de verdade.</p>
+  <div class="grid">
+    <div class="card" style="background:#D9CBAE">
+      <svg class="svgl stamp" data-bg="#D9CBAE" viewBox="0 0 260 320" style="max-width:250px"></svg>
+    </div>
+    <div class="card" style="background:#1B2A4A">
+      <svg class="svgl stamp" data-bg="#1B2A4A" viewBox="0 0 260 320" style="max-width:250px"></svg>
+    </div>
+  </div>
+</div></section>
+
+<section class="opt" style="padding-bottom:80px"><div class="wrap">
+  <div class="rec">
+    <h2 style="margin-bottom:8px">Minha escolha</h2>
+    <p>A <b>68 (Selo postal)</b> é a mais original e se encaixa no passaporte que o site já tem. A <b>64 (Pôster suíço)</b> é a mais adulta e fácil de aplicar. A <b>63 (Cada letra, um mundo)</b> é a mais diferente de tudo e tem cara de marca de design.</p>
+    <p class="small">O site real não foi alterado.</p>
+  </div>
+</div></section>
+
+<script>
+  // Selo postal: monta o SVG com picotes na cor do fundo do cartão
+  document.querySelectorAll('svg.stamp').forEach(function(svg){
+    var bg=svg.dataset.bg, navy='#1B2A4A', red='#C8442B', paper='#F7F0DF', ns='http://www.w3.org/2000/svg';
+    var h='';
+    h+='<rect x="20" y="20" width="220" height="280" fill="'+paper+'"/>';
+    h+='<rect x="34" y="34" width="192" height="252" fill="none" stroke="'+navy+'" stroke-width="1.4"/>';
+    h+='<text x="46" y="56" font-family="Special Elite, monospace" font-size="11" fill="'+red+'">1 MUNDO</text>';
+    h+='<text x="214" y="56" text-anchor="end" font-family="Special Elite, monospace" font-size="11" fill="'+navy+'">BRASIL</text>';
+    h+='<circle cx="130" cy="136" r="56" fill="#E9DFC6" stroke="'+navy+'" stroke-width="1.6"/>';
+    h+='<ellipse cx="130" cy="136" rx="56" ry="18" fill="none" stroke="'+navy+'" stroke-width="1.2"/>';
+    h+='<ellipse cx="130" cy="136" rx="22" ry="56" fill="none" stroke="'+navy+'" stroke-width="1.2"/>';
+    h+='<path d="M130 80 V192" stroke="'+navy+'" stroke-width="1.2"/>';
+    h+='<path d="M74 136 H186" stroke="'+navy+'" stroke-width="1.2"/>';
+    h+='<path d="M66 168 Q128 70 198 112" fill="none" stroke="'+red+'" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"/>';
+    h+='<circle cx="198" cy="112" r="4" fill="'+red+'"/>';
+    h+='<text x="130" y="236" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="34" letter-spacing="2" fill="'+navy+'">FANTAZÊ</text>';
+    h+='<text x="130" y="256" text-anchor="middle" font-family="Special Elite, monospace" font-size="9" letter-spacing="2.4" fill="'+navy+'">RESTAURANTE CÊNICO</text>';
+    h+='<text x="130" y="274" text-anchor="middle" font-family="Special Elite, monospace" font-size="8" letter-spacing="1.5" fill="'+red+'">BELO HORIZONTE · MG</text>';
+    // carimbo
+    h+='<g opacity=".7"><circle cx="196" cy="84" r="30" fill="none" stroke="'+navy+'" stroke-width="1.4"/><circle cx="196" cy="84" r="25" fill="none" stroke="'+navy+'" stroke-width=".8"/>';
+    h+='<text x="196" y="82" text-anchor="middle" font-family="Special Elite, monospace" font-size="10" fill="'+navy+'">BH · MG</text><text x="196" y="95" text-anchor="middle" font-family="Special Elite, monospace" font-size="7" fill="'+navy+'">EM CARTAZ</text>';
+    [74,84,94].forEach(function(y){ h+='<path d="M52 '+y+' q8 -6 16 0 t16 0 t16 0 t16 0 t16 0 t16 0" fill="none" stroke="'+navy+'" stroke-width="1.5" opacity=".7"/>'; });
+    h+='</g>';
+    // picotes
+    for(var x=26;x<=234;x+=12){ h+='<circle cx="'+x+'" cy="20" r="4.6" fill="'+bg+'"/><circle cx="'+x+'" cy="300" r="4.6" fill="'+bg+'"/>'; }
+    for(var y=26;y<=294;y+=12){ h+='<circle cx="20" cy="'+y+'" r="4.6" fill="'+bg+'"/><circle cx="240" cy="'+y+'" r="4.6" fill="'+bg+'"/>'; }
+    svg.innerHTML=h;
+  });
+</script>
+</body>
+</html>

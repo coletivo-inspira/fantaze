@@ -20,7 +20,7 @@ export default function ThemePortal({ theme, className }: ThemePortalProps) {
           initial={{ opacity: 0, y: 40, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="absolute inset-0 overflow-hidden rounded-t-[999px] rounded-b-[2.5rem] border-[6px] border-white shadow-[0_40px_80px_-30px_rgba(48,19,126,0.55)]"
+          className="absolute inset-0 overflow-hidden rounded-t-[999px] rounded-b-[2.5rem] border-[6px] border-white shadow-[0_40px_80px_-30px_rgba(142,26,31,0.55)]"
         >
           {photo ? (
             <img src={photo} alt={`Ambiente do tema ${theme.name}`} className="h-full w-full object-cover object-top" />

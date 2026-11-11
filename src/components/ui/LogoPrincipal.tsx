@@ -1,5 +1,5 @@
 import { cn } from '../../lib/cn';
-import logo from '../../assets/logo-completa.svg';
+import logo from '../../assets/logo-completa.png';
 
 interface LogoPrincipalProps {
   /** `hover` balança a logo ao passar o mouse (precisa de um pai com `group`); `loop` balança sempre. */
@@ -7,7 +7,7 @@ interface LogoPrincipalProps {
   className?: string;
 }
 
-/** Logotipo completo (versão do manual de identidade visual), em vetor. */
+/** Logotipo completo: asa em degradê + nome manuscrito, em vermelho. */
 export default function LogoPrincipal({ motion = 'none', className }: LogoPrincipalProps) {
   return (
     <img
@@ -15,7 +15,7 @@ export default function LogoPrincipal({ motion = 'none', className }: LogoPrinci
       alt="Fantazê"
       draggable={false}
       className={cn(
-        'block aspect-[1341/719] select-none',
+        'block aspect-[983/148] select-none',
         motion === 'loop' && 'animate-bob',
         motion === 'hover' && 'group-hover:animate-bob',
         className,

@@ -61,7 +61,7 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10" aria-label="Principal">
           <Link to="/" aria-label="Fantazê — página inicial" className="group">
-            <LogoPrincipal motion="hover" className="w-28 sm:w-32" />
+            <LogoPrincipal motion="hover" className="w-40 sm:w-52" />
           </Link>
 
           <div className="hidden items-center gap-1 lg:flex">

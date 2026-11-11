@@ -12,13 +12,13 @@ export const passportSlots: PassportSlot[] = [
     name: 'Bridgerton',
     month: 'Carimbo 1',
     code: 'FNT-BRIDGERTON',
-    colors: ['#30137e', '#8fb3dd'],
+    colors: ['#8E1A1F', '#8fb3dd'],
   },
-  { id: 'carimbo-2', themeId: null, name: 'Universo 2', month: 'Carimbo 2', code: 'FNT-CARIMBO-02', colors: ['#7917b0', '#fc7893'] },
-  { id: 'carimbo-3', themeId: null, name: 'Universo 3', month: 'Carimbo 3', code: 'FNT-CARIMBO-03', colors: ['#3c7fdd', '#ffb86f'] },
-  { id: 'carimbo-4', themeId: null, name: 'Universo 4', month: 'Carimbo 4', code: 'FNT-CARIMBO-04', colors: ['#fc7893', '#7917b0'] },
-  { id: 'carimbo-5', themeId: null, name: 'Universo 5', month: 'Carimbo 5', code: 'FNT-CARIMBO-05', colors: ['#30137e', '#fc7893'] },
-  { id: 'carimbo-6', themeId: null, name: 'Universo 6', month: 'Carimbo 6', code: 'FNT-CARIMBO-06', colors: ['#7917b0', '#3c7fdd'] },
+  { id: 'carimbo-2', themeId: null, name: 'Universo 2', month: 'Carimbo 2', code: 'FNT-CARIMBO-02', colors: ['#D8302A', '#FF6B4A'] },
+  { id: 'carimbo-3', themeId: null, name: 'Universo 3', month: 'Carimbo 3', code: 'FNT-CARIMBO-03', colors: ['#F26B2D', '#ffb86f'] },
+  { id: 'carimbo-4', themeId: null, name: 'Universo 4', month: 'Carimbo 4', code: 'FNT-CARIMBO-04', colors: ['#FF6B4A', '#D8302A'] },
+  { id: 'carimbo-5', themeId: null, name: 'Universo 5', month: 'Carimbo 5', code: 'FNT-CARIMBO-05', colors: ['#8E1A1F', '#FF6B4A'] },
+  { id: 'carimbo-6', themeId: null, name: 'Universo 6', month: 'Carimbo 6', code: 'FNT-CARIMBO-06', colors: ['#D8302A', '#F26B2D'] },
 ];
 
 export const passportRewards: PassportReward[] = [

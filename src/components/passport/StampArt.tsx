@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import logo from '../../assets/logo-completa.svg';
+import logo from '../../assets/logo-asa.png';
 
 interface StampArtProps {
   name: string;
@@ -8,7 +8,7 @@ interface StampArtProps {
   className?: string;
 }
 
-/** Carimbo circular do tema: nome em arco, logo do Fantazê ao centro e identificação na base. */
+/** Carimbo circular do tema: nome em arco, asa do Fantazê ao centro e identificação na base. */
 export default function StampArt({ name, month, colors, className }: StampArtProps) {
   const uid = useId().replace(/:/g, '');
   const [ink, accent] = colors;
@@ -37,7 +37,7 @@ export default function StampArt({ name, month, colors, className }: StampArtPro
           {month.toUpperCase()}
         </textPath>
       </text>
-      <image href={logo} x="34" y="42" width="52" height="28" preserveAspectRatio="xMidYMid meet" />
+      <image href={logo} x="40" y="40" width="40" height="40" preserveAspectRatio="xMidYMid meet" />
     </svg>
   );
 }

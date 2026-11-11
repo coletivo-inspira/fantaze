@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-12 pt-24 sm:pt-28 md:grid-cols-12 md:px-10">
         <div className="md:col-span-5">
           <Link to="/" aria-label="Fantazê — página inicial" className="group inline-block">
-            <Logo variant="white" motion="hover" className="w-48" />
+            <Logo variant="white" motion="hover" className="w-64" />
           </Link>
           <p className="mt-6 max-w-sm text-white/70">{restaurant.slogan} {restaurant.audience}</p>
           <a

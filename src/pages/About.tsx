@@ -81,7 +81,7 @@ export default function About() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {restaurant.pillars.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.08}>
-                <div className="h-full rounded-[2rem] bg-white p-6 sm:p-8 shadow-[0_24px_50px_-36px_rgba(48,19,126,0.6)]">
+                <div className="h-full rounded-[2rem] bg-white p-6 sm:p-8 shadow-[0_24px_50px_-36px_rgba(142,26,31,0.6)]">
                   <h3 className="text-2xl text-brand-indigo">{p.title}</h3>
                   <p className="mt-3 leading-relaxed text-brand-ink/70">{p.description}</p>
                 </div>

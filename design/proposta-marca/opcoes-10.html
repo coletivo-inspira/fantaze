@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fantazê — Portal + nome (composições)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600&family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --indigo:#1E0B5A; --purple:#4A1B7A; --ivory:#FBF6EE; --gold:#C9A25B; --peach:#F8DFDA;
+    --serif:'Bodoni Moda',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--ivory);color:var(--indigo);font-family:var(--sans);line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header.top{padding:56px 0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
+  h1,h2{font-family:var(--serif);font-weight:600}
+  h1{font-size:clamp(28px,5vw,44px)}
+  .lead{max-width:680px;opacity:.8;margin-top:10px}
+  section.opt{padding:44px 0;border-top:1px solid rgba(30,11,90,.12)}
+  .head{display:flex;gap:14px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}
+  .num{font-family:var(--serif);font-size:34px;color:var(--gold)}
+  h2{font-size:24px}
+  .why{max-width:640px;opacity:.78;margin-bottom:20px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{border-radius:6px;padding:40px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:320px;overflow:hidden}
+  .dark{background:var(--indigo);color:var(--ivory)}
+  .light{background:#fff;color:var(--indigo);border:1px solid rgba(30,11,90,.12)}
+  .gold{color:var(--gold)}
+  .sym{display:block;height:auto}
+  .svgl{width:100%;height:auto;display:block}
+  .ds{font-size:10px;letter-spacing:.38em;text-transform:uppercase;padding-left:.38em;margin-top:12px}
+  .small{font-size:12px;opacity:.7;margin-top:10px}
+  .rec{background:#fff;border:1px solid rgba(30,11,90,.12);border-radius:6px;padding:24px;max-width:720px}
+
+  /* 52 letras-porta */
+  .w52{font-family:'Outfit',sans-serif;font-weight:500;font-size:46px;letter-spacing:.14em;padding-left:.14em;line-height:1;white-space:nowrap}
+  .w52 svg{display:inline-block;height:.72em;width:.64em;vertical-align:baseline;margin:0 .08em}
+
+  /* 54 letras iluminadas */
+  .lit{display:flex;align-items:center;gap:14px}
+  .lit .glow{position:relative}
+  .lit .glow::before{content:"";position:absolute;left:-20px;top:50%;width:140px;height:140px;transform:translateY(-50%);background:radial-gradient(circle,rgba(232,201,138,.45),transparent 65%);pointer-events:none}
+  .lit .nm{font-family:'Cinzel',serif;font-weight:700;font-size:38px;letter-spacing:.16em;line-height:1;background:linear-gradient(90deg,#E8C98A 0%,#C9A25B 22%,var(--to) 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* 55 reflexo */
+  .lock{display:flex;flex-direction:column;align-items:center}
+  .lock .nm{font-family:'Fraunces',serif;font-weight:700;font-size:44px;line-height:1;margin-top:10px}
+  .floor{width:240px;height:1px;background:var(--gold);margin:12px 0 2px;opacity:.8}
+  .refl{transform:scaleY(-1);opacity:.4;-webkit-mask-image:linear-gradient(to bottom,transparent 35%,rgba(0,0,0,.9));mask-image:linear-gradient(to bottom,transparent 35%,rgba(0,0,0,.9));margin-top:-2px;height:92px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+
+  /* 56 entrando */
+  .enter{display:flex;align-items:center;gap:4px;font-family:'Cinzel',serif;font-weight:700;line-height:1}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8C98A" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#C9A25B" stop-opacity=".05"/>
+    </linearGradient>
+    <symbol id="spark" viewBox="0 0 100 100"><path d="M50 2 Q56 44 98 50 Q56 56 50 98 Q44 56 2 50 Q44 44 50 2Z"/></symbol>
+
+    <!-- porta sólida (símbolo principal, vem da opção 46) -->
+    <g id="solid">
+      <path d="M40 100 L14 111 H88 L78 100 Z" style="fill:var(--gold)" opacity=".55"/>
+      <path d="M12 94 V46 A38 38 0 0 1 88 46 V94 Z M24 94 V46 A26 26 0 0 1 76 46 V94 Z" fill="currentColor" fill-rule="evenodd"/>
+      <path d="M24 94 V46 A26 26 0 0 1 76 46 V94 Z" fill="#E8C98A"/>
+      <path d="M24 94 V48 C24 37 32 30 42 26 V90 Z" fill="currentColor"/>
+      <circle cx="35" cy="62" r="2.4" fill="#C9A25B"/>
+      <rect x="6" y="94" width="88" height="5" rx="1" fill="currentColor"/>
+    </g>
+    <symbol id="d2" viewBox="0 0 100 112">
+      <use href="#solid"/>
+      <use href="#spark" x="52" y="36" width="20" height="20" style="fill:#fff"/>
+    </symbol>
+
+    <!-- letras A como porta: fechada e aberta -->
+    <symbol id="aClosed" viewBox="0 0 64 72">
+      <path d="M3 72 V28 A29 29 0 0 1 61 28 V72 Z M12 72 V28 A20 20 0 0 1 52 28 V72 Z" fill="currentColor" fill-rule="evenodd"/>
+      <path d="M12 72 V28 A20 20 0 0 1 52 28 V72 Z" fill="currentColor" opacity=".3"/>
+      <path d="M32 10 V72" stroke="currentColor" stroke-width="2"/>
+      <circle cx="27" cy="46" r="2" fill="#C9A25B"/><circle cx="37" cy="46" r="2" fill="#C9A25B"/>
+    </symbol>
+    <symbol id="aOpen" viewBox="0 0 64 72">
+      <path d="M3 72 V28 A29 29 0 0 1 61 28 V72 Z M12 72 V28 A20 20 0 0 1 52 28 V72 Z" fill="currentColor" fill-rule="evenodd"/>
+      <path d="M12 72 V28 A20 20 0 0 1 52 28 V72 Z" fill="#E8C98A"/>
+      <path d="M12 72 V30 C12 22 17 17 26 14 V68 Z" fill="currentColor"/>
+      <circle cx="21" cy="46" r="1.8" fill="#C9A25B"/>
+      <use href="#spark" x="34" y="26" width="12" height="12" style="fill:#fff"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Fantazê · Portal + nome</div>
+    <h1>Sete formas de unir o portal ao nome (50 a 56)</h1>
+    <p class="lead">Aqui o portal deixa de ficar ao lado do nome e passa a se relacionar com ele: o nome dentro da porta, na luz do chão, nos A, em arco por cima, iluminado, refletido ou entrando pela porta.</p>
+  </div>
+</header>
+
+<!-- 50 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">50</span><h2>Nome dentro da luz</h2></div>
+  <p class="why">O nome ocupa a abertura da porta, escrito sobre a luz dourada, com a folha entreaberta ao lado. O portal vira a moldura e o fundo da logo, e o nome é a coisa que se vê do outro lado.</p>
+  <div class="grid">
+    <div class="card dark" style="min-height:420px">
+      <svg class="svgl" viewBox="0 0 220 300" style="max-width:210px">
+        <path d="M60 262 L24 292 H196 L176 262 Z" style="fill:var(--gold)" opacity=".5"/>
+        <path d="M10 250 V120 A100 100 0 0 1 210 120 V250 Z M26 250 V120 A84 84 0 0 1 194 120 V250 Z" fill="currentColor" fill-rule="evenodd"/>
+        <path d="M26 250 V120 A84 84 0 0 1 194 120 V250 Z" fill="#E8C98A"/>
+        <path d="M26 250 V132 C26 112 40 98 58 90 V244 Z" fill="currentColor"/>
+        <circle cx="46" cy="176" r="4" fill="#C9A25B"/>
+        <rect x="2" y="250" width="216" height="8" fill="currentColor"/>
+        <use href="#spark" x="116" y="76" width="20" height="20" style="fill:#fff"/>
+        <text x="128" y="150" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-weight="600" font-size="38" letter-spacing="5" fill="#1E0B5A">FAN</text>
+        <text x="128" y="198" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-weight="600" font-size="38" letter-spacing="5" fill="#1E0B5A">TAZÊ</text>
+      </svg>
+      <div class="ds gold">Restaurante Cênico</div>
+    </div>
+    <div class="card light" style="min-height:420px">
+      <svg class="svgl" viewBox="0 0 220 300" style="max-width:210px">
+        <path d="M60 262 L24 292 H196 L176 262 Z" style="fill:var(--gold)" opacity=".5"/>
+        <path d="M10 250 V120 A100 100 0 0 1 210 120 V250 Z M26 250 V120 A84 84 0 0 1 194 120 V250 Z" fill="currentColor" fill-rule="evenodd"/>
+        <path d="M26 250 V120 A84 84 0 0 1 194 120 V250 Z" fill="#E8C98A"/>
+        <path d="M26 250 V132 C26 112 40 98 58 90 V244 Z" fill="currentColor"/>
+        <circle cx="46" cy="176" r="4" fill="#C9A25B"/>
+        <rect x="2" y="250" width="216" height="8" fill="currentColor"/>
+        <use href="#spark" x="116" y="76" width="20" height="20" style="fill:#fff"/>
+        <text x="128" y="150" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-weight="600" font-size="38" letter-spacing="5" fill="#1E0B5A">FAN</text>
+        <text x="128" y="198" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-weight="600" font-size="38" letter-spacing="5" fill="#1E0B5A">TAZÊ</text>
+      </svg>
+      <div class="ds">Restaurante Cênico</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 51 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">51</span><h2>Nome no feixe de luz</h2></div>
+  <p class="why">A porta fica pequena no alto e a luz que escapa dela se abre em leque até o nome, que fica "iluminado" no chão. O portal e o nome formam uma só cena, com a leitura de cima para baixo.</p>
+  <div class="grid">
+    <div class="card dark">
+      <svg class="svgl" viewBox="0 0 360 250" style="max-width:360px">
+        <path d="M172 58 L96 232 H264 L188 58 Z" fill="url(#beam)"/>
+        <use href="#d2" x="150" y="0" width="60" height="67"/>
+        <text x="183" y="178" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-weight="500" font-size="31" letter-spacing="8" fill="currentColor">FANTAZÊ</text>
+        <text x="182" y="203" text-anchor="middle" font-family="Jost, sans-serif" font-size="8" letter-spacing="4.5" fill="#C9A25B">RESTAURANTE CÊNICO</text>
+      </svg>
+    </div>
+    <div class="card light">
+      <svg class="svgl" viewBox="0 0 360 250" style="max-width:360px">
+        <path d="M172 58 L96 232 H264 L188 58 Z" fill="url(#beam)"/>
+        <use href="#d2" x="150" y="0" width="60" height="67"/>
+        <text x="183" y="178" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-weight="500" font-size="31" letter-spacing="8" fill="currentColor">FANTAZÊ</text>
+        <text x="182" y="203" text-anchor="middle" font-family="Jost, sans-serif" font-size="8" letter-spacing="4.5" fill="#C9A25B">RESTAURANTE CÊNICO</text>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+<!-- 52 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">52</span><h2>Os dois A: porta fechada e porta aberta</h2></div>
+  <p class="why">Os dois A de FANTAZÊ viram portais. O primeiro está fechado e o segundo, aberto, com a luz dentro. Conta a história do nome: antes de entrar, depois de entrar. Sem símbolo separado.</p>
+  <div class="grid">
+    <div class="card dark"><div class="w52">F<svg viewBox="0 0 64 72"><use href="#aClosed"/></svg>NT<svg viewBox="0 0 64 72"><use href="#aOpen"/></svg>ZÊ</div><div class="ds gold" style="margin-top:18px">Restaurante Cênico</div></div>
+    <div class="card light"><div class="w52">F<svg viewBox="0 0 64 72"><use href="#aClosed"/></svg>NT<svg viewBox="0 0 64 72"><use href="#aOpen"/></svg>ZÊ</div><div class="ds" style="margin-top:18px;color:var(--gold)">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 53 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">53</span><h2>Nome em arco sobre a porta</h2></div>
+  <p class="why">O nome curvado em volta do topo da porta, como a placa de um teatro ou o letreiro de um portão. A curva do texto repete a curva do arco, então o conjunto se lê como um único selo.</p>
+  <div class="grid">
+    <div class="card dark">
+      <svg class="svgl" viewBox="0 0 300 215" style="max-width:300px">
+        <path id="arc53" d="M80 100 A70 70 0 0 1 220 100" fill="none"/>
+        <text font-family="Bodoni Moda, Georgia, serif" font-weight="600" font-size="25" letter-spacing="9" fill="currentColor"><textPath href="#arc53" startOffset="50%" text-anchor="middle">FANTAZÊ</textPath></text>
+        <use href="#d2" x="108" y="78" width="84" height="94"/>
+        <text x="152" y="198" text-anchor="middle" font-family="Jost, sans-serif" font-size="8" letter-spacing="4.5" fill="#C9A25B">RESTAURANTE CÊNICO</text>
+      </svg>
+    </div>
+    <div class="card light">
+      <svg class="svgl" viewBox="0 0 300 215" style="max-width:300px">
+        <path id="arc53b" d="M80 100 A70 70 0 0 1 220 100" fill="none"/>
+        <text font-family="Bodoni Moda, Georgia, serif" font-weight="600" font-size="25" letter-spacing="9" fill="currentColor"><textPath href="#arc53b" startOffset="50%" text-anchor="middle">FANTAZÊ</textPath></text>
+        <use href="#d2" x="108" y="78" width="84" height="94"/>
+        <text x="152" y="198" text-anchor="middle" font-family="Jost, sans-serif" font-size="8" letter-spacing="4.5" fill="#C9A25B">RESTAURANTE CÊNICO</text>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+<!-- 54 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">54</span><h2>Letras acesas pela luz da porta</h2></div>
+  <p class="why">A luz sai da porta e ilumina as letras: o nome começa dourado perto da porta e vai ficando branco (ou índigo) para o outro lado. Dá a sensação de a luz "escrever" o nome, e é ótimo para animar no site.</p>
+  <div class="grid">
+    <div class="card dark"><div class="lit" style="--to:#FBF6EE"><div class="glow"><svg class="sym" style="width:56px"><use href="#d2"/></svg></div><div class="nm">FANTAZÊ</div></div><div class="ds gold" style="margin-top:20px">Restaurante Cênico</div></div>
+    <div class="card light"><div class="lit" style="--to:#1E0B5A"><div class="glow"><svg class="sym" style="width:56px"><use href="#d2"/></svg></div><div class="nm">FANTAZÊ</div></div><div class="ds" style="margin-top:20px;color:var(--gold)">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 55 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">55</span><h2>Reflexo no chão</h2></div>
+  <p class="why">A porta e o nome apoiados numa linha de piso dourada, com um reflexo que vai sumindo, como num palco polido. Elegante e silencioso, e dá profundidade sem acrescentar nenhum elemento novo.</p>
+  <div class="grid">
+    <div class="card dark" style="min-height:420px"><div class="lock"><svg class="sym" style="width:64px"><use href="#d2"/></svg><div class="nm">Fantazê</div><div class="floor"></div><div class="refl"><svg class="sym" style="width:64px;margin-top:0"><use href="#d2"/></svg><div class="nm" style="margin-top:10px;font-family:'Fraunces',serif;font-weight:700;font-size:44px;line-height:1">Fantazê</div></div></div></div>
+    <div class="card light" style="min-height:420px"><div class="lock"><svg class="sym" style="width:64px"><use href="#d2"/></svg><div class="nm">Fantazê</div><div class="floor"></div><div class="refl"><svg class="sym" style="width:64px;margin-top:0"><use href="#d2"/></svg><div class="nm" style="margin-top:10px;font-family:'Fraunces',serif;font-weight:700;font-size:44px;line-height:1">Fantazê</div></div></div></div>
+  </div>
+</div></section>
+
+<!-- 56 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">56</span><h2>Entrando no portal</h2></div>
+  <p class="why">As letras vão diminuindo e ficando mais suaves em direção à porta, como se o nome estivesse entrando por ela. É a mais narrativa e dinâmica, e funciona bem em animação (as letras "atravessam" a porta).</p>
+  <div class="grid">
+    <div class="card dark"><div class="enter"><span style="font-size:48px">F</span><span style="font-size:42px;opacity:.95">A</span><span style="font-size:36px;opacity:.88">N</span><span style="font-size:30px;opacity:.78">T</span><span style="font-size:25px;opacity:.66">A</span><span style="font-size:20px;opacity:.54">Z</span><span style="font-size:16px;opacity:.42">Ê</span><svg class="sym" style="width:50px;margin-left:8px"><use href="#d2"/></svg></div><div class="ds gold" style="margin-top:24px">Restaurante Cênico</div></div>
+    <div class="card light"><div class="enter"><span style="font-size:48px">F</span><span style="font-size:42px;opacity:.95">A</span><span style="font-size:36px;opacity:.88">N</span><span style="font-size:30px;opacity:.78">T</span><span style="font-size:25px;opacity:.66">A</span><span style="font-size:20px;opacity:.54">Z</span><span style="font-size:16px;opacity:.42">Ê</span><svg class="sym" style="width:50px;margin-left:8px"><use href="#d2"/></svg></div><div class="ds" style="margin-top:24px;color:var(--gold)">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<section class="opt" style="padding-bottom:80px"><div class="wrap">
+  <div class="rec">
+    <h2 style="margin-bottom:8px">Minha escolha</h2>
+    <p>A <b>50 (Nome dentro da luz)</b> é a que mais "ocupa" o portal com o nome: logo forte, original e fácil de virar selo. A <b>52 (Dois A)</b> é a mais sutil e conta uma história. Para o site, a <b>54</b> e a <b>56</b> rendem as melhores animações.</p>
+    <p class="small">O site real não foi alterado.</p>
+  </div>
+</div></section>
+
+</body>
+</html>

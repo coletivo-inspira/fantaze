@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fantazê — Mais direções (75 a 80)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Bricolage+Grotesque:wght@500;700;800&family=Syncopate:wght@400;700&family=Space+Grotesk:wght@500;700&family=Bowlby+One&family=Outfit:wght@300;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{ --ink:#17151F; --tomato:#E4572E; }
+  *{box-sizing:border-box;margin:0}
+  body{background:#F5F1E8;color:var(--ink);font-family:'Jost',system-ui,sans-serif;line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header.top{padding:56px 0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--tomato);font-weight:500;margin-bottom:10px}
+  h1,h2{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.01em}
+  h1{font-size:clamp(28px,5vw,44px)}
+  .lead{max-width:680px;opacity:.8;margin-top:10px}
+  section.opt{padding:44px 0;border-top:1px solid rgba(23,21,31,.15)}
+  .head{display:flex;gap:14px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}
+  .num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:34px;color:var(--tomato)}
+  h2{font-size:24px}
+  .why{max-width:640px;opacity:.78;margin-bottom:20px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{border-radius:8px;padding:32px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:330px;overflow:hidden;position:relative}
+  .svgl{width:100%;height:auto;display:block}
+  .rec{background:#fff;border:1px solid rgba(23,21,31,.15);border-radius:8px;padding:24px;max-width:720px}
+  .small{font-size:12px;opacity:.7;margin-top:10px}
+
+  /* 75 cogumelo */
+  .m1{background:#123524;color:#F3E9D2;--cap:#E4572E;--stem:#F3E9D2;--spot:#F3E9D2}
+  .m2{background:#F3E9D2;color:#123524;--cap:#1F5A3E;--stem:#DCC79C;--spot:#F3E9D2}
+  .fr{font-family:'Fraunces',serif;font-weight:700;font-size:48px;letter-spacing:-.02em;line-height:1;margin-top:12px}
+  .fr2{font-size:12px;letter-spacing:.26em;text-transform:uppercase;margin-top:8px;opacity:.8}
+
+  /* 76 vinil */
+  .v1{background:#17151F;color:#F3E9D2;--disc:#0B0B0E;--groove:#2C2C34;--label:#E4572E;--lt:#F3E9D2;--hole:#17151F}
+  .v2{background:#F3E9D2;color:#17151F;--disc:#17151F;--groove:#34343E;--label:#F2B134;--lt:#17151F;--hole:#F3E9D2}
+  .bg{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;letter-spacing:-.03em;line-height:1;margin-top:12px}
+  .bg2{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:13px;margin-top:6px;opacity:.8}
+
+  /* 77 abertura */
+  .film{background:#000;color:#fff;padding:0}
+
+  /* 80 aurora */
+  .au1{background:#0A0618;color:#fff}
+  .au2{background:#fff;color:#1B1440}
+  .blob{position:absolute;border-radius:50%;filter:blur(46px);opacity:.75}
+  .au1 .b1{width:190px;height:190px;left:-30px;top:-30px;background:#FF6FB5}
+  .au1 .b2{width:200px;height:200px;right:-40px;top:10px;background:#5CE1E6}
+  .au1 .b3{width:220px;height:160px;left:30%;bottom:-60px;background:#8A5CFF}
+  .au2 .b1{width:190px;height:190px;left:-30px;top:-30px;background:#FFB3D9;opacity:.7}
+  .au2 .b2{width:200px;height:200px;right:-40px;top:10px;background:#A8EEF0;opacity:.7}
+  .au2 .b3{width:220px;height:160px;left:30%;bottom:-60px;background:#C9B3FF;opacity:.7}
+  .aw{position:relative;font-family:'Outfit',sans-serif;font-weight:300;font-size:60px;letter-spacing:-.025em;line-height:1;background:linear-gradient(90deg,#FFC2E0,#C9B3FF 40%,#9BE7FF 70%,#FFE3B8);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .au2 .aw{background:linear-gradient(90deg,#C2257A,#6B3FD6 45%,#1E88A8 80%,#C27A1E);-webkit-background-clip:text;background-clip:text}
+  .as{position:relative;font-family:'Outfit',sans-serif;font-weight:500;font-size:11px;letter-spacing:.34em;text-transform:uppercase;margin-top:12px;opacity:.85}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mush" viewBox="0 0 120 120">
+      <path d="M42 62 C44 82 40 98 34 110 H86 C80 98 76 82 78 62 Z" style="fill:var(--stem)"/>
+      <path d="M8 64 C8 30 34 8 60 8 C86 8 112 30 112 64 C112 68 108 70 104 70 H16 C12 70 8 68 8 64Z" style="fill:var(--cap)"/>
+      <circle cx="38" cy="36" r="9" style="fill:var(--spot)"/><circle cx="68" cy="26" r="6.5" style="fill:var(--spot)"/>
+      <circle cx="86" cy="48" r="9.5" style="fill:var(--spot)"/><circle cx="56" cy="52" r="5" style="fill:var(--spot)"/><circle cx="24" cy="56" r="4" style="fill:var(--spot)"/>
+      <path d="M26 112 H94" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="vinyl" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="96" style="fill:var(--disc)"/>
+      <g fill="none" style="stroke:var(--groove)" stroke-width=".9">
+        <circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="84"/><circle cx="100" cy="100" r="78"/><circle cx="100" cy="100" r="72"/>
+        <circle cx="100" cy="100" r="66"/><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="54"/><circle cx="100" cy="100" r="48"/>
+      </g>
+      <path d="M100 100 L100 6 A94 94 0 0 1 170 32 Z" fill="#fff" opacity=".07"/>
+      <path d="M100 100 L100 194 A94 94 0 0 1 30 168 Z" fill="#fff" opacity=".07"/>
+      <circle cx="100" cy="100" r="36" style="fill:var(--label)"/>
+      <circle cx="100" cy="100" r="33" fill="none" style="stroke:var(--lt)" stroke-width=".8" opacity=".5"/>
+      <path id="lbl" d="M100 78 A22 22 0 1 1 99.9 78" fill="none"/>
+      <text font-family="Jost, sans-serif" font-weight="500" font-size="6.6" style="fill:var(--lt)"><textPath href="#lbl" textLength="134" lengthAdjust="spacing">FANTAZÊ · FASE 01 · TRILHA ·</textPath></text>
+      <circle cx="100" cy="100" r="4" style="fill:var(--hole)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Fantazê · Mais direções</div>
+    <h1>Seis caminhos novos (75 a 80)</h1>
+    <p class="lead">Cogumelo, disco de vinil, abertura de filme, mapa de metrô, papel em camadas e aurora. Cada um parte de uma ideia ligada ao restaurante: comida e fantasia, trilha sonora, cinema, viagem entre temas e atmosfera.</p>
+  </div>
+</header>
+
+<!-- 75 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">75</span><h2>Cogumelo</h2></div>
+  <p class="why">O cogumelo é comida e é conto de fadas ao mesmo tempo, o ponto exato entre restaurante e fantasia. Desenho plano, chapéu vermelho com bolinhas (ou verde, em versão mais séria) e fonte macia. Acolhedor, mas com ar de design autoral.</p>
+  <div class="grid">
+    <div class="card m1"><svg style="width:104px;height:auto" viewBox="0 0 120 120"><use href="#mush"/></svg><div class="fr">fantazê</div><div class="fr2">Restaurante Cênico</div></div>
+    <div class="card m2"><svg style="width:104px;height:auto" viewBox="0 0 120 120"><use href="#mush"/></svg><div class="fr">fantazê</div><div class="fr2">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<!-- 76 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">76</span><h2>Disco de vinil</h2></div>
+  <p class="why">A trilha sonora muda a cada temporada, então cada temporada é um disco novo. O rótulo traz o nome em volta do furo e a fase. Também funciona como ícone redondo para redes sociais e como capa de playlist.</p>
+  <div class="grid">
+    <div class="card v1"><svg style="width:150px;height:auto" viewBox="0 0 200 200"><use href="#vinyl"/></svg><div class="bg">fantazê</div><div class="bg2">restaurante cênico · trilha da temporada</div></div>
+    <div class="card v2"><svg style="width:150px;height:auto" viewBox="0 0 200 200"><use href="#vinyl"/></svg><div class="bg">fantazê</div><div class="bg2">restaurante cênico · trilha da temporada</div></div>
+  </div>
+</div></section>
+
+<!-- 77 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">77</span><h2>Abertura de filme</h2></div>
+  <p class="why">A marca como o cartão de título de um filme: tela preta, o nome em letras largas e finas e um crédito pequeno. À direita, o nome como legenda sobre uma cena de fim de tarde. Sem símbolo nenhum: é só atmosfera de cinema.</p>
+  <div class="grid">
+    <div class="card film">
+      <svg class="svgl" viewBox="0 0 400 240">
+        <rect width="400" height="240" fill="#000"/>
+        <text x="200" y="92" text-anchor="middle" font-family="Syncopate, sans-serif" font-size="6.5" letter-spacing="4" fill="#9a9a9a">UMA EXPERIÊNCIA EM TEMPORADAS</text>
+        <text x="200" y="132" text-anchor="middle" font-family="Syncopate, sans-serif" font-size="30" letter-spacing="9" fill="#fff">FANTAZÊ</text>
+        <path d="M150 152 H250" stroke="#555" stroke-width=".8"/>
+        <text x="200" y="172" text-anchor="middle" font-family="Syncopate, sans-serif" font-size="6.5" letter-spacing="4" fill="#9a9a9a">TEMPORADA 01 · BRIDGERTON</text>
+      </svg>
+    </div>
+    <div class="card film">
+      <svg class="svgl" viewBox="0 0 400 240">
+        <defs><linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B1B4D"/><stop offset=".55" stop-color="#B2557A"/><stop offset="1" stop-color="#F4A46B"/></linearGradient></defs>
+        <rect width="400" height="240" fill="#000"/>
+        <rect y="30" width="400" height="180" fill="url(#dusk)"/>
+        <path d="M0 176 C60 164 110 170 160 176 C230 186 300 160 400 172 V210 H0 Z" fill="#12091F"/>
+        <rect y="0" width="400" height="30" fill="#000"/><rect y="210" width="400" height="30" fill="#000"/>
+        <text x="200" y="190" text-anchor="middle" font-family="Jost, sans-serif" font-weight="500" font-size="19" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round" paint-order="stroke">fantazê.</text>
+        <text x="200" y="228" text-anchor="middle" font-family="Syncopate, sans-serif" font-size="6" letter-spacing="3.5" fill="#8a8a8a">RESTAURANTE CÊNICO</text>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+<!-- 78 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">78</span><h2>Linhas do metrô</h2></div>
+  <p class="why">Um mapa de linhas e estações: cada estação é uma temporada (a atual, a próxima, a que o público vota). O nome fica no topo como o título do mapa. Combina com "viagem" e com a votação dos próximos temas, e rende um pôster legal para a parede.</p>
+  <div class="grid">
+    <div class="card" style="background:#17151F;color:#F3E9D2">
+      <svg class="svgl" viewBox="0 0 420 232" style="max-width:440px" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <text x="30" y="52" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="currentColor">fantazê</text>
+        <text x="31" y="72" font-family="Jost, sans-serif" font-size="10" letter-spacing="2" fill="currentColor" opacity=".7">RESTAURANTE CÊNICO · LINHA DOS MUNDOS</text>
+        <path d="M30 150 H150 L190 110 H390" stroke="#E4572E" stroke-width="9"/>
+        <path d="M150 150 L190 190 H390" stroke="#F2B134" stroke-width="9"/>
+        <g fill="#17151F" stroke="#F3E9D2" stroke-width="3.5">
+          <circle cx="50" cy="150" r="8"/><circle cx="150" cy="150" r="11"/><circle cx="260" cy="110" r="8"/><circle cx="390" cy="110" r="8"/><circle cx="330" cy="190" r="8"/>
+        </g>
+        <g font-family="Jost, sans-serif" font-size="10.5" fill="currentColor" text-anchor="middle">
+          <text x="50" y="176" font-weight="500">Bridgerton</text><text x="260" y="136">Próximo tema</text><text x="390" y="90">Você vota</text><text x="330" y="216">Tema 03</text>
+        </g>
+      </svg>
+    </div>
+    <div class="card" style="background:#F3E9D2;color:#17151F">
+      <svg class="svgl" viewBox="0 0 420 232" style="max-width:440px" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <text x="30" y="52" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="currentColor">fantazê</text>
+        <text x="31" y="72" font-family="Jost, sans-serif" font-size="10" letter-spacing="2" fill="currentColor" opacity=".7">RESTAURANTE CÊNICO · LINHA DOS MUNDOS</text>
+        <path d="M30 150 H150 L190 110 H390" stroke="#E4572E" stroke-width="9"/>
+        <path d="M150 150 L190 190 H390" stroke="#1B998B" stroke-width="9"/>
+        <g fill="#F3E9D2" stroke="#17151F" stroke-width="3.5">
+          <circle cx="50" cy="150" r="8"/><circle cx="150" cy="150" r="11"/><circle cx="260" cy="110" r="8"/><circle cx="390" cy="110" r="8"/><circle cx="330" cy="190" r="8"/>
+        </g>
+        <g font-family="Jost, sans-serif" font-size="10.5" fill="currentColor" text-anchor="middle">
+          <text x="50" y="176" font-weight="500">Bridgerton</text><text x="260" y="136">Próximo tema</text><text x="390" y="90">Você vota</text><text x="330" y="216">Tema 03</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+<!-- 79 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">79</span><h2>Papel em camadas</h2></div>
+  <p class="why">O nome recortado em várias camadas de papel empilhadas, como num diorama: cada camada de uma cor, com sombra por baixo. Dá profundidade e textura artesanal, e conversa com a ideia de "cenário" do restaurante.</p>
+  <div class="grid">
+    <div class="card" style="background:#2A1B3D">
+      <svg class="svgl" viewBox="0 0 420 170" style="max-width:440px">
+        <defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feGaussianBlur stdDeviation="3.5"/></filter></defs>
+        <g font-family="Bowlby One, Arial Black, sans-serif" font-size="62" text-anchor="middle">
+          <text x="216" y="118" fill="#000" opacity=".45" filter="url(#sh)">FANTAZÊ</text>
+          <text x="214" y="116" fill="#7A1E3A">FANTAZÊ</text>
+          <text x="211" y="113" fill="#C2455F">FANTAZÊ</text>
+          <text x="208" y="110" fill="#F28BA0">FANTAZÊ</text>
+          <text x="205" y="107" fill="#FFD6DF">FANTAZÊ</text>
+        </g>
+        <text x="210" y="148" text-anchor="middle" font-family="Jost, sans-serif" font-weight="500" font-size="10" letter-spacing="5" fill="#F28BA0">RESTAURANTE CÊNICO</text>
+      </svg>
+    </div>
+    <div class="card" style="background:#F3E9D2">
+      <svg class="svgl" viewBox="0 0 420 170" style="max-width:440px">
+        <g font-family="Bowlby One, Arial Black, sans-serif" font-size="62" text-anchor="middle">
+          <text x="216" y="118" fill="#000" opacity=".3" filter="url(#sh)">FANTAZÊ</text>
+          <text x="214" y="116" fill="#0B4F55">FANTAZÊ</text>
+          <text x="211" y="113" fill="#177E86">FANTAZÊ</text>
+          <text x="208" y="110" fill="#4DB6AC">FANTAZÊ</text>
+          <text x="205" y="107" fill="#B8EAE0">FANTAZÊ</text>
+        </g>
+        <text x="210" y="148" text-anchor="middle" font-family="Jost, sans-serif" font-weight="500" font-size="10" letter-spacing="5" fill="#0B4F55">RESTAURANTE CÊNICO</text>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+<!-- 80 -->
+<section class="opt"><div class="wrap">
+  <div class="head"><span class="num">80</span><h2>Aurora</h2></div>
+  <p class="why">Nada de símbolo: uma atmosfera. Manchas de cor suaves em movimento atrás de um nome fino em letras minúsculas com degradê. Moderno, calmo e adulto, e as cores podem mudar a cada temporada (o fundo é o "clima" do tema).</p>
+  <div class="grid">
+    <div class="card au1"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="aw">fantazê</div><div class="as">Restaurante Cênico</div></div>
+    <div class="card au2"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="aw">fantazê</div><div class="as">Restaurante Cênico</div></div>
+  </div>
+</div></section>
+
+<section class="opt" style="padding-bottom:80px"><div class="wrap">
+  <div class="rec">
+    <h2 style="margin-bottom:8px">Minha escolha</h2>
+    <p>A <b>76 (Vinil)</b> tem conceito claro (trilha por temporada) e vira ícone redondo para as redes. A <b>77 (Abertura de filme)</b> é a mais sofisticada e a mais fácil de aplicar. A <b>75 (Cogumelo)</b> é a que melhor une comida e fantasia num só desenho.</p>
+    <p class="small">O site real não foi alterado.</p>
+  </div>
+</div></section>
+
+</body>
+</html>

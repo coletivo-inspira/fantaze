@@ -44,7 +44,7 @@ export default function HowItWorks() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.12}>
-              <div className="group relative h-full rounded-[2rem] border border-brand-indigo/10 bg-white p-6 sm:p-8 shadow-[0_24px_50px_-36px_rgba(48,19,126,0.6)] transition-all duration-300 hover:-translate-y-2">
+              <div className="group relative h-full rounded-[2rem] border border-brand-indigo/10 bg-white p-6 sm:p-8 shadow-[0_24px_50px_-36px_rgba(142,26,31,0.6)] transition-all duration-300 hover:-translate-y-2">
                 <span className="absolute right-6 top-4 font-display text-7xl text-brand-indigo/[0.06]">0{i + 1}</span>
                 <span className={`grid h-14 w-14 place-items-center rounded-2xl text-white ${s.color} transition-transform duration-300 group-hover:rotate-6`}>
                   <s.icon size={26} />

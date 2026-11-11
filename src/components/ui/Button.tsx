@@ -7,7 +7,7 @@ type Size = 'md' | 'lg';
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-brand-indigo text-white hover:bg-brand-purple shadow-[0_10px_30px_-10px_rgba(48,19,126,0.7)]',
+    'bg-brand-indigo text-white hover:bg-brand-purple shadow-[0_10px_30px_-10px_rgba(142,26,31,0.7)]',
   secondary: 'bg-brand-pink text-white hover:brightness-105 shadow-[0_10px_30px_-10px_rgba(252,120,147,0.8)]',
   ghost: 'border border-brand-indigo/20 text-brand-indigo hover:bg-brand-indigo/5',
   light: 'bg-white text-brand-indigo hover:bg-brand-sand',
