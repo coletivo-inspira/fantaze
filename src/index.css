@@ -16,7 +16,7 @@
   --color-brand-paper: #fff8f4;
   --color-brand-ink: #3d0f12; /* texto */
 
-  --font-display: 'Caprasimo', 'Cooper Black', serif;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-sans: 'Nunito', system-ui, sans-serif;
   --font-theme: 'Cormorant Garamond', Georgia, serif;
 
@@ -114,10 +114,15 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.01em;
   text-wrap: balance;
   overflow-wrap: break-word;
+}
+
+/* Fraunces tem vários pesos: o texto em fonte de título usa semibold por padrão */
+.font-display {
+  font-weight: 600;
 }
 
 img, svg, video {

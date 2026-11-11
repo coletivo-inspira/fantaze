@@ -21,8 +21,8 @@ export default function Footer() {
       <svg className="absolute -top-px left-0 w-full text-brand-paper" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden>
         <path fill="currentColor" d="M0 0 H1440 V20 Q1200 70 960 30 T480 30 T0 40Z" />
       </svg>
-      <Decor name="cup" float className="right-[6%] top-24 w-16 opacity-60 sm:w-24" />
-      <Decor name="sparkles" twinkle className="left-[44%] top-32 w-10 opacity-70" />
+      <Decor tom="escuro" name="cup" float className="right-[6%] top-24 w-16 opacity-60 sm:w-24" />
+      <Decor tom="escuro" name="sparkles" twinkle className="left-[44%] top-32 w-10 opacity-70" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-12 pt-24 sm:pt-28 md:grid-cols-12 md:px-10">
         <div className="md:col-span-5">
