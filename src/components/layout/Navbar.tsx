@@ -4,7 +4,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/cn';
 import LogoPrincipal from '../ui/LogoPrincipal';
+import Logo from '../ui/Logo';
 import Button from '../ui/Button';
+import ThemeToggle from '../ui/ThemeToggle';
 
 const links = [
   { name: 'Início', to: '/' },
@@ -61,7 +63,9 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10" aria-label="Principal">
           <Link to="/" aria-label="Fantazê — página inicial" className="group">
-            <LogoPrincipal motion="hover" className="w-40 sm:w-52" />
+            <LogoPrincipal motion="hover" className="w-40 sm:w-52 dark:hidden" />
+            {/* No modo escuro o nome fica branco para ter contraste com o fundo marrom */}
+            <Logo variant="white" motion="hover" className="hidden w-40 sm:w-52 dark:block" />
           </Link>
 
           <div className="hidden items-center gap-1 lg:flex">
@@ -93,7 +97,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <ThemeToggle />
             <Button to="/reservas" variant="primary" className="hidden sm:inline-flex">
               Reservar mesa
             </Button>

@@ -31,6 +31,7 @@ Depois de qualquer mudança, rode `npx tsc -b && npx eslint . && npx vite build`
 - Versões coloridas da logo (verde, roxo, azul etc.) ficam para depois; por ora só a vermelha/laranja.
 - **Grafismos** (`src/assets/grafismos`, via `ui/grafismos.ts` e `<Decor name=…/>`): conjunto novo de cinema e mesa (chair, clapper, tickets, cutlery, bowl, sparkles, plate, cup, wing, dice, cards). Os antigos estão em `design/grafismos-antigos/`.
 - Paleta oficial como `brand-*`, agora em **vermelho e laranja** (os nomes dos tokens foram mantidos): indigo = vermelho profundo `#8e1a1f`, purple = vermelho `#d8302a`, blue = laranja `#f26b2d`, pink = coral `#ff6b4a`, ink = `#3d0f12`, mais cream, amber, peach, sand e paper (tons quentes). Fontes: Caprasimo (títulos), Nunito (texto), Cormorant Garamond (tema em cartaz).
+- **Modo escuro (marrom, não preto)**: botão `ThemeToggle` na navbar alterna `data-theme="dark"` no `<html>` (salvo em `localStorage` `fantaze:tema`; padrão = claro; script no `index.html` evita o flash). Implementação 100% em `src/index.css`: tokens `brand-*` redefinidos (indigo/ink viram creme para texto, paper vira marrom `#231510`), mais overrides para `bg-brand-indigo` (painel marrom `#3b1c13`; botões/links viram vermelho), `bg-white` e `--t-*`. A variante Tailwind `dark:` está habilitada para isso. No escuro a navbar/splash trocam a logo para a versão de nome branco. Ao criar componentes, prefira tokens `brand-*`/`--t-*` e evite cores fixas em fundos claros.
 - O site deve ser **responsivo para mobile** em tudo que for criado.
 - Instagram: `@fantaze`.
 

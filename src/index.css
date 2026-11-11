@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Modo escuro manual: <html data-theme="dark"> (botão na barra de navegação) */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme {
   /* Paleta oficial da marca Fantazê: vermelho e laranja (da logo da asa) */
   --color-brand-indigo: #8e1a1f; /* vermelho profundo: fundos escuros e títulos */
@@ -55,6 +58,40 @@
   --t-accent-2: #e8b4b8;
   --t-gold: #c9a24b;
 }
+
+/*
+ * MODO ESCURO (marrom, não preto).
+ * Os tokens de texto/título (indigo, ink) viram creme e os fundos viram marrom-chocolate.
+ * Fundos sólidos `bg-brand-indigo` (painéis) viram marrom-avermelhado; botões viram vermelho.
+ */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --color-brand-paper: #231510;
+  --color-brand-indigo: #fbe9dc;
+  --color-brand-ink: #f2dfd2;
+  --color-brand-peach: #3a2319;
+  --color-brand-cream: #4a2e22;
+  --color-brand-purple: #ff6a55;
+  --color-brand-blue: #ff8a3d;
+  /* Paleta do tema em cartaz, versão escura (acentos continuam os do tema) */
+  --t-bg: #2a1913;
+  --t-surface: #37221a;
+  --t-ink: #f5e3d6;
+}
+html[data-theme="dark"] [style*="--t-bg"] {
+  --t-bg: #2a1913 !important;
+  --t-surface: #37221a !important;
+  --t-ink: #f5e3d6 !important;
+}
+html[data-theme="dark"] .bg-brand-indigo { background-color: #3b1c13; }
+html[data-theme="dark"] footer.bg-brand-indigo { background-color: #170d09; }
+html[data-theme="dark"] :is(button, a, span).bg-brand-indigo { background-color: #c42b22; }
+html[data-theme="dark"] :is(button, a, span).bg-brand-indigo:hover { background-color: #ff6a55; }
+html[data-theme="dark"] .bg-brand-amber { color: #3d0f12; }
+html[data-theme="dark"] .bg-white { background-color: #321e16; }
+html[data-theme="dark"] .bg-white\/70 { background-color: rgb(58 35 25 / 0.7); }
+html[data-theme="dark"] .border-white { border-color: #3a2319; }
+html[data-theme="dark"] body { transition: background-color 0.3s ease, color 0.3s ease; }
 
 html {
   scroll-behavior: smooth;

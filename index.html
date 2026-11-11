@@ -9,6 +9,15 @@
     />
     <meta name="theme-color" content="#8E1A1F" />
 
+    <!-- Aplica o modo escuro salvo antes da pintura (evita piscar o tema claro) -->
+    <script>
+      try {
+        if (localStorage.getItem('fantaze:tema') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
