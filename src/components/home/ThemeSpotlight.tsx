@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Box } from 'lucide-react';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { formatShortDate } from '../../lib/format';
 import Button from '../ui/Button';
@@ -37,6 +37,9 @@ export default function ThemeSpotlight() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Button to="/tema-do-mes" variant="theme" size="lg" icon={<ArrowRight size={18} />}>
                 Explorar o tema
+              </Button>
+              <Button to="/tema-do-mes#tour-3d" variant="ghost" size="lg" icon={<Box size={18} />}>
+                Tour 3D do salão
               </Button>
               <ThemeCountdown daysLeft={daysLeft} />
             </div>

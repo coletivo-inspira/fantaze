@@ -49,6 +49,10 @@ Depois de qualquer mudança, rode `npx tsc -b && npx eslint . && npx vite build`
 - Pratos: `src/assets/pratos/<id-do-prato>.jpg` (ids em `src/data/menu.ts`). Sem arquivo, cai na ilustração `DishArt`.
 - Fotos de referência do moodboard em `src/assets/photos` (usadas em Sobre).
 
+## Tour 3D do salão
+
+Página estática em `public/salao-3d/index.html` (three.js r128 via cdnjs, sem build), servida em `/salao-3d/index.html` (sempre com `index.html` explícito: no `npm run dev` o Vite não resolve `/salao-3d/` e cai no 404 do app). Aceita `?tema=<id>` (bridgerton, harry, stranger, ghibli) e `?embed=1` (pula a intro e não captura a rolagem do mouse). Fica embutida em `/tema-do-mes#tour-3d` pelo `components/theme/Salao3D.tsx`, que só carrega o iframe após o clique (capa: `src/assets/ambiente/salao-3d.jpg`). A home leva até lá pelo botão "Tour 3D do salão" no `ThemeSpotlight`. Links internos da página 3D usam `target="_top"`.
+
 ## Passaporte
 
 6 carimbos (`src/data/passport.ts`), brindes aos 3 e 6 carimbos. Códigos atuais de teste: `FNT-BRIDGERTON`, `FNT-CARIMBO-02` a `FNT-CARIMBO-06` (não aparecem na tela). Estado salvo em localStorage (`fantaze:passaporte`). O carimbo (`StampArt`) leva a logo ao centro e o nome do tema em arco (fonte reduz para nomes longos).
