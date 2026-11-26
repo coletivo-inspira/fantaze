@@ -7,6 +7,7 @@ import Decor from '../ui/Decor';
 
 const explore = [
   { name: 'Em cartaz', to: '/tema-do-mes' },
+  { name: 'Tour 3D', to: '/tour-3d' },
   { name: 'Cardápio', to: '/cardapio' },
   { name: 'Próximos temas', to: '/proximos-temas' },
   { name: 'Passaporte', to: '/passaporte' },
@@ -22,7 +23,7 @@ export default function Footer() {
         <path fill="currentColor" d="M0 0 H1440 V20 Q1200 70 960 30 T480 30 T0 40Z" />
       </svg>
       <Decor tom="escuro" name="cup" float className="right-[6%] top-24 w-16 opacity-60 sm:w-24" />
-      <Decor tom="escuro" name="sparkles" twinkle className="left-[44%] top-32 w-10 opacity-70" />
+      <Decor tom="escuro" name="sparkles" twinkle className="left-[44%] top-32 hidden w-10 opacity-70 md:block" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-12 pt-24 sm:pt-28 md:grid-cols-12 md:px-10">
         <div className="md:col-span-5">
@@ -89,7 +90,7 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-white/50 md:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 pb-24 pt-6 text-xs sm:pb-6 text-white/50 md:px-10">
           <p>© {new Date().getFullYear()} Fantazê. Todos os direitos reservados.</p>
           <p>
             Os universos citados (Bridgerton, Harry Potter, Stranger Things e outros) pertencem aos seus respectivos

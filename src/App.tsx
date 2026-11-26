@@ -7,6 +7,7 @@ import ScrollRestoration from './components/layout/ScrollRestoration.tsx';
 // --- Code splitting com React.lazy (uma página por rota) ---
 const Home = lazy(() => import('./pages/Home.tsx'));
 const MonthlyTheme = lazy(() => import('./pages/MonthlyTheme.tsx'));
+const Tour3D = lazy(() => import('./pages/Tour3D.tsx'));
 const Menu = lazy(() => import('./pages/Menu.tsx'));
 const NextThemes = lazy(() => import('./pages/NextThemes.tsx'));
 const Reservations = lazy(() => import('./pages/Reservations.tsx'));
@@ -23,6 +24,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/tema-do-mes" element={<MonthlyTheme />} />
+            <Route path="/tour-3d" element={<Tour3D />} />
             <Route path="/cardapio" element={<Menu />} />
             <Route path="/proximos-temas" element={<NextThemes />} />
             <Route path="/reservas" element={<Reservations />} />

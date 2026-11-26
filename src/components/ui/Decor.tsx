@@ -9,7 +9,7 @@ interface DecorProps {
   /** Pisca como uma estrela */
   twinkle?: boolean;
   delay?: number;
-  /** `escuro`: sempre âmbar (para fundos escuros, como o rodapé). Padrão: bordô no claro, âmbar no modo escuro. */
+  /** `escuro`: sempre âmbar (para fundos escuros, como o rodapé). Padrão: bordô. */
   tom?: 'auto' | 'escuro';
 }
 
@@ -27,17 +27,5 @@ export default function Decor({ name, className, float, twinkle, delay = 0, tom 
     return <img src={grafismosAmbar[name]} alt="" aria-hidden draggable={false} style={style} className={base} />;
   }
 
-  return (
-    <>
-      <img src={grafismos[name]} alt="" aria-hidden draggable={false} style={style} className={cn(base, 'dark:hidden')} />
-      <img
-        src={grafismosAmbar[name]}
-        alt=""
-        aria-hidden
-        draggable={false}
-        style={style}
-        className={cn(base, 'hidden dark:block')}
-      />
-    </>
-  );
+  return <img src={grafismos[name]} alt="" aria-hidden draggable={false} style={style} className={base} />;
 }

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import LogoPrincipal from '../ui/LogoPrincipal';
-import Logo from '../ui/Logo';
 
 /** Abertura do “portal”: aparece toda vez que o site é aberto (ou recarregado). */
 export default function Splash() {
@@ -28,8 +27,7 @@ export default function Splash() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             >
-              <LogoPrincipal motion="loop" className="w-[min(78vw,420px)] dark:hidden" />
-              <Logo variant="white" motion="loop" className="hidden w-[min(78vw,420px)] dark:block" />
+              <LogoPrincipal motion="loop" className="w-[min(78vw,420px)]" />
             </motion.div>
             <motion.p
               initial={{ opacity: 0 }}

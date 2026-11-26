@@ -15,7 +15,7 @@ export default function VotePreview() {
       <Decor name="cards" float className="right-[8%] top-10 w-20 opacity-70" />
       <Decor name="tickets" float delay={1} className="bottom-10 left-[6%] w-24 opacity-70" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 md:px-10 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 md:px-10 lg:grid-cols-2">
         <div>
           <SectionHeading
             tone="dark"

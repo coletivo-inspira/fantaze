@@ -26,7 +26,7 @@ export default function Logo({ variant = 'color', motion = 'none', className }: 
     <span
       role="img"
       aria-label="Fantazê"
-      className={cn('relative block aspect-[983/148] select-none', className)}
+      className={cn('relative block aspect-[1200/265] select-none', className)}
     >
       <img src={white ? letrasBranco : letras} alt="" draggable={false} className="absolute inset-0 h-full w-full" />
       <img src={asa} alt="" draggable={false} className={wing} />

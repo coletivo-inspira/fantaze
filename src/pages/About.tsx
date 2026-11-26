@@ -98,7 +98,7 @@ export default function About() {
           <SectionHeading
             kicker="Moodboard"
             title="Mundos que inspiraram a gente."
-            subtitle="Referências de ambientação imersiva que guiam a nossa direção de arte. As imagens são ilustrativas."
+            subtitle="Referências de ambientação imersiva que guiam a nossa direção de arte."
           />
           <div className="mt-12 grid auto-rows-[10rem] grid-cols-2 gap-4 sm:auto-rows-[13rem] md:grid-cols-3">
             {mood.map((m, i) => (

@@ -17,7 +17,7 @@ Depois de qualquer mudança, rode `npx tsc -b && npx eslint . && npx vite build`
 
 ## Estrutura
 
-- `src/App.tsx`: rotas lazy dentro de `Layout`. Rotas: `/`, `/tema-do-mes` (exibida como "Em cartaz"), `/cardapio`, `/proximos-temas`, `/reservas`, `/passaporte`, `/sobre`.
+- `src/App.tsx`: rotas lazy dentro de `Layout`. Rotas: `/`, `/tema-do-mes` (exibida como "Em cartaz"), `/tour-3d`, `/cardapio`, `/proximos-temas`, `/reservas`, `/passaporte`, `/sobre`.
 - `src/pages/`, `src/components/{layout,ui,home,theme,menu,vote,reservation,passport}/`.
 - `src/data/`: conteúdo editável (`restaurant`, `themes`, `menu`, `upcoming`, `passport`).
 - `src/services/`: contrato (interface) + implementação local em localStorage para votos, reservas e passaporte. Para usar backend, crie outra implementação e troque o export no fim do arquivo.
@@ -25,13 +25,13 @@ Depois de qualquer mudança, rode `npx tsc -b && npx eslint . && npx vite build`
 
 ## Regras da marca (não contradizer sem consultar o usuário)
 
-- **Logo** definida pelo grupo (PNG com fundo transparente, extraída de `Design sem nome.zip`): asa em degradê vermelho/laranja/amarelo + nome manuscrito em vermelho. Nunca recolorir a asa. `LogoPrincipal` (`src/assets/logo-completa.png`) é usada na navbar e na splash. Os carimbos usam só a asa (`logo-asa.png`).
-- **Rodapé** usa `Logo.tsx` (nome branco + asa em camada própria, que bate no hover: `logo-letras-branco.png` + `logo-asa-canvas.png`).
+- **Logo** (nova, nov/2026, do manual "Identidade visual em ação"): asa em degradê vermelho/laranja/amarelo + "Fantazê" manuscrito e "restaurante temático" em **laranja** (fundo claro). Versão negativa: mesmo desenho com nome em **branco** (fundos cacau/chocolate/bordô). Nunca recolorir a asa. PNGs 1200×265 (proporção `aspect-[1200/265]`), gerados dos originais `fantaze_logo_laranja_fundo_claro.png` / `fantaze_logo_branca_fundo_escuro.png`. `LogoPrincipal` (`logo-completa.png`, laranja) na navbar e na splash. Os carimbos e o favicon usam só a asa (`logo-asa.png`). `public/logo-fantaze.png` (og:image) = logo laranja sobre pêssego. O tour 3D usa a versão branca embutida em base64.
+- **Rodapé** usa `Logo.tsx` (nome branco + asa em camada própria, que bate no hover: `logo-letras-branco.png` + `logo-asa-canvas.png`, mesmo canvas; origem da batida `.wing-l` em `index.css`).
 - **Favicon** = asa sobre quadrado arredondado pêssego (`public/favicon.svg` com PNG embutido, PNGs e apple-touch). Se a logo vetorial sair do grupo, substituir os PNGs por SVG.
 - Versões coloridas da logo (verde, roxo, azul etc.) ficam para depois; por ora só a vermelha/laranja.
-- **Grafismos** (`src/assets/grafismos`, via `ui/grafismos.ts` e `<Decor name=…/>`): conjunto de cinema e mesa (chair, clapper, tickets, cutlery, bowl, sparkles, plate, cup, wing, dice, cards) em traço bordô (`nome.png`) e âmbar (`nome-ambar.png`, usado no modo escuro e com `tom="escuro"`, como no rodapé). `<Decor>` troca sozinho conforme o tema. Os originais em índigo estão em `design/grafismos-indigo/`; os antigos em `design/grafismos-antigos/`.
-- Paleta oficial como `brand-*`, agora em **vermelho e laranja** (os nomes dos tokens foram mantidos): indigo = vermelho profundo `#8e1a1f`, purple = vermelho `#d8302a`, blue = laranja `#f26b2d`, pink = coral `#ff6b4a`, ink = `#3d0f12`, mais cream, amber, peach, sand e paper (tons quentes). Fontes: Fraunces (títulos, peso 600), Nunito (texto), Cormorant Garamond (tema em cartaz). O deck de identidade visual está no Claude Artifacts ("Fantazê — Identidade Visual").
-- **Modo escuro (marrom, não preto)**: botão `ThemeToggle` na navbar alterna `data-theme="dark"` no `<html>` (salvo em `localStorage` `fantaze:tema`; padrão = claro; script no `index.html` evita o flash). Implementação 100% em `src/index.css`: tokens `brand-*` redefinidos (indigo/ink viram creme para texto, paper vira marrom `#231510`), mais overrides para `bg-brand-indigo` (painel marrom `#3b1c13`; botões/links viram vermelho), `bg-white` e `--t-*`. A variante Tailwind `dark:` está habilitada para isso. No escuro a navbar/splash trocam a logo para a versão de nome branco. Ao criar componentes, prefira tokens `brand-*`/`--t-*` e evite cores fixas em fundos claros.
+- **Grafismos** (`src/assets/grafismos`, via `ui/grafismos.ts` e `<Decor name=…/>`): conjunto de cinema e mesa (chair, clapper, tickets, cutlery, bowl, sparkles, plate, cup, wing, dice, cards) em traço bordô (`nome.png`) e âmbar (`nome-ambar.png`, com `tom="escuro"`, como no rodapé). Os originais em índigo estão em `design/grafismos-indigo/`; os antigos em `design/grafismos-antigos/`.
+- Paleta oficial como `brand-*`, agora em **vermelho e laranja** (os nomes dos tokens foram mantidos): indigo = vermelho profundo `#8e1a1f`, purple = vermelho `#d8302a`, blue = laranja `#f26b2d`, pink = coral `#ff6b4a`, ink = `#3d0f12`, mais cream, amber, peach, sand e paper (tons quentes). Fontes (padrão único em todo o site, inclusive nas páginas do tema): Fraunces (todos os títulos, cards e números, peso 600), Nunito (texto corrido), Cormorant Garamond itálico **só** no nome do tema e na frase de efeito dele (`theme.name`, `tagline`, `badge`, nome dos candidatos na votação). Não usar `font-theme` em títulos de seção, cards ou parágrafos. Por tema muda só a cor (`--t-*`) e as imagens. O deck de identidade visual está no Claude Artifacts ("Fantazê — Identidade Visual").
+- **Sem modo escuro**: o site é sempre claro (decisão do cliente, nov/2026). O `ThemeToggle`, o script do `index.html` e o CSS `data-theme="dark"` foram removidos; não recriar variantes `dark:`.
 - O site deve ser **responsivo para mobile** em tudo que for criado.
 - Instagram: `@fantaze`.
 
@@ -51,7 +51,7 @@ Depois de qualquer mudança, rode `npx tsc -b && npx eslint . && npx vite build`
 
 ## Tour 3D do salão
 
-Página estática em `public/salao-3d/index.html` (three.js r128 via cdnjs, sem build), servida em `/salao-3d/index.html` (sempre com `index.html` explícito: no `npm run dev` o Vite não resolve `/salao-3d/` e cai no 404 do app). Aceita `?tema=<id>` (bridgerton, harry, stranger, ghibli) e `?embed=1` (pula a intro e não captura a rolagem do mouse). Fica embutida em `/tema-do-mes#tour-3d` pelo `components/theme/Salao3D.tsx`, que só carrega o iframe após o clique (capa: `src/assets/ambiente/salao-3d.jpg`). A home leva até lá pelo botão "Tour 3D do salão" no `ThemeSpotlight`. Links internos da página 3D usam `target="_top"`.
+Página estática em `public/salao-3d/index.html` (three.js r128 via cdnjs, sem build), servida em `/salao-3d/index.html` (sempre com `index.html` explícito: no `npm run dev` o Vite não resolve `/salao-3d/` e cai no 404 do app). Aceita `?tema=<id>` (bridgerton, harry, stranger, ghibli) e `?embed=1` (pula a intro e não captura a rolagem do mouse). Fica embutida em `/tema-do-mes#tour-3d` pelo `components/theme/Salao3D.tsx`, que só carrega o iframe após o clique (capa: `src/assets/ambiente/salao-3d.jpg`). Também tem página própria `/tour-3d` (`pages/Tour3D.tsx`, iframe aberto direto, item "Tour 3D" no menu e no rodapé); o botão "Tour 3D do salão" do `ThemeSpotlight` leva para ela. URL montada por `lib/tour3d.ts`. Links internos da página 3D usam `target="_top"`.
 
 ## Passaporte
 
@@ -66,6 +66,9 @@ Página estática em `public/salao-3d/index.html` (three.js r128 via cdnjs, sem 
 GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`), push na `main`. Domínio próprio `fantaze.inspira.dev.br`, base `/`. Só use a variável de repositório `BASE_PATH` se publicar em subpasta. O build gera `404.html` para o fallback de SPA.
 
 ## Armadilhas conhecidas
+
+- Navbar: com 7 links, os links de desktop só aparecem a partir de `xl` (abaixo disso, menu hambúrguer); em `lg` eles quebravam linha.
+- O botão "voltar ao topo" some em `/reservas` (cobria o "Continuar") e `/tour-3d`.
 
 - `backdrop-filter` em um ancestral faz filhos `position: fixed` se posicionarem em relação a ele (por isso o menu mobile fica fora do `<header>`).
 - Arquivos `.fuse_hidden*` podem aparecer na pasta; apague-os e não commite.

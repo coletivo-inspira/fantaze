@@ -43,7 +43,7 @@ export default function MenuCard({ item }: { item: MenuItem }) {
 
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex flex-col items-start gap-1.5 sm:flex-row sm:justify-between sm:gap-3">
-          <h3 className="font-theme text-[1.4rem] font-semibold leading-tight text-[var(--t-ink)] sm:text-[1.7rem]">
+          <h3 className="text-xl leading-tight text-[var(--t-ink)] sm:text-2xl">
             {item.name}
           </h3>
           <span className="shrink-0 rounded-full bg-[var(--t-ink)] px-3 py-1 text-sm font-extrabold text-[var(--t-bg)]">

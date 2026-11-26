@@ -33,7 +33,7 @@ export default function SectionHeading({
       <h2
         className={cn(
           'mt-4 text-4xl leading-[1.05] sm:text-5xl',
-          tone === 'dark' ? 'text-white' : tone === 'theme' ? 'font-theme font-semibold text-[var(--t-ink)]' : 'text-brand-indigo',
+          tone === 'dark' ? 'text-white' : tone === 'theme' ? 'text-[var(--t-ink)]' : 'text-brand-indigo',
         )}
       >
         {title}

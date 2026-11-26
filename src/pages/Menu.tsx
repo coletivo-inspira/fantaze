@@ -51,7 +51,7 @@ export default function Menu() {
             {/* Filtros */}
             <div className="sticky top-20 z-30 -mx-6 border-b border-brand-indigo/10 bg-brand-paper/90 px-6 py-4 backdrop-blur-xl md:-mx-10 md:px-10">
               <LayoutGroup>
-                <div className="no-scrollbar flex items-center gap-2 overflow-x-auto">
+                <div className="no-scrollbar flex items-center gap-2 overflow-x-auto pr-8 [mask-image:linear-gradient(to_right,black_85%,transparent)] md:pr-0 md:[mask-image:none]">
                   {[{ id: 'todos' as const, label: 'Tudo' }, ...menuCategories].map((c) => (
                     <button
                       key={c.id}
@@ -106,7 +106,7 @@ export default function Menu() {
                     aria-labelledby={`cat-${group.id}`}
                   >
                     <div className="mb-6 flex items-end gap-4">
-                      <h2 id={`cat-${group.id}`} className="font-theme text-4xl font-semibold italic text-[var(--t-ink)] sm:text-5xl">
+                      <h2 id={`cat-${group.id}`} className="text-3xl text-[var(--t-ink)] sm:text-4xl">
                         {group.label}
                       </h2>
                       <span className="mb-2 hidden text-sm font-bold uppercase tracking-[0.25em] text-[var(--t-gold)] sm:block">

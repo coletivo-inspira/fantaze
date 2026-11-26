@@ -4,13 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/cn';
 import LogoPrincipal from '../ui/LogoPrincipal';
-import Logo from '../ui/Logo';
 import Button from '../ui/Button';
-import ThemeToggle from '../ui/ThemeToggle';
 
 const links = [
   { name: 'Início', to: '/' },
   { name: 'Em cartaz', to: '/tema-do-mes' },
+  { name: 'Tour 3D', to: '/tour-3d' },
   { name: 'Cardápio', to: '/cardapio' },
   { name: 'Próximos temas', to: '/proximos-temas' },
   { name: 'Passaporte', to: '/passaporte' },
@@ -63,12 +62,10 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10" aria-label="Principal">
           <Link to="/" aria-label="Fantazê — página inicial" className="group">
-            <LogoPrincipal motion="hover" className="w-40 sm:w-52 dark:hidden" />
-            {/* No modo escuro o nome fica branco para ter contraste com o fundo marrom */}
-            <Logo variant="white" motion="hover" className="hidden w-40 sm:w-52 dark:block" />
+            <LogoPrincipal motion="hover" className="w-40 sm:w-48" />
           </Link>
 
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="hidden items-center gap-1 xl:flex">
             {links.map((link) => (
               <NavLink
                 key={link.to}
@@ -76,7 +73,7 @@ export default function Navbar() {
                 end={link.to === '/'}
                 className={({ isActive }) =>
                   cn(
-                    'relative rounded-full px-3 py-2 text-sm font-bold transition-colors xl:px-4',
+                    'relative whitespace-nowrap rounded-full px-3 py-2 text-sm font-bold transition-colors 2xl:px-4',
                     isActive ? 'text-brand-indigo' : 'text-brand-ink/60 hover:text-brand-indigo',
                   )
                 }
@@ -98,8 +95,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <ThemeToggle />
-            <Button to="/reservas" variant="primary" className="hidden sm:inline-flex">
+            <Button to="/reservas" variant="primary" className="hidden whitespace-nowrap sm:inline-flex">
               Reservar mesa
             </Button>
             <button
@@ -108,7 +104,7 @@ export default function Navbar() {
               aria-label={open ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={open}
               aria-controls="menu-mobile"
-              className="grid h-11 w-11 place-items-center rounded-full bg-brand-peach text-brand-indigo lg:hidden"
+              className="grid h-11 w-11 place-items-center rounded-full bg-brand-peach text-brand-indigo xl:hidden"
             >
               {open ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -129,7 +125,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 overflow-y-auto bg-brand-paper px-6 pb-10 pt-24 lg:hidden"
+            className="fixed inset-0 z-40 overflow-y-auto bg-brand-paper px-6 pb-10 pt-24 xl:hidden"
           >
             <nav aria-label="Menu mobile" className="flex flex-col gap-2">
               {[...links, { name: 'Reservar mesa', to: '/reservas' }].map((link, i) => (

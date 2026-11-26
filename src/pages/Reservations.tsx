@@ -48,10 +48,6 @@ export default function Reservations() {
                 {restaurant.phone}
               </a>
             </div>
-            <p className="px-2 text-xs text-brand-ink/50">
-              Esta versão simula a disponibilidade e salva a solicitação no navegador. A estrutura já está pronta para
-              integrar com um sistema real de reservas.
-            </p>
           </aside>
         </div>
       </section>

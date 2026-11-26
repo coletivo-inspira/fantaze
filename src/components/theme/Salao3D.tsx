@@ -3,9 +3,7 @@ import { Maximize2, Sparkles, X } from 'lucide-react';
 import poster from '../../assets/ambiente/salao-3d.jpg';
 import Reveal from '../ui/Reveal';
 import SectionHeading from '../ui/SectionHeading';
-
-// Caminho com index.html explícito: o servidor de dev do Vite não resolve índice de pasta em public/.
-const TOUR_URL = `${import.meta.env.BASE_URL}salao-3d/index.html`;
+import { tour3dUrl } from '../../lib/tour3d';
 
 interface Salao3DProps {
   /** id do tema em cartaz (o tour abre nele, se existir lá) */
@@ -18,7 +16,7 @@ interface Salao3DProps {
  */
 export default function Salao3D({ themeId }: Salao3DProps) {
   const [open, setOpen] = useState(false);
-  const src = `${TOUR_URL}?embed=1&tema=${encodeURIComponent(themeId)}`;
+  const src = tour3dUrl(themeId, true);
 
   return (
     <section id="tour-3d" className="mx-auto max-w-7xl scroll-mt-28 px-6 py-16 md:px-10">
@@ -75,7 +73,7 @@ export default function Salao3D({ themeId }: Salao3DProps) {
             </button>
           )}
           <a
-            href={src.replace('embed=1&', '')}
+            href={tour3dUrl(themeId)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-bold text-[var(--t-ink)]/75 transition hover:text-[var(--t-ink)]"

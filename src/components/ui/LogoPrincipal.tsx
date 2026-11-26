@@ -7,7 +7,7 @@ interface LogoPrincipalProps {
   className?: string;
 }
 
-/** Logotipo completo: asa em degradê + nome manuscrito, em vermelho. */
+/** Logotipo completo: asa em degradê + nome manuscrito e "restaurante temático" em laranja. */
 export default function LogoPrincipal({ motion = 'none', className }: LogoPrincipalProps) {
   return (
     <img
@@ -15,7 +15,7 @@ export default function LogoPrincipal({ motion = 'none', className }: LogoPrinci
       alt="Fantazê"
       draggable={false}
       className={cn(
-        'block aspect-[983/148] select-none',
+        'block aspect-[1200/265] select-none',
         motion === 'loop' && 'animate-bob',
         motion === 'hover' && 'group-hover:animate-bob',
         className,

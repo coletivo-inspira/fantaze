@@ -28,7 +28,7 @@ export default function ThemeSpotlight() {
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {theme.highlights.map((h) => (
                 <li key={h.title} className="rounded-2xl border border-[var(--t-gold)]/30 bg-[var(--t-surface)] p-4">
-                  <p className="font-theme text-xl font-semibold text-[var(--t-ink)]">{h.title}</p>
+                  <p className="font-display text-lg text-[var(--t-ink)]">{h.title}</p>
                   <p className="mt-1 text-sm text-[var(--t-ink)]/65">{h.description}</p>
                 </li>
               ))}
@@ -38,7 +38,7 @@ export default function ThemeSpotlight() {
               <Button to="/tema-do-mes" variant="theme" size="lg" icon={<ArrowRight size={18} />}>
                 Explorar o tema
               </Button>
-              <Button to="/tema-do-mes#tour-3d" variant="ghost" size="lg" icon={<Box size={18} />}>
+              <Button to="/tour-3d" variant="ghost" size="lg" icon={<Box size={18} />}>
                 Tour 3D do salão
               </Button>
               <ThemeCountdown daysLeft={daysLeft} />
