@@ -36,6 +36,8 @@ export interface MonthlyTheme {
   dressCode: string;
   playlist: string;
   scenes: { kind: SceneKind; title: string; caption: string }[];
+  /** Cenário para fotos no salão (aparece também no tour 3D, ponto "Cantinho da foto") */
+  photoSpot?: { title: string; description: string; props: string[] };
 }
 
 export type DishArtKind = 'plate' | 'tart' | 'cake' | 'macarons' | 'cup' | 'glass' | 'flute' | 'scones';

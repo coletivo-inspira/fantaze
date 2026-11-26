@@ -36,5 +36,14 @@ const sceneFileName = { ballroom: 'salao', garden: 'jardim', tea: 'cha' } as con
 export const getScenePhoto = (kind: keyof typeof sceneFileName): string | undefined =>
   scenePhotos[sceneFileName[kind]];
 
+const spotFiles = import.meta.glob('../assets/cantinho/*.{jpg,jpeg,png,webp}', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
+const spotPhotos = indexByName(spotFiles);
+
+/** Imagem do cantinho da foto do tema: src/assets/cantinho/<id-do-tema>.jpg */
+export const getPhotoSpotPhoto = (themeId: string): string | undefined => spotPhotos[themeId];
+
 /** Foto do portal “Em cartaz” da home: src/assets/ambiente/cartaz.jpg */
 export const getCartazPhoto = (): string | undefined => scenePhotos['cartaz'];

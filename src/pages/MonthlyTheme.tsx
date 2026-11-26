@@ -6,6 +6,7 @@ import ThemeScope from '../components/ui/ThemeScope';
 import ThemeScene from '../components/theme/ThemeScene';
 import ScenePhoto from '../components/theme/ScenePhoto';
 import Salao3D from '../components/theme/Salao3D';
+import PhotoSpot from '../components/theme/PhotoSpot';
 import ThemeCountdown from '../components/theme/ThemeCountdown';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
@@ -115,6 +116,9 @@ export default function MonthlyTheme() {
 
       {/* Tour 3D do salão */}
       <Salao3D themeId={theme.id} />
+
+      {/* Cantinho da foto */}
+      <PhotoSpot theme={theme} />
 
       {/* Jornada */}
       <section className="mx-auto max-w-5xl px-6 py-16 md:px-10">

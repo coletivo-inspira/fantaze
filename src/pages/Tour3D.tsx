@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { CalendarHeart, Hand, Maximize2, Footprints, Palette } from 'lucide-react';
+import { CalendarHeart, Camera, Hand, Maximize2, Footprints, Palette } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import { useCurrentTheme } from '../hooks/useCurrentTheme';
 import { tour3dUrl } from '../lib/tour3d';
 import Button from '../components/ui/Button';
@@ -9,11 +10,14 @@ const tips = [
   { icon: Hand, text: 'Arraste a tela para olhar em volta' },
   { icon: Footprints, text: 'Toque no chão para caminhar' },
   { icon: Palette, text: 'Troque o tema e veja o salão mudar' },
+  { icon: Camera, text: 'Ache o cantinho da foto perto da entrada' },
 ];
 
 /** Página do tour 3D: o salão abre direto, ocupando quase toda a tela. */
 export default function Tour3D() {
   const { theme } = useCurrentTheme();
+  const [params] = useSearchParams();
+  const ponto = params.get('ponto') ?? undefined;
 
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-brand-peach to-brand-paper pb-12 pt-24 sm:pt-28">
@@ -37,7 +41,7 @@ export default function Tour3D() {
             <Button to="/reservas" icon={<CalendarHeart size={18} />}>
               Reservar mesa
             </Button>
-            <Button href={tour3dUrl(theme.id)} external variant="ghost" icon={<Maximize2 size={16} />}>
+            <Button href={tour3dUrl(theme.id, false, ponto)} external variant="ghost" icon={<Maximize2 size={16} />}>
               Tela cheia
             </Button>
           </div>
@@ -45,14 +49,14 @@ export default function Tour3D() {
 
         <div className="mt-6 h-[calc(100dvh-8rem)] min-h-[460px] overflow-hidden rounded-[1.5rem] border-4 border-white bg-[#231510] shadow-xl sm:mt-8 sm:h-[min(78dvh,820px)] sm:rounded-[2rem]">
           <iframe
-            src={tour3dUrl(theme.id, true)}
+            src={tour3dUrl(theme.id, true, ponto)}
             title="Tour 3D do salão do Fantazê"
             className="h-full w-full"
             allow="fullscreen"
           />
         </div>
 
-        <ul className="mt-6 grid gap-3 sm:grid-cols-3">
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {tips.map(({ icon: Icon, text }) => (
             <li
               key={text}

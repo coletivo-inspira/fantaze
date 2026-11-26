@@ -65,6 +65,12 @@ export const themes: MonthlyTheme[] = [
     ],
     dressCode: 'Tons pastel, luvas, flores no cabelo e gravatas borboleta são muito bem-vindos.',
     playlist: 'Covers de música pop em arranjos de quarteto de cordas.',
+    photoSpot: {
+      title: 'Diamante da Temporada',
+      description:
+        'Um arco de glicínias e rosas, a poltrona de veludo azul, candelabros acesos e uma moldura dourada gigante para você posar dentro do quadro, como num retrato de baile.',
+      props: ['Arco de flores', 'Poltrona de veludo', 'Moldura para posar', 'Tiara e leque', 'Torre de macarons'],
+    },
     scenes: [
       { kind: 'ballroom', title: 'Salão de baile', caption: 'Lustres, cortinas e o grande arco dourado.' },
       { kind: 'garden', title: 'Jardim das rosas', caption: 'Canteiros e treliças para o seu passeio.' },
